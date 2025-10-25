@@ -3,26 +3,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import TimelineStep from '../components/TimelineStep.vue';
 
 const steps = [
-  { number: 1, title: 'Publicidad', description: 'Lanza campañas en Google, Meta, LinkedIn y otros canales. Zellfy captura automáticamente cada interacción.', color: '#00BFFF' },
-  { number: 2, title: 'Captura', description: 'Cada lead ingresa automáticamente al CRM con toda su información: fuente, intereses y datos de contacto.', color: '#00C48C' },
-  { number: 3, title: 'Atención Inicial', description: 'Responde en segundos con mensajes automatizados vía WhatsApp, email o SMS, personalizados según el origen del lead.', color: '#6C63FF' },
-  { number: 4, title: 'Educación', description: 'Envía contenido relevante, casos de éxito y recursos educativos según el perfil del prospecto.', color: '#00BFFF' },
-  { number: 5, title: 'Seguimiento', description: 'Automatiza recordatorios, agenda reuniones y mantén el flujo activo sin esfuerzo manual.', color: '#00C48C' },
-  { number: 6, title: 'Cierre', description: 'Acelera el cierre con propuestas digitales, firma electrónica y validaciones en tiempo real.', color: '#6C63FF' },
-  { number: 7, title: 'Documentación', description: 'Gestiona contratos, documentos legales y autenticación con Clave Única (Chile) integrada.', color: '#00BFFF' },
-  { number: 8, title: 'Postventa', description: 'Mantén la relación con encuestas automáticas, upselling y soporte continuo.', color: '#00C48C' }
+  { number: 1, title: 'Publicidad y Atracción', description: 'Lanza campañas digitales segmentadas en Google, Meta, TikTok y LinkedIn. Zellfy captura automáticamente cada interacción.', color: '#00BFFF', icon: '📢' },
+  { number: 2, title: 'Captura del Lead', description: 'Formularios inteligentes y detección automática. Cada lead ingresa al CRM con fuente, campaña e interés identificado.', color: '#00C48C', icon: '🎯' },
+  { number: 3, title: 'Atención Inicial', description: 'Respuesta instantánea vía WhatsApp, SMS o email. Mensajería automatizada con IA o agente humano según necesidad.', color: '#00BFFF', icon: '💬' },
+  { number: 4, title: 'Oferta y Educación', description: 'Información guiada del producto o servicio. Catálogos digitales, videos y contenido personalizado según perfil.', color: '#00C48C', icon: '📚' },
+  { number: 5, title: 'Seguimiento', description: 'Recontacto automatizado, calendarización de reuniones y remarketing inteligente. Sin perder ningún cliente potencial.', color: '#00BFFF', icon: '🔄' },
+  { number: 6, title: 'Cierre / Compra', description: 'Acompañamiento durante la decisión. Propuestas digitales, cotizaciones y aprobaciones en tiempo real.', color: '#00C48C', icon: '✅' },
+  { number: 7, title: 'Gestión Documental', description: 'Carpeta digital, revisión de antecedentes, créditos, escrituras. Firma electrónica y Clave Única integrada.', color: '#00BFFF', icon: '📄' },
+  { number: 8, title: 'Entrega y Postventa', description: 'Seguimiento post compra, encuestas de satisfacción, upselling y fidelización. El ciclo se cierra y comienza de nuevo.', color: '#00C48C', icon: '🎁' }
 ];
 ---
 
-<BaseLayout title="Cómo Funciona - Zellfy.ai" description="Descubre cómo Zellfy.ai transforma tu proceso de ventas en 8 etapas clave.">
+<BaseLayout title="Cómo Funciona - Zellfy" description="Descubre el flujo completo de Zellfy en 8 etapas que transforman tu proceso de ventas.">
   <!-- Hero -->
-  <section class="bg-gradient-to-br from-violet-50 to-blue-50 py-20 px-6">
+  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
     <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold mb-6" style="color: var(--color-violet);">
-        Cómo Funciona Zellfy.ai
+      <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
+        Cómo Funciona Zellfy
       </h1>
-      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-        Un flujo completo que acompaña a tus clientes desde el primer contacto hasta la postventa, automatizando cada paso del proceso.
+      <p class="text-2xl max-w-4xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
+        Del anuncio al cierre. Del cierre al financiamiento. <strong>Todo fluye.</strong>
       </p>
     </div>
   </section>
@@ -30,9 +30,12 @@ const steps = [
   <!-- Timeline de 8 etapas -->
   <section class="py-20 px-6">
     <div class="container mx-auto max-w-5xl">
-      <h2 class="text-4xl font-bold text-center mb-16" style="color: var(--color-violet);">
-        El Journey Completo
+      <h2 class="text-4xl font-bold text-center mb-6" style="color: var(--color-graphite);">
+        El Flujo Real de una Venta
       </h2>
+      <p class="text-xl text-center mb-16 max-w-3xl mx-auto" style="color: #6b7280; font-family: var(--font-secondary);">
+        En Zellfy, cada cliente tiene su propio flujo. Tú solo observas cómo avanza.
+      </p>
       
       <div class="space-y-12">
         {steps.map(step => (

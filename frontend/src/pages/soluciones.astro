@@ -2,120 +2,169 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Soluciones - Zellfy.ai" description="Descubre Zellfy y Zellflow: el ecosistema completo para transformar tus ventas.">
+<BaseLayout title="Soluciones - Zellfy" description="La plataforma completa que transforma tu proceso de ventas de principio a fin.">
   <!-- Hero -->
-  <section class="bg-gradient-to-br from-blue-50 to-violet-50 py-20 px-6">
+  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
     <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold mb-6" style="color: var(--color-violet);">
-        Un Ecosistema Completo
+      <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
+        La Plataforma Completa para tus Ventas
       </h1>
-      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-        Conecta, gestiona y automatiza todo tu proceso comercial con dos productos diseñados para escalar.
+      <p class="text-2xl max-w-4xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
+        Zellfy conecta, gestiona y cierra. Un sistema vivo que acompaña cada etapa de tu proceso comercial.
       </p>
     </div>
   </section>
 
-  <!-- Zellfy vs Zellflow -->
-  <section class="py-20 px-6">
+  <!-- Módulos Principales -->
+  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
     <div class="container mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Zellfy -->
-        <div class="bg-white p-8 rounded-2xl shadow-xl border-2" style="border-color: var(--color-blue-electric);">
-          <div class="text-5xl mb-4" style="color: var(--color-blue-electric);">💼</div>
-          <h2 class="text-3xl font-bold mb-4" style="color: var(--color-blue-electric);">Zellfy</h2>
-          <p class="text-gray-600 mb-6">
-            CRM inteligente para captación, gestión y cierre de ventas.
+      <h2 class="text-4xl font-bold text-center mb-6" style="color: var(--color-graphite);">
+        ¿Qué hace Zellfy por tu negocio?
+      </h2>
+      <p class="text-xl text-center mb-16 max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
+        Una plataforma modular que se adapta a cada industria y escala con tu crecimiento.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Módulo 1: Captación -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <div class="text-5xl mb-4" style="color: var(--color-blue-electric);">📡</div>
+          <h3 class="text-2xl font-bold mb-4" style="color: var(--color-graphite);">Captación de Leads</h3>
+          <p class="text-lg mb-4" style="color: #6b7280;">
+            Conecta con Google Ads, Meta, WhatsApp y formularios web. Todos tus leads en un solo lugar.
           </p>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-blue-electric);">✓</span>
-              Captura automática de leads desde múltiples fuentes
-            </li>
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-blue-electric);">✓</span>
-              Seguimiento inteligente y automatizado
-            </li>
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-blue-electric);">✓</span>
-              Dashboard en tiempo real
-            </li>
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-blue-electric);">✓</span>
-              Integraciones con Google, Meta, WhatsApp y CRMs
-            </li>
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-blue-electric);">✓</span>
-              Reportería avanzada y análisis predictivo
-            </li>
+          <ul class="space-y-2 text-sm" style="color: #6b7280;">
+            <li>✓ Captura automática multicanal</li>
+            <li>✓ Detección de fuente y campaña</li>
+            <li>✓ Calificación inicial con IA</li>
           </ul>
-          <a href="/contacto" class="mt-8 w-full inline-block text-center px-6 py-3 rounded-full text-white font-bold transition hover:opacity-90" style="background-color: var(--color-blue-electric);">
-            Conocer Zellfy
-          </a>
         </div>
 
-        <!-- Zellflow -->
-        <div class="bg-white p-8 rounded-2xl shadow-xl border-2" style="border-color: var(--color-green-mint);">
-          <div class="text-5xl mb-4" style="color: var(--color-green-mint);">⚙️</div>
-          <h2 class="text-3xl font-bold mb-4" style="color: var(--color-green-mint);">Zellflow</h2>
-          <p class="text-gray-600 mb-6">
-            Automatización y gestión documental para escalar operaciones.
+        <!-- Módulo 2: Gestión CRM -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <div class="text-5xl mb-4" style="color: var(--color-green-mint);">📊</div>
+          <h3 class="text-2xl font-bold mb-4" style="color: var(--color-graphite);">Gestión Comercial</h3>
+          <p class="text-lg mb-4" style="color: #6b7280;">
+            CRM vivo que acompaña cada oportunidad desde el primer contacto hasta el cierre.
           </p>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-green-mint);">✓</span>
-              Automatización de flujos de trabajo completos
-            </li>
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-green-mint);">✓</span>
-              Gestión documental con firma electrónica
-            </li>
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-green-mint);">✓</span>
-              Integración con Clave Única (Chile)
-            </li>
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-green-mint);">✓</span>
-              Validación de identidad y autenticación
-            </li>
-            <li class="flex items-start">
-              <span class="text-xl mr-2" style="color: var(--color-green-mint);">✓</span>
-              Workflows personalizables sin código
-            </li>
+          <ul class="space-y-2 text-sm" style="color: #6b7280;">
+            <li>✓ Seguimiento automatizado 24/7</li>
+            <li>✓ Dashboard gerencial en tiempo real</li>
+            <li>✓ Recordatorios y tareas inteligentes</li>
           </ul>
-          <a href="/contacto" class="mt-8 w-full inline-block text-center px-6 py-3 rounded-full text-white font-bold transition hover:opacity-90" style="background-color: var(--color-green-mint);">
-            Conocer Zellflow
-          </a>
+        </div>
+
+        <!-- Módulo 3: Cierre y Documentación -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <div class="text-5xl mb-4" style="color: var(--color-blue-electric);">✅</div>
+          <h3 class="text-2xl font-bold mb-4" style="color: var(--color-graphite);">Cierre y Documentos</h3>
+          <p class="text-lg mb-4" style="color: #6b7280;">
+            Acelera el cierre con firma digital, validaciones y gestión documental integrada.
+          </p>
+          <ul class="space-y-2 text-sm" style="color: #6b7280;">
+            <li>✓ Firma electrónica y Clave Única</li>
+            <li>✓ Carpeta digital por cliente</li>
+            <li>✓ Flujos de aprobación automatizados</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ecosistema Escalable -->
-  <section class="py-20 px-6 bg-gradient-to-br from-violet-50 to-blue-50">
+  <!-- Zellfy en Acción -->
+  <section class="py-20 px-6">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--color-violet);">
-        Un Ecosistema Escalable
+      <h2 class="text-4xl font-bold text-center mb-16" style="color: var(--color-graphite);">
+        Zellfy en Acción
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-4xl mb-3">🔗</div>
-          <h4 class="font-bold text-xl mb-2">Integraciones</h4>
-          <p class="text-gray-600">Conecta con APIs, CRMs externos, bancos y plataformas digitales.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+          <div class="text-5xl mb-4">🏢</div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--color-graphite);">Inmobiliario</h3>
+          <p style="color: #6b7280;">Desde el anuncio hasta la escritura. Gestión completa de propiedad y cliente.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-4xl mb-3">🤖</div>
-          <h4 class="font-bold text-xl mb-2">Inteligencia Artificial</h4>
-          <p class="text-gray-600">Predicciones de cierre, análisis de comportamiento y recomendaciones automáticas.</p>
+        <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+          <div class="text-5xl mb-4">🚗</div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--color-graphite);">Automotriz</h3>
+          <p style="color: #6b7280;">Test drives, cotizaciones y financiamiento integrado con bancos.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-4xl mb-3">📊</div>
-          <h4 class="font-bold text-xl mb-2">Data & Analytics</h4>
-          <p class="text-gray-600">Visualiza métricas clave y toma decisiones basadas en datos en tiempo real.</p>
+        <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+          <div class="text-5xl mb-4">💳</div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--color-graphite);">Créditos</h3>
+          <p style="color: #6b7280;">Evaluación crediticia, aprobaciones y seguimiento automatizado.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-4xl mb-3">🌎</div>
-          <h4 class="font-bold text-xl mb-2">Expansión Global</h4>
-          <p class="text-gray-600">Soporte multilenguaje y escalabilidad internacional.</p>
+        <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+          <div class="text-5xl mb-4">🛒</div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--color-graphite);">E-commerce</h3>
+          <p style="color: #6b7280;">Recuperación de carritos y seguimiento post-venta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Módulo Adicional: ZellFlow -->
+  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
+    <div class="container mx-auto max-w-5xl">
+      <div class="bg-white p-12 rounded-3xl shadow-xl">
+        <div class="text-center mb-8">
+          <div class="text-6xl mb-4">⚡</div>
+          <h2 class="text-4xl font-bold mb-4" style="color: var(--color-graphite);">
+            ¿Necesitas automatización avanzada?
+          </h2>
+          <p class="text-xl" style="color: #6b7280; font-family: var(--font-secondary);">
+            <strong>ZellFlow</strong> es nuestro módulo de automatización end-to-end para empresas que requieren procesos altamente escalables.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+          <div>
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--color-graphite);">¿Qué incluye?</h3>
+            <ul class="space-y-3" style="color: #6b7280;">
+              <li class="flex items-start">
+                <span class="mr-2">✓</span>
+                Automatización de flujos complejos sin código
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">✓</span>
+                Integración API con sistemas legacy
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">✓</span>
+                Gestión documental corporativa
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">✓</span>
+                Workflows personalizados por industria
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--color-graphite);">¿Para quién?</h3>
+            <ul class="space-y-3" style="color: #6b7280;">
+              <li class="flex items-start">
+                <span class="mr-2">✓</span>
+                Empresas con alto volumen de transacciones
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">✓</span>
+                Organizaciones que necesitan trazabilidad total
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">✓</span>
+                Negocios con procesos altamente regulados
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">✓</span>
+                Equipos que requieren control operacional avanzado
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="/contacto" class="inline-block px-10 py-4 rounded-full text-white font-bold transition hover:opacity-90 shadow-lg" style="background-color: var(--color-green-mint);">
+            Consultar por ZellFlow
+          </a>
         </div>
       </div>
     </div>

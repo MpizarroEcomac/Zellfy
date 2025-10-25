@@ -2,15 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Planes y Precios - Zellfy.ai" description="Elige el plan que se adapta a tu ritmo de crecimiento.">
+<BaseLayout title="Planes y Precios - Zellfy" description="Escoge el plan que se adapta a tu negocio y escala cuando creces.">
   <!-- Hero -->
-  <section class="bg-gradient-to-br from-violet-50 to-blue-50 py-20 px-6">
+  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
     <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold mb-6" style="color: var(--color-violet);">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
         Elige el Plan que se Adapta a tu Ritmo
       </h1>
-      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-        Desde emprendedores hasta empresas consolidadas. Encuentra la solución perfecta para tu negocio.
+      <p class="text-2xl max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
+        Paga solo por lo que usas. Escala cuando creces.
       </p>
     </div>
   </section>
@@ -20,7 +20,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Starter -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
           <h3 class="text-2xl font-bold mb-2" style="color: var(--color-blue-electric);">Starter</h3>
           <div class="mb-6">
             <span class="text-5xl font-bold">$49</span>
@@ -138,9 +138,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Beneficios Comunes -->
-  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 to-violet-50">
+  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
     <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-12" style="color: var(--color-violet);">
+      <h2 class="text-3xl font-bold mb-12" style="color: var(--color-graphite);">
         Incluido en todos los planes
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">

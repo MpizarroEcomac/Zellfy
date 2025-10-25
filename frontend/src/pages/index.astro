@@ -2,74 +2,130 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Zellfy.ai - Conecta. Gestiona. Cierra.">
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-blue-50 to-violet-50 py-32 px-6">
-    <div class="container mx-auto text-center">
-      <h1 class="text-6xl md:text-7xl font-bold mb-8" style="color: var(--color-violet);">
-        Conecta. Gestiona. Cierra.
-      </h1>
-      <p class="text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-        Zellfy.ai es un ecosistema vivo que conecta, gestiona y acelera todo tu proceso de ventas.
-      </p>
-      <a href="/contacto" class="inline-block px-10 py-5 rounded-full text-white font-bold text-xl transition hover:opacity-90 shadow-xl" style="background-color: var(--color-blue-electric);">
-        Empieza a Fluir
-      </a>
+<BaseLayout title="Zellfy - Automatiza, acompaña y acelera tus ventas">
+  <!-- Hero Principal -->
+  <section class="relative bg-gradient-to-br from-blue-50 via-white to-green-50 py-32 px-6 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+      <div class="absolute top-40 right-20 w-64 h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute bottom-20 left-1/2 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
     </div>
-  </section>
-
-  <!-- Por qué elegir Zellfy -->
-  <section class="py-20 px-6">
-    <div class="container mx-auto">
-      <h2 class="text-5xl font-bold text-center mb-16" style="color: var(--color-violet);">
-        Por qué elegir Zellfy
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div class="text-center p-8 rounded-2xl shadow-lg hover:shadow-2xl transition" style="background-color: var(--color-gray-smoke);">
-          <div class="text-6xl mb-6" style="color: var(--color-blue-electric);">🔗</div>
-          <h3 class="text-3xl font-bold mb-4">Conecta</h3>
-          <p class="text-lg text-gray-600 mb-6">
-            Integra todas tus fuentes de captación en un solo lugar: Google, Meta, WhatsApp, formularios web y más.
-          </p>
-          <a href="/soluciones" class="text-blue-500 font-semibold hover:underline">Conocer más →</a>
-        </div>
-        <div class="text-center p-8 rounded-2xl shadow-lg hover:shadow-2xl transition" style="background-color: var(--color-gray-smoke);">
-          <div class="text-6xl mb-6" style="color: var(--color-green-mint);">⚙️</div>
-          <h3 class="text-3xl font-bold mb-4">Gestiona</h3>
-          <p class="text-lg text-gray-600 mb-6">
-            CRM potente con automatización inteligente, seguimiento en tiempo real y gestión documental integrada.
-          </p>
-          <a href="/como-funciona" class="text-green-500 font-semibold hover:underline">Ver cómo funciona →</a>
-        </div>
-        <div class="text-center p-8 rounded-2xl shadow-lg hover:shadow-2xl transition" style="background-color: var(--color-gray-smoke);">
-          <div class="text-6xl mb-6" style="color: var(--color-violet);">✅</div>
-          <h3 class="text-3xl font-bold mb-4">Cierra</h3>
-          <p class="text-lg text-gray-600 mb-6">
-            Acelera el cierre con flujos automatizados, firma digital y análisis predictivo basado en IA.
-          </p>
-          <a href="/casos" class="text-violet-500 font-semibold hover:underline">Ver casos de éxito →</a>
-        </div>
+    
+    <div class="container mx-auto text-center relative z-10">
+      <h1 class="text-6xl md:text-7xl font-bold mb-6" style="color: var(--color-graphite); font-family: var(--font-primary);">
+        Zellfy automatiza, acompaña y acelera tus ventas.
+      </h1>
+      <p class="text-2xl mb-8 max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
+        Conecta leads, gestiona oportunidades y cierra negocios sin fricción.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto" class="inline-block px-10 py-5 rounded-full text-white font-bold text-xl transition hover:opacity-90 shadow-xl" style="background-color: var(--color-green-mint);">
+          💚 Empieza a Fluir
+        </a>
+        <a href="/como-funciona" class="inline-block px-10 py-5 rounded-full font-bold text-xl transition border-2 hover:bg-blue-50" style="border-color: var(--color-blue-electric); color: var(--color-blue-electric);">
+          Ver cómo funciona
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA Final -->
-  <section class="py-24 px-6 bg-gradient-to-r from-blue-500 to-violet-500 text-white text-center">
+  <!-- Lo que hacemos -->
+  <section class="py-24 px-6" style="background-color: var(--color-white-smoke);">
     <div class="container mx-auto">
-      <h2 class="text-5xl font-bold mb-8">
+      <h2 class="text-5xl font-bold text-center mb-6" style="color: var(--color-graphite);">
+        Lo que hacemos
+      </h2>
+      <p class="text-xl text-center mb-16 max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
+        Zellfy no reemplaza a tu equipo. Lo potencia.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Conecta -->
+        <div class="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-6xl mb-6" style="color: var(--color-blue-electric);">🔗</div>
+          <h3 class="text-3xl font-bold mb-4" style="color: var(--color-graphite);">Conecta</h3>
+          <p class="text-lg mb-6" style="color: #6b7280;">
+            Atrae leads desde publicidad y redes, todo en un solo lugar.
+          </p>
+          <a href="/soluciones" class="inline-flex items-center font-semibold transition" style="color: var(--color-blue-electric);">
+            Conocer más 
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Gestiona -->
+        <div class="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-6xl mb-6" style="color: var(--color-green-mint);">⚙️</div>
+          <h3 class="text-3xl font-bold mb-4" style="color: var(--color-graphite);">Gestiona</h3>
+          <p class="text-lg mb-6" style="color: #6b7280;">
+            Automatiza respuestas, seguimiento y documentación.
+          </p>
+          <a href="/como-funciona" class="inline-flex items-center font-semibold transition" style="color: var(--color-green-mint);">
+            Ver cómo funciona
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Cierra -->
+        <div class="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-6xl mb-6" style="color: var(--color-blue-electric);">✅</div>
+          <h3 class="text-3xl font-bold mb-4" style="color: var(--color-graphite);">Cierra</h3>
+          <p class="text-lg mb-6" style="color: #6b7280;">
+            Reduce tiempos y aumenta conversiones con IA + flujo humano.
+          </p>
+          <a href="/casos" class="inline-flex items-center font-semibold transition" style="color: var(--color-blue-electric);">
+            Ver casos de éxito
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <p class="text-center text-xl mt-16 italic" style="color: var(--color-graphite);">
+        "Zellfy no reemplaza a tu equipo. Lo potencia."
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-24 px-6 text-center" style="background: linear-gradient(135deg, var(--color-blue-electric) 0%, var(--color-green-mint) 100%);">
+    <div class="container mx-auto">
+      <h2 class="text-5xl font-bold mb-8 text-white">
         ¿Listo para transformar tus ventas?
       </h2>
-      <p class="text-2xl mb-12 max-w-3xl mx-auto">
-        Empieza hoy mismo y descubre cómo Zellfy.ai puede llevar tu negocio al siguiente nivel.
+      <p class="text-2xl mb-12 max-w-3xl mx-auto text-white opacity-95">
+        Empieza hoy mismo y descubre cómo Zellfy puede llevar tu negocio al siguiente nivel.
       </p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="/contacto" class="inline-block px-10 py-5 bg-white text-violet-600 font-bold text-lg rounded-full hover:bg-gray-100 transition shadow-lg">
+        <a href="/contacto" class="inline-block px-10 py-5 bg-white font-bold text-lg rounded-full hover:bg-gray-100 transition shadow-lg" style="color: var(--color-blue-electric);">
           Solicitar Demo
         </a>
-        <a href="/pricing" class="inline-block px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white hover:text-violet-600 transition">
+        <a href="/pricing" class="inline-block px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white transition" style="hover:color: var(--color-blue-electric);">
           Ver Precios
         </a>
       </div>
     </div>
   </section>
+
+  <style>
+    @keyframes blob {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+    }
+    .animate-blob {
+      animation: blob 7s infinite;
+    }
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+  </style>
 </BaseLayout>
