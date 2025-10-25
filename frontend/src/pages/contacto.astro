@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.vue';
+---
+
+<BaseLayout title="Contacto - Zellfy.ai" description="Hablemos de cómo transformar tus ventas">
+  <section class="bg-gradient-to-br from-violet-50 to-blue-50 py-20 px-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-6" style="color: var(--color-violet);">
+        Hablemos de cómo transformar tus ventas
+      </h1>
+      <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+        Completa el formulario y un especialista te contactará en menos de 24 horas
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 px-6">
+    <div class="container mx-auto max-w-2xl">
+      <ContactForm client:load />
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 to-violet-50">
+    <div class="container mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-8" style="color: var(--color-violet);">También puedes contactarnos directamente</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div>
+          <div class="text-4xl mb-3">📧</div>
+          <p class="font-semibold">Email</p>
+          <p class="text-gray-600">contacto@zellfy.ai</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-3">📱</div>
+          <p class="font-semibold">WhatsApp</p>
+          <p class="text-gray-600">+56 9 XXXX XXXX</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-3">🏢</div>
+          <p class="font-semibold">Oficina</p>
+          <p class="text-gray-600">Santiago, Chile</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

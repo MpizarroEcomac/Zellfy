@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Casos de Éxito - Zellfy.ai" description="Descubre cómo empresas reales han transformado sus ventas con Zellfy.ai">
+  <section class="bg-gradient-to-br from-violet-50 to-blue-50 py-20 px-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-6" style="color: var(--color-violet);">
+        Casos de Éxito
+      </h1>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        Empresas reales que han transformado sus procesos comerciales con Zellfy.ai
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 px-6">
+    <div class="container mx-auto max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Ecomac -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <div class="h-40 bg-gradient-to-br from-blue-100 to-violet-100 rounded-lg mb-6 flex items-center justify-center">
+            <span class="text-4xl font-bold" style="color: var(--color-blue-electric);">ECOMAC</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-violet);">Ecomac</h3>
+          <p class="text-gray-600 mb-4">
+            Empresa automotriz que logró digitalizar completamente su funnel de ventas y reducir tiempos de cierre en un 65%.
+          </p>
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center text-sm">
+              <span class="font-bold mr-2" style="color: var(--color-green-mint);">↑ 65%</span>
+              <span class="text-gray-600">Reducción en tiempo de cierre</span>
+            </div>
+            <div class="flex items-center text-sm">
+              <span class="font-bold mr-2" style="color: var(--color-green-mint);">↑ 40%</span>
+              <span class="text-gray-600">Aumento en conversión</span>
+            </div>
+          </div>
+          <a href="/contacto" class="inline-block px-6 py-2 rounded-full border-2 font-semibold transition hover:bg-violet-50" style="border-color: var(--color-violet); color: var(--color-violet);">
+            Ver Caso Completo
+          </a>
+        </div>
+
+        <!-- Creces -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <div class="h-40 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-6 flex items-center justify-center">
+            <span class="text-4xl font-bold" style="color: var(--color-green-mint);">CRECES</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-violet);">Creces</h3>
+          <p class="text-gray-600 mb-4">
+            Plataforma financiera que implementó seguimiento automatizado y obtuvo visibilidad total de su pipeline comercial.
+          </p>
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center text-sm">
+              <span class="font-bold mr-2" style="color: var(--color-green-mint);">↑ 80%</span>
+              <span class="text-gray-600">Visibilidad de leads</span>
+            </div>
+            <div class="flex items-center text-sm">
+              <span class="font-bold mr-2" style="color: var(--color-green-mint);">↑ 50%</span>
+              <span class="text-gray-600">Automatización de procesos</span>
+            </div>
+          </div>
+          <a href="/contacto" class="inline-block px-6 py-2 rounded-full border-2 font-semibold transition hover:bg-violet-50" style="border-color: var(--color-violet); color: var(--color-violet);">
+            Ver Caso Completo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-gradient-to-r from-blue-500 to-violet-500 text-white text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-6">
+        ¿Quieres ser nuestro próximo caso de éxito?
+      </h2>
+      <a href="/contacto" class="inline-block px-8 py-4 bg-white text-violet-600 font-bold rounded-full hover:bg-gray-100 transition">
+        Solicitar Demo
+      </a>
+    </div>
+  </section>
+</BaseLayout>

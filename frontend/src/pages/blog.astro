@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const blogPosts = await getCollection('blog');
+const sortedPosts = blogPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout title="Blog - Zellfy.ai" description="Aprende sobre automatización de ventas, CRM y estrategias comerciales">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-violet-50 to-blue-50 py-20 px-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-6" style="color: var(--color-violet);">
+        Blog Zellfy
+      </h1>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        Consejos, estrategias y mejores prácticas para transformar tu proceso de ventas
+      </p>
+    </div>
+  </section>
+
+  <!-- Posts Grid -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {sortedPosts.map((post) => (
+          <article class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+            <div class="h-48 bg-gradient-to-br from-blue-100 to-violet-100 flex items-center justify-center">
+              <span class="text-5xl">📝</span>
+            </div>
+            <div class="p-6">
+              <div class="flex gap-2 mb-3">
+                {post.data.tags?.map((tag) => (
+                  <span class="px-3 py-1 text-xs rounded-full bg-violet-100 text-violet-700 font-semibold">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h2 class="text-2xl font-bold mb-3" style="color: var(--color-violet);">
+                {post.data.title}
+              </h2>
+              <p class="text-gray-600 mb-4">
+                {post.data.description}
+              </p>
+              <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>{post.data.author}</span>
+                <span>{new Date(post.data.pubDate).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              </div>
+              <a 
+                href={`/blog/${post.slug}`}
+                class="inline-block px-6 py-2 rounded-full border-2 font-semibold transition hover:bg-violet-50"
+                style="border-color: var(--color-violet); color: var(--color-violet);"
+              >
+                Leer más →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 bg-gradient-to-r from-blue-500 to-violet-500 text-white text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-6">
+        ¿Listo para implementar estas estrategias?
+      </h2>
+      <a href="/contacto" class="inline-block px-8 py-4 bg-white text-violet-600 font-bold rounded-full hover:bg-gray-100 transition">
+        Solicitar Demo
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimelineStep from '../components/TimelineStep.vue';
+
+const steps = [
+  { number: 1, title: 'Publicidad', description: 'Lanza campañas en Google, Meta, LinkedIn y otros canales. Zellfy captura automáticamente cada interacción.', color: '#00BFFF' },
+  { number: 2, title: 'Captura', description: 'Cada lead ingresa automáticamente al CRM con toda su información: fuente, intereses y datos de contacto.', color: '#00C48C' },
+  { number: 3, title: 'Atención Inicial', description: 'Responde en segundos con mensajes automatizados vía WhatsApp, email o SMS, personalizados según el origen del lead.', color: '#6C63FF' },
+  { number: 4, title: 'Educación', description: 'Envía contenido relevante, casos de éxito y recursos educativos según el perfil del prospecto.', color: '#00BFFF' },
+  { number: 5, title: 'Seguimiento', description: 'Automatiza recordatorios, agenda reuniones y mantén el flujo activo sin esfuerzo manual.', color: '#00C48C' },
+  { number: 6, title: 'Cierre', description: 'Acelera el cierre con propuestas digitales, firma electrónica y validaciones en tiempo real.', color: '#6C63FF' },
+  { number: 7, title: 'Documentación', description: 'Gestiona contratos, documentos legales y autenticación con Clave Única (Chile) integrada.', color: '#00BFFF' },
+  { number: 8, title: 'Postventa', description: 'Mantén la relación con encuestas automáticas, upselling y soporte continuo.', color: '#00C48C' }
+];
+---
+
+<BaseLayout title="Cómo Funciona - Zellfy.ai" description="Descubre cómo Zellfy.ai transforma tu proceso de ventas en 8 etapas clave.">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-violet-50 to-blue-50 py-20 px-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-6" style="color: var(--color-violet);">
+        Cómo Funciona Zellfy.ai
+      </h1>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        Un flujo completo que acompaña a tus clientes desde el primer contacto hasta la postventa, automatizando cada paso del proceso.
+      </p>
+    </div>
+  </section>
+
+  <!-- Timeline de 8 etapas -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-4xl font-bold text-center mb-16" style="color: var(--color-violet);">
+        El Journey Completo
+      </h2>
+      
+      <div class="space-y-12">
+        {steps.map(step => (
+          <TimelineStep
+            client:visible
+            number={step.number}
+            title={step.title}
+            description={step.description}
+            color={step.color}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Aplicaciones por Rubro -->
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 to-violet-50">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--color-violet);">
+        Casos de Aplicación
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="font-bold text-xl mb-3" style="color: var(--color-blue-electric);">🏢 Inmobiliario</h4>
+          <p class="text-gray-600">Captura leads de portales, automatiza visitas y gestiona documentación de propiedades.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="font-bold text-xl mb-3" style="color: var(--color-green-mint);">🚗 Automotriz</h4>
+          <p class="text-gray-600">Gestiona test drives, cotizaciones y financiamiento integrado con bancos.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="font-bold text-xl mb-3" style="color: var(--color-violet);">💳 Créditos</h4>
+          <p class="text-gray-600">Evalúa clientes, automatiza evaluaciones crediticias y aprobaciones en minutos.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="font-bold text-xl mb-3" style="color: var(--color-blue-electric);">🛒 E-commerce</h4>
+          <p class="text-gray-600">Recupera carritos abandonados, segmenta clientes y optimiza conversión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-6" style="color: var(--color-violet);">
+        ¿Listo para automatizar tu proceso de ventas?
+      </h2>
+      <a href="/contacto" class="inline-block px-8 py-4 rounded-full text-white font-bold text-lg transition hover:opacity-90 shadow-lg" style="background-color: var(--color-blue-electric);">
+        Solicitar Demo
+      </a>
+    </div>
+  </section>
+</BaseLayout>
