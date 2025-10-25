@@ -1,0 +1,123 @@
+<!-- Wireframe visual importable a Figma para Zellfy.ai -->
+<!-- Paleta de colores: Azul eléctrico #00BFFF, Verde menta #00C48C, Violeta digital #6C63FF, Gris humo #F5F6FA -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zellfy.ai — Blueprint Wireframe</title>
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F5F6FA;
+      color: #1F1F1F;
+    }
+    header {
+      background: linear-gradient(90deg, #00BFFF, #6C63FF);
+      color: white;
+      padding: 1.2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+    .hero {
+      background: linear-gradient(135deg, #00BFFF 0%, #6C63FF 50%, #00C48C 100%);
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .section {
+      padding: 4rem 3rem;
+      text-align: center;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .cta {
+      background: #00C48C;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      background: #6C63FF;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Zellfy.ai</h2>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#como-funciona">Cómo Funciona</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#pricing">Planes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Conecta. Gestiona. Cierra.</h1>
+    <p>Transforma tus ventas con un sistema vivo, fluido y humano.</p>
+    <a class="cta" href="#demo">Empieza a fluir</a>
+  </section>
+
+  <section id="beneficios" class="section">
+    <h2>Por qué elegir Zellfy</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Conecta</h3>
+        <p>Centraliza todos tus leads desde redes y campañas.</p>
+      </div>
+      <div class="card">
+        <h3>Gestiona</h3>
+        <p>Automatiza el seguimiento, documentación y atención.</p>
+      </div>
+      <div class="card">
+        <h3>Cierra</h3>
+        <p>Reduce tus tiempos de venta y mejora tu conversión.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section">
+    <h2>Planes y Precios</h2>
+    <div class="grid-3">
+      <div class="card"><h3>Starter</h3><p>Para pymes que comienzan</p></div>
+      <div class="card"><h3>Pro</h3><p>Para empresas que escalan</p></div>
+      <div class="card"><h3>Enterprise</h3><p>Soluciones personalizadas</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Zellfy.ai © 2025 — Conecta. Gestiona. Cierra.</p>
+  </footer>
+</body>
+</html>
