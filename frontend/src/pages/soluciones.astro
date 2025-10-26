@@ -4,106 +4,152 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Soluciones - Zellfy" description="La plataforma completa que transforma tu proceso de ventas de principio a fin.">
   <!-- Hero -->
-  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
+  <section class="bg-gradient-to-br from-blue-50 to-green-50 py-20 px-6">
     <div class="container mx-auto text-center">
       <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
         La Plataforma Completa para tus Ventas
       </h1>
-      <p class="text-2xl max-w-4xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
         Zellfy conecta, gestiona y cierra. Un sistema vivo que acompaña cada etapa de tu proceso comercial.
       </p>
     </div>
   </section>
 
   <!-- Módulos Principales -->
-  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
+  <section class="py-20 px-6">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-6" style="color: var(--color-graphite);">
-        ¿Qué hace Zellfy por tu negocio?
-      </h2>
-      <p class="text-xl text-center mb-16 max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Una plataforma modular que se adapta a cada industria y escala con tu crecimiento.
-      </p>
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4" style="color: var(--color-graphite);">
+          ¿Qué hace Zellfy por tu negocio?
+        </h2>
+        <p class="text-lg max-w-2xl mx-auto" style="color: #6b7280;">
+          Una plataforma modular que se adapta a cada industria y escala con tu crecimiento.
+        </p>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Módulo 1: Captación -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4" style="color: var(--color-blue-electric);">📡</div>
-          <h3 class="text-2xl font-bold mb-4" style="color: var(--color-graphite);">Captación de Leads</h3>
-          <p class="text-lg mb-4" style="color: #6b7280;">
-            Conecta con Google Ads, Meta, WhatsApp y formularios web. Todos tus leads en un solo lugar.
-          </p>
-          <ul class="space-y-2 text-sm" style="color: #6b7280;">
-            <li>✓ Captura automática multicanal</li>
-            <li>✓ Detección de fuente y campaña</li>
-            <li>✓ Calificación inicial con IA</li>
-          </ul>
+        <div class="solution-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Captación de leads" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-400/80 to-blue-600/80"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="text-6xl mb-2">📡</div>
+              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Captación</h3>
+            </div>
+          </div>
+          <div class="p-6 text-center">
+            <p class="text-sm" style="color: #6b7280;">
+              Conecta con Google Ads, Meta, WhatsApp y formularios web. Captura automática y calificación con IA.
+            </p>
+          </div>
         </div>
 
         <!-- Módulo 2: Gestión CRM -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4" style="color: var(--color-green-mint);">📊</div>
-          <h3 class="text-2xl font-bold mb-4" style="color: var(--color-graphite);">Gestión Comercial</h3>
-          <p class="text-lg mb-4" style="color: #6b7280;">
-            CRM vivo que acompaña cada oportunidad desde el primer contacto hasta el cierre.
-          </p>
-          <ul class="space-y-2 text-sm" style="color: #6b7280;">
-            <li>✓ Seguimiento automatizado 24/7</li>
-            <li>✓ Dashboard gerencial en tiempo real</li>
-            <li>✓ Recordatorios y tareas inteligentes</li>
-          </ul>
+        <div class="solution-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Gestión CRM" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-br from-green-400/80 to-emerald-600/80"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="text-6xl mb-2">📊</div>
+              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Gestión CRM</h3>
+            </div>
+          </div>
+          <div class="p-6 text-center">
+            <p class="text-sm" style="color: #6b7280;">
+              CRM vivo que acompaña cada oportunidad. Seguimiento 24/7 y dashboard en tiempo real.
+            </p>
+          </div>
         </div>
 
         <!-- Módulo 3: Cierre y Documentación -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4" style="color: var(--color-blue-electric);">✅</div>
-          <h3 class="text-2xl font-bold mb-4" style="color: var(--color-graphite);">Cierre y Documentos</h3>
-          <p class="text-lg mb-4" style="color: #6b7280;">
-            Acelera el cierre con firma digital, validaciones y gestión documental integrada.
-          </p>
-          <ul class="space-y-2 text-sm" style="color: #6b7280;">
-            <li>✓ Firma electrónica y Clave Única</li>
-            <li>✓ Carpeta digital por cliente</li>
-            <li>✓ Flujos de aprobación automatizados</li>
-          </ul>
+        <div class="solution-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop" alt="Cierre y documentos" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-400/80 to-indigo-600/80"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="text-6xl mb-2">✅</div>
+              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Cierre</h3>
+            </div>
+          </div>
+          <div class="p-6 text-center">
+            <p class="text-sm" style="color: #6b7280;">
+              Firma digital, validaciones y gestión documental. Flujos de aprobación automatizados.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Zellfy en Acción -->
-  <section class="py-20 px-6">
+  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-16" style="color: var(--color-graphite);">
-        Zellfy en Acción
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
-          <div class="text-5xl mb-4">🏢</div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--color-graphite);">Inmobiliario</h3>
-          <p style="color: #6b7280;">Desde el anuncio hasta la escritura. Gestión completa de propiedad y cliente.</p>
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4" style="color: var(--color-graphite);">
+          Zellfy en Acción
+        </h2>
+        <p class="text-lg max-w-2xl mx-auto" style="color: #6b7280;">Soluciones adaptadas a cada industria</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="industry-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="Inmobiliario" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="text-5xl mb-3">🏢</div>
+              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">Inmobiliario</h3>
+            </div>
+          </div>
+          <div class="p-5 text-center">
+            <p class="text-sm" style="color: #6b7280;">Desde el anuncio hasta la escritura. Gestión completa de propiedad y cliente.</p>
+          </div>
         </div>
-        <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
-          <div class="text-5xl mb-4">🚗</div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--color-graphite);">Automotriz</h3>
-          <p style="color: #6b7280;">Test drives, cotizaciones y financiamiento integrado con bancos.</p>
+        <div class="industry-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop" alt="Automotriz" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="text-5xl mb-3">🚗</div>
+              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">Automotriz</h3>
+            </div>
+          </div>
+          <div class="p-5 text-center">
+            <p class="text-sm" style="color: #6b7280;">Test drives, cotizaciones y financiamiento integrado con bancos.</p>
+          </div>
         </div>
-        <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
-          <div class="text-5xl mb-4">💳</div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--color-graphite);">Créditos</h3>
-          <p style="color: #6b7280;">Evaluación crediticia, aprobaciones y seguimiento automatizado.</p>
+        <div class="industry-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop" alt="Créditos" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="text-5xl mb-3">💳</div>
+              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">Créditos</h3>
+            </div>
+          </div>
+          <div class="p-5 text-center">
+            <p class="text-sm" style="color: #6b7280;">Evaluación crediticia, aprobaciones y seguimiento automatizado.</p>
+          </div>
         </div>
-        <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
-          <div class="text-5xl mb-4">🛒</div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--color-graphite);">E-commerce</h3>
-          <p style="color: #6b7280;">Recuperación de carritos y seguimiento post-venta.</p>
+        <div class="industry-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop" alt="E-commerce" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="text-5xl mb-3">🛍️</div>
+              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">E-commerce</h3>
+            </div>
+          </div>
+          <div class="p-5 text-center">
+            <p class="text-sm" style="color: #6b7280;">Recuperación de carritos y seguimiento post-venta.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Módulo Adicional: ZellFlow -->
-  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
+  <section class="py-20 px-6">
     <div class="container mx-auto max-w-5xl">
       <div class="bg-white p-12 rounded-3xl shadow-xl">
         <div class="text-center mb-8">
@@ -171,10 +217,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Frase Inspiradora -->
-  <section class="py-20 px-6">
+  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
     <div class="container mx-auto text-center">
-      <blockquote class="text-3xl font-bold italic max-w-4xl mx-auto" style="color: var(--color-violet);">
-        "Zellfy.ai no es solo software. Es una célula viva que impulsa, conecta y da visibilidad total al proceso de venta. Donde antes había lentitud, ahora hay flujo. Donde antes había fricción, ahora hay crecimiento."
+      <blockquote class="text-2xl md:text-3xl font-bold italic max-w-4xl mx-auto" style="color: var(--color-violet);">
+        "Zellfy.ai no es solo software. Es una célula viva que impulsa, conecta y da visibilidad total al proceso de venta."
       </blockquote>
     </div>
   </section>
@@ -196,3 +242,302 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 50%, #d4f4ec 100%);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+  }
+
+  .hero-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .hero-circles::before,
+  .hero-circles::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 196, 140, 0.15), transparent 70%);
+  }
+
+  .hero-circles::before {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -100px;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .hero-circles::after {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+    animation: float 10s ease-in-out infinite reverse;
+  }
+
+  /* Animaciones Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Hero Section con gradiente animado */
+  section.bg-gradient-to-br {
+    background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 50%, #d4f4ec 100%);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.bg-gradient-to-br::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 60%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(0, 196, 140, 0.15) 0%, transparent 60%);
+    animation: float 8s ease-in-out infinite;
+  }
+
+  section h1, section h2 {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  section p {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  /* Todas las Cards - Comportamiento unificado */
+  .solution-card,
+  .industry-card {
+    transition: all 0.3s ease;
+  }
+
+  .solution-card:hover,
+  .industry-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .solution-card .text-6xl,
+  .solution-card .text-5xl,
+  .industry-card .text-5xl {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+  }
+
+  .solution-card:hover .text-6xl,
+  .solution-card:hover .text-5xl,
+  .industry-card:hover .text-5xl {
+    transform: scale(1.1);
+  }
+
+
+  /* Feature Lists */
+  .feature-list li {
+    transition: all 0.3s ease;
+  }
+
+  .feature-list li:hover {
+    transform: translateX(5px);
+    color: var(--color-blue-electric) !important;
+  }
+
+  .feature-list .checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00C48C, #00A86B);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-list li:hover .checkmark {
+    transform: scale(1.1) rotate(15deg);
+  }
+
+  /* Iconos con animación flotante */
+  .text-5xl, .text-6xl {
+    display: inline-block;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+  }
+
+  /* Botones con efectos brillantes */
+  a[class*="inline-block"] {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  a[class*="inline-block"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+  }
+
+  a[class*="inline-block"]:hover::before {
+    left: 100%;
+  }
+
+  a[class*="inline-block"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 196, 140, 0.4) !important;
+  }
+
+  /* Sección de fondo alternativo */
+  section[style*="background-color: var(--color-white-smoke)"] {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
+  }
+
+  /* Animación de entrada para grid items */
+  .grid > div {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .grid > div:nth-child(1) { animation-delay: 0.1s; }
+  .grid > div:nth-child(2) { animation-delay: 0.2s; }
+  .grid > div:nth-child(3) { animation-delay: 0.3s; }
+  .grid > div:nth-child(4) { animation-delay: 0.4s; }
+
+  /* ZellFlow card */
+  section .bg-white.p-12 {
+    overflow: visible;
+    transition: all 0.3s ease;
+  }
+
+  section .bg-white.p-12:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Frase inspiradora con efecto especial */
+  blockquote {
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  blockquote::before {
+    content: '"';
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    font-size: 120px;
+    opacity: 0.1;
+    font-family: Georgia, serif;
+    color: var(--color-violet);
+  }
+
+  /* CTA final con gradiente animado */
+  section.bg-gradient-to-r {
+    background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%);
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.bg-gradient-to-r::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    animation: float 12s ease-in-out infinite;
+  }
+
+  section.bg-gradient-to-r h2,
+  section.bg-gradient-to-r a {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Listas simples */
+  ul.space-y-3 li {
+    transition: transform 0.3s ease;
+  }
+
+  ul.space-y-3 li:hover {
+    transform: translateX(5px);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .module-card:hover,
+    .industry-card:hover {
+      transform: translateY(-6px) scale(1.01);
+    }
+
+    .hero-section {
+      py: 20;
+    }
+  }
+</style>

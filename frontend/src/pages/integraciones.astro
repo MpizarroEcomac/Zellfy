@@ -2,163 +2,123 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Integraciones - Zellfy" description="Conecta Zellfy con tus herramientas favoritas: Google Ads, Meta, CRMs, WhatsApp, APIs bancarias y más.">
-  <!-- Hero -->
-  <section class="bg-gradient-to-br from-blue-50 to-white py-20 px-6">
+<BaseLayout title="Integraciones - Zellfy" description="Conecta Zellfy con tus herramientas favoritas">
+  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
     <div class="container mx-auto text-center">
       <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
         Integraciones que potencian tu negocio
       </h1>
-      <p class="text-xl max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Conecta Zellfy con las herramientas que ya usas: CRMs, bancos, plataformas publicitarias, email marketing y más.
+      <p class="text-2xl max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
+        Conecta Zellfy con las herramientas que ya usas
       </p>
     </div>
   </section>
 
-  <!-- Grid de Integraciones -->
-  <section class="py-20 px-6">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-16" style="color: var(--color-graphite);">
-        Red completa de conexiones
-      </h2>
+  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--color-graphite);">Red completa de conexiones</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Publicidad Digital -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4">📢</div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-blue-electric);">Publicidad Digital</h3>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">📢</div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Publicidad Digital</h3>
           <ul class="space-y-2 text-gray-600">
-            <li>✓ Google Ads</li>
-            <li>✓ Meta Business (Facebook/Instagram)</li>
-            <li>✓ TikTok Ads</li>
-            <li>✓ LinkedIn Ads</li>
+            <li>Google Ads</li>
+            <li>Meta Business</li>
+            <li>TikTok Ads</li>
+            <li>LinkedIn Ads</li>
           </ul>
         </div>
 
-        <!-- CRMs y Ventas -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4">📊</div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-green-mint);">CRMs y Ventas</h3>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">CRMs y Ventas</h3>
           <ul class="space-y-2 text-gray-600">
-            <li>✓ HubSpot</li>
-            <li>✓ Salesforce</li>
-            <li>✓ Pipedrive</li>
-            <li>✓ Zoho CRM</li>
+            <li>HubSpot</li>
+            <li>Salesforce</li>
+            <li>Pipedrive</li>
+            <li>Zoho CRM</li>
           </ul>
         </div>
 
-        <!-- Comunicación -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4">💬</div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-blue-electric);">Comunicación</h3>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Comunicacion</h3>
           <ul class="space-y-2 text-gray-600">
-            <li>✓ WhatsApp Business API</li>
-            <li>✓ Twilio</li>
-            <li>✓ SendGrid</li>
-            <li>✓ Mailchimp</li>
+            <li>WhatsApp Business API</li>
+            <li>Twilio</li>
+            <li>SendGrid</li>
+            <li>Mailchimp</li>
           </ul>
         </div>
 
-        <!-- Pagos y Finanzas -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4">💳</div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-green-mint);">Pagos y Finanzas</h3>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">💳</div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Pagos y Finanzas</h3>
           <ul class="space-y-2 text-gray-600">
-            <li>✓ Transbank (WebPay)</li>
-            <li>✓ MercadoPago</li>
-            <li>✓ Stripe</li>
-            <li>✓ APIs Bancarias</li>
+            <li>Transbank WebPay</li>
+            <li>MercadoPago</li>
+            <li>Stripe</li>
+            <li>APIs Bancarias</li>
           </ul>
         </div>
 
-        <!-- Documentación Digital -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4">📝</div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-blue-electric);">Firma Electrónica</h3>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">📝</div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Firma Electronica</h3>
           <ul class="space-y-2 text-gray-600">
-            <li>✓ FirmaVirtual</li>
-            <li>✓ DocuSign</li>
-            <li>✓ Clave Única (Chile)</li>
-            <li>✓ HelloSign</li>
+            <li>FirmaVirtual</li>
+            <li>DocuSign</li>
+            <li>Clave Unica Chile</li>
+            <li>HelloSign</li>
           </ul>
         </div>
 
-        <!-- Productividad -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4">🗂️</div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-green-mint);">Productividad</h3>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">🗂️</div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Productividad</h3>
           <ul class="space-y-2 text-gray-600">
-            <li>✓ Google Workspace</li>
-            <li>✓ Microsoft 365</li>
-            <li>✓ Google Calendar</li>
-            <li>✓ Google Sheets</li>
+            <li>Google Workspace</li>
+            <li>Microsoft 365</li>
+            <li>Google Calendar</li>
+            <li>Google Sheets</li>
           </ul>
         </div>
 
-        <!-- Análisis y BI -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4">📈</div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-blue-electric);">Análisis y BI</h3>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Analisis y BI</h3>
           <ul class="space-y-2 text-gray-600">
-            <li>✓ Google Analytics</li>
-            <li>✓ Meta Pixel</li>
-            <li>✓ Hotjar</li>
-            <li>✓ Power BI</li>
+            <li>Google Analytics</li>
+            <li>Meta Pixel</li>
+            <li>Hotjar</li>
+            <li>Power BI</li>
           </ul>
         </div>
 
-        <!-- Automatización -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="text-5xl mb-4">⚡</div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-green-mint);">Automatización</h3>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Automatizacion</h3>
           <ul class="space-y-2 text-gray-600">
-            <li>✓ Zapier</li>
-            <li>✓ Make (Integromat)</li>
-            <li>✓ Webhooks personalizados</li>
-            <li>✓ API REST propia</li>
+            <li>Zapier</li>
+            <li>Make Integromat</li>
+            <li>Webhooks personalizados</li>
+            <li>API REST propia</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sección API Personalizada -->
-  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
-    <div class="container mx-auto max-w-4xl text-center">
-      <h2 class="text-4xl font-bold mb-6" style="color: var(--color-graphite);">
-        ¿Necesitas una integración personalizada?
-      </h2>
-      <p class="text-xl mb-8" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Nuestra API REST te permite crear conexiones a medida con cualquier sistema o herramienta externa.
-      </p>
-      <div class="bg-white p-8 rounded-2xl shadow-lg">
-        <pre class="text-left text-sm overflow-x-auto"><code style="color: var(--color-graphite);">
-POST /api/v1/leads
-{
-  "nombre": "Juan Pérez",
-  "email": "juan@ejemplo.com",
-  "telefono": "+56912345678",
-  "origen": "Google Ads",
-  "interes": "Departamento 2D"
-}
-        </code></pre>
-      </div>
-      <a href="/contacto" class="inline-block mt-8 px-8 py-4 rounded-full text-white font-bold transition hover:opacity-90 shadow-lg" style="background-color: var(--color-green-mint);">
-        Solicitar Documentación API
-      </a>
-    </div>
-  </section>
-
-  <!-- CTA Final -->
-  <section class="py-20 px-6 text-center" style="background: linear-gradient(135deg, var(--color-blue-electric) 0%, var(--color-green-mint) 100%);">
+  <section class="py-20 px-6 bg-gradient-to-r from-blue-500 to-green-500 text-white text-center">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold mb-6 text-white">
+      <h2 class="text-4xl font-bold mb-6">
         Conecta todo tu ecosistema con Zellfy
       </h2>
-      <p class="text-xl mb-8 text-white opacity-95 max-w-2xl mx-auto">
-        Empieza hoy y descubre cómo nuestras integraciones pueden potenciar tu operación.
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Empieza hoy y descubre como nuestras integraciones pueden potenciar tu operacion
       </p>
-      <a href="/contacto" class="inline-block px-10 py-5 bg-white font-bold text-lg rounded-full hover:bg-gray-100 transition shadow-lg" style="color: var(--color-blue-electric);">
+      <a href="/contacto" class="inline-block px-8 py-4 bg-white font-bold rounded-full hover:bg-gray-100 transition" style="color: var(--color-blue-electric);">
         Solicitar Demo
       </a>
     </div>

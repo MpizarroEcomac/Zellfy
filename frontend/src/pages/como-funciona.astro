@@ -1,65 +1,537 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import TimelineStep from '../components/TimelineStep.vue';
-
-const steps = [
-  { number: 1, title: 'Publicidad y Atracción', description: 'Lanza campañas digitales segmentadas en Google, Meta, TikTok y LinkedIn. Zellfy captura automáticamente cada interacción.', color: '#00BFFF', icon: '📢' },
-  { number: 2, title: 'Captura del Lead', description: 'Formularios inteligentes y detección automática. Cada lead ingresa al CRM con fuente, campaña e interés identificado.', color: '#00C48C', icon: '🎯' },
-  { number: 3, title: 'Atención Inicial', description: 'Respuesta instantánea vía WhatsApp, SMS o email. Mensajería automatizada con IA o agente humano según necesidad.', color: '#00BFFF', icon: '💬' },
-  { number: 4, title: 'Oferta y Educación', description: 'Información guiada del producto o servicio. Catálogos digitales, videos y contenido personalizado según perfil.', color: '#00C48C', icon: '📚' },
-  { number: 5, title: 'Seguimiento', description: 'Recontacto automatizado, calendarización de reuniones y remarketing inteligente. Sin perder ningún cliente potencial.', color: '#00BFFF', icon: '🔄' },
-  { number: 6, title: 'Cierre / Compra', description: 'Acompañamiento durante la decisión. Propuestas digitales, cotizaciones y aprobaciones en tiempo real.', color: '#00C48C', icon: '✅' },
-  { number: 7, title: 'Gestión Documental', description: 'Carpeta digital, revisión de antecedentes, créditos, escrituras. Firma electrónica y Clave Única integrada.', color: '#00BFFF', icon: '📄' },
-  { number: 8, title: 'Entrega y Postventa', description: 'Seguimiento post compra, encuestas de satisfacción, upselling y fidelización. El ciclo se cierra y comienza de nuevo.', color: '#00C48C', icon: '🎁' }
-];
 ---
 
-<BaseLayout title="Cómo Funciona - Zellfy" description="Descubre el flujo completo de Zellfy en 8 etapas que transforman tu proceso de ventas.">
-  <!-- Hero -->
-  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
-        Cómo Funciona Zellfy
-      </h1>
-      <p class="text-2xl max-w-4xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Del anuncio al cierre. Del cierre al financiamiento. <strong>Todo fluye.</strong>
-      </p>
-    </div>
-  </section>
-
-  <!-- Timeline de 8 etapas -->
-  <section class="py-20 px-6">
-    <div class="container mx-auto max-w-5xl">
-      <h2 class="text-4xl font-bold text-center mb-6" style="color: var(--color-graphite);">
-        El Flujo Real de una Venta
-      </h2>
-      <p class="text-xl text-center mb-16 max-w-3xl mx-auto" style="color: #6b7280; font-family: var(--font-secondary);">
-        En Zellfy, cada cliente tiene su propio flujo. Tú solo observas cómo avanza.
-      </p>
-      
-      <div class="space-y-12">
-        {steps.map(step => (
-          <TimelineStep
-            client:visible
-            number={step.number}
-            title={step.title}
-            description={step.description}
-            color={step.color}
-          />
-        ))}
+<BaseLayout title="Cómo Funciona - Zellfy" description="Descubre el flujo completo de Zellfy que transforma tu proceso de ventas.">
+  
+  <!-- Hero Visual -->
+  <section class="hero-how">
+    <div class="container">
+      <div class="hero-content-center">
+        <span class="badge-how">✨ Tu proceso automatizado</span>
+        <h1>De Lead a Cliente en Piloto Automático</h1>
+        <p class="hero-subtitle">Zellfy conecta cada punto del proceso de ventas. Tú solo observas cómo fluyen los resultados.</p>
+      </div>
+      <div class="flow-visual">
+        <div class="flow-step">
+          <div class="flow-icon" style="background: linear-gradient(135deg, #00BFFF, #0099CC);">📢</div>
+          <span>Anuncio</span>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon" style="background: linear-gradient(135deg, #00C48C, #00a076);">🎯</div>
+          <span>Lead</span>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon" style="background: linear-gradient(135deg, #00BFFF, #0099CC);">💬</div>
+          <span>Contacto</span>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon" style="background: linear-gradient(135deg, #00C48C, #00a076);">✅</div>
+          <span>Cierre</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Aplicaciones por Rubro -->
-  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 to-violet-50">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--color-violet);">
-        Casos de Aplicación
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h4 class="font-bold text-xl mb-3" style="color: var(--color-blue-electric);">🏢 Inmobiliario</h4>
+  <!-- Comparación Antes/Después -->
+  <section class="comparison-section">
+    <div class="container">
+      <h2 class="section-title-center">Sin Zellfy vs Con Zellfy</h2>
+      <div class="comparison-grid">
+        <div class="comparison-card before">
+          <div class="comparison-header">
+            <span class="comparison-icon">❌</span>
+            <h3>Proceso Manual</h3>
+          </div>
+          <ul class="comparison-list">
+            <li>⚠️ Leads se pierden entre planillas</li>
+            <li>⚠️ Respuestas lentas (horas o días)</li>
+            <li>⚠️ Seguimiento inconsistente</li>
+            <li>⚠️ Sin visibilidad del pipeline</li>
+            <li>⚠️ Documentos en emails y carpetas</li>
+            <li>⚠️ Equipo sobrecargado</li>
+          </ul>
+        </div>
+        <div class="comparison-card after">
+          <div class="comparison-header">
+            <span class="comparison-icon">✅</span>
+            <h3>Con Zellfy</h3>
+          </div>
+          <ul class="comparison-list">
+            <li>✓ Cada lead capturado automáticamente</li>
+            <li>✓ Respuesta instantánea 24/7</li>
+            <li>✓ Seguimiento automatizado e inteligente</li>
+            <li>✓ Dashboard en tiempo real</li>
+            <li>✓ Carpeta digital centralizada</li>
+            <li>✓ Equipo enfocado en cerrar ventas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flujo Visual Detallado -->
+  <section class="detailed-flow">
+    <div class="container">
+      <h2 class="section-title-center">El Flujo Completo, Paso a Paso</h2>
+      <p class="section-subtitle">Cada etapa automatizada, cada detalle cubierto</p>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon-big">📢</div>
+          <h3>Publicidad & Atracción</h3>
+          <p>Conecta Google Ads, Meta, TikTok y LinkedIn. Zellfy captura cada clic automáticamente.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon-big">🎯</div>
+          <h3>Captura Inteligente</h3>
+          <p>Formularios que detectan fuente, campaña e interés. Ingreso instantáneo al CRM.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon-big">💬</div>
+          <h3>Respuesta Automática</h3>
+          <p>WhatsApp, SMS o email. Respuesta inmediata con IA o agente humano.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon-big">📚</div>
+          <h3>Educación & Oferta</h3>
+          <p>Catálogos digitales, videos y contenido personalizado según perfil del lead.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <div class="step-icon-big">🔄</div>
+          <h3>Seguimiento 24/7</h3>
+          <p>Recontacto automatizado, recordatorios y remarketing inteligente.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <div class="step-icon-big">✅</div>
+          <h3>Cierre de Venta</h3>
+          <p>Propuestas digitales, cotizaciones y aprobaciones en tiempo real.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">7</div>
+          <div class="step-icon-big">📄</div>
+          <h3>Gestión Documental</h3>
+          <p>Carpeta digital, firma electrónica y Clave Única integrada.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">8</div>
+          <div class="step-icon-big">🎁</div>
+          <h3>Postventa & Fidelización</h3>
+          <p>Encuestas, upselling y remarketing. El ciclo comienza de nuevo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos de Uso con Imágenes -->
+  <section class="use-cases">
+    <div class="container">
+      <h2 class="section-title-center">Funciona en Cualquier Industria</h2>
+      <div class="use-cases-grid">
+        <div class="use-case-card">
+          <div class="use-case-icon">🏢</div>
+          <h4>Inmobiliario</h4>
+          <p>Captura leads de portales, automatiza visitas y gestiona documentación de propiedades.</p>
+          <div class="use-case-tag">+45% conversiones</div>
+        </div>
+        <div class="use-case-card">
+          <div class="use-case-icon">🚗</div>
+          <h4>Automotriz</h4>
+          <p>Gestiona test drives, cotizaciones y financiamiento integrado con bancos.</p>
+          <div class="use-case-tag">-60% tiempo cierre</div>
+        </div>
+        <div class="use-case-card">
+          <div class="use-case-icon">💳</div>
+          <h4>Financiero</h4>
+          <p>Evalúa clientes, automatiza evaluaciones crediticias y aprobaciones en minutos.</p>
+          <div class="use-case-tag">80% automatización</div>
+        </div>
+        <div class="use-case-card">
+          <div class="use-case-icon">🛒</div>
+          <h4>E-commerce</h4>
+          <p>Recupera carritos abandonados, segmenta clientes y optimiza conversión.</p>
+          <div class="use-case-tag">+35% recuperación</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-how">
+    <div class="container text-center">
+      <h2>Ve Zellfy en Acción</h2>
+      <p class="cta-subtitle">Agenda una demo de 15 minutos y descubre cómo automatizar tu proceso completo</p>
+      <a href="/contacto" class="btn btn-primary-big">Solicitar Demo Gratis</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero How Section */
+  .hero-how {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 6rem 1.5rem 4rem;
+    text-align: center;
+  }
+
+  .hero-content-center {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+  }
+
+  .badge-how {
+    display: inline-block;
+    background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%);
+    color: #00C48C;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 196, 140, 0.2);
+  }
+
+  .hero-how h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #212529;
+    font-weight: 700;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .flow-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .flow-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .flow-step span {
+    font-weight: 600;
+    color: #212529;
+    font-size: 0.95rem;
+  }
+
+  .flow-arrow {
+    font-size: 2rem;
+    color: #00BFFF;
+    font-weight: bold;
+  }
+
+  /* Comparison Section */
+  .comparison-section {
+    padding: 6rem 1.5rem;
+    background: white;
+  }
+
+  .section-title-center {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #212529;
+    font-weight: 700;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #64748b;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .comparison-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e2e8f0;
+  }
+
+  .comparison-card.after {
+    border-color: #00C48C;
+    box-shadow: 0 10px 40px rgba(0, 196, 140, 0.2);
+  }
+
+  .comparison-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .comparison-icon {
+    font-size: 2.5rem;
+  }
+
+  .comparison-header h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #212529;
+  }
+
+  .comparison-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .comparison-list li {
+    padding: 1rem 0;
+    font-size: 1.05rem;
+    color: #475569;
+    border-bottom: 1px solid #f1f5f9;
+    line-height: 1.6;
+  }
+
+  .comparison-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* Detailed Flow */
+  .detailed-flow {
+    padding: 6rem 1.5rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .step-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .step-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #00BFFF, #00C48C);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  .step-icon-big {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .step-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #212529;
+    font-weight: 600;
+  }
+
+  .step-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* Use Cases */
+  .use-cases {
+    padding: 6rem 1.5rem;
+    background: white;
+  }
+
+  .use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .use-case-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+
+  .use-case-card:hover {
+    border-color: #00BFFF;
+    transform: translateY(-5px);
+  }
+
+  .use-case-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .use-case-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #212529;
+  }
+
+  .use-case-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .use-case-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #00C48C, #00a076);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  /* CTA How */
+  .cta-how {
+    background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%);
+    padding: 6rem 1.5rem;
+    color: white;
+  }
+
+  .cta-how h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .cta-how .cta-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+  }
+
+  .btn-primary-big {
+    display: inline-block;
+    padding: 1.25rem 3rem;
+    background: white;
+    color: #00BFFF;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary-big:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .comparison-grid,
+    .steps-grid,
+    .use-cases-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-visual {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .flow-arrow {
+      transform: rotate(90deg);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-how h1 {
+      font-size: 2rem;
+    }
+
+    .comparison-grid,
+    .steps-grid,
+    .use-cases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-how h2 {
+      font-size: 2rem;
+    }
+  }
+</style
           <p class="text-gray-600">Captura leads de portales, automatiza visitas y gestiona documentación de propiedades.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-md">

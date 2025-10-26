@@ -2,130 +2,817 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Zellfy - Automatiza, acompaña y acelera tus ventas">
-  <!-- Hero Principal -->
-  <section class="relative bg-gradient-to-br from-blue-50 via-white to-green-50 py-32 px-6 overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-20 left-10 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-      <div class="absolute top-40 right-20 w-64 h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute bottom-20 left-1/2 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
-    
-    <div class="container mx-auto text-center relative z-10">
-      <h1 class="text-6xl md:text-7xl font-bold mb-6" style="color: var(--color-graphite); font-family: var(--font-primary);">
-        Zellfy automatiza, acompaña y acelera tus ventas.
-      </h1>
-      <p class="text-2xl mb-8 max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Conecta leads, gestiona oportunidades y cierra negocios sin fricción.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contacto" class="inline-block px-10 py-5 rounded-full text-white font-bold text-xl transition hover:opacity-90 shadow-xl" style="background-color: var(--color-green-mint);">
-          💚 Empieza a Fluir
-        </a>
-        <a href="/como-funciona" class="inline-block px-10 py-5 rounded-full font-bold text-xl transition border-2 hover:bg-blue-50" style="border-color: var(--color-blue-electric); color: var(--color-blue-electric);">
-          Ver cómo funciona
-        </a>
+<BaseLayout title="Zellfy - Transforma tu proceso de ventas">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-split">
+        <div class="hero-content">
+          <span class="badge">✨ Plataforma Todo-en-Uno</span>
+          <h1>Transforma tu proceso de ventas en flujo continuo</h1>
+          <p class="hero-text">Conecta leads, automatiza seguimiento y cierra más ventas con la plataforma CRM diseñada para equipos modernos.</p>
+          <div class="hero-buttons">
+            <a href="/contacto" class="btn btn-primary">Prueba Gratis →</a>
+            <a href="/como-funciona" class="btn btn-secondary">Ver Demo</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Empresas confían</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">40%</div>
+              <div class="stat-label">Más conversiones</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Automatización activa</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/dashboard-analytics.jpg" alt="Dashboard de análisis de ventas" class="main-hero-img" />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Lo que hacemos -->
-  <section class="py-24 px-6" style="background-color: var(--color-white-smoke);">
-    <div class="container mx-auto">
-      <h2 class="text-5xl font-bold text-center mb-6" style="color: var(--color-graphite);">
-        Lo que hacemos
-      </h2>
-      <p class="text-xl text-center mb-16 max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Zellfy no reemplaza a tu equipo. Lo potencia.
-      </p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <!-- Conecta -->
-        <div class="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-          <div class="text-6xl mb-6" style="color: var(--color-blue-electric);">🔗</div>
-          <h3 class="text-3xl font-bold mb-4" style="color: var(--color-graphite);">Conecta</h3>
-          <p class="text-lg mb-6" style="color: #6b7280;">
-            Atrae leads desde publicidad y redes, todo en un solo lugar.
-          </p>
-          <a href="/soluciones" class="inline-flex items-center font-semibold transition" style="color: var(--color-blue-electric);">
-            Conocer más 
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Gestiona -->
-        <div class="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-          <div class="text-6xl mb-6" style="color: var(--color-green-mint);">⚙️</div>
-          <h3 class="text-3xl font-bold mb-4" style="color: var(--color-graphite);">Gestiona</h3>
-          <p class="text-lg mb-6" style="color: #6b7280;">
-            Automatiza respuestas, seguimiento y documentación.
-          </p>
-          <a href="/como-funciona" class="inline-flex items-center font-semibold transition" style="color: var(--color-green-mint);">
-            Ver cómo funciona
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Cierra -->
-        <div class="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-          <div class="text-6xl mb-6" style="color: var(--color-blue-electric);">✅</div>
-          <h3 class="text-3xl font-bold mb-4" style="color: var(--color-graphite);">Cierra</h3>
-          <p class="text-lg mb-6" style="color: #6b7280;">
-            Reduce tiempos y aumenta conversiones con IA + flujo humano.
-          </p>
-          <a href="/casos" class="inline-flex items-center font-semibold transition" style="color: var(--color-blue-electric);">
-            Ver casos de éxito
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-        </div>
+  <!-- Características -->
+  <section class="features">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Todo lo que necesitas para vender más</h2>
+        <p>Una plataforma completa que se adapta a tu forma de trabajar</p>
       </div>
       
-      <p class="text-center text-xl mt-16 italic" style="color: var(--color-graphite);">
-        "Zellfy no reemplaza a tu equipo. Lo potencia."
-      </p>
-    </div>
-  </section>
+      <div class="grid grid-cols-3">
+        <div class="card">
+          <img src="/business-chart.jpg" alt="Captación automática" class="card-image" />
+          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
+            <span>⚡</span>
+          </div>
+          <h3>Captación Automática</h3>
+          <p>Conecta con Google Ads, Meta y WhatsApp. Todos tus leads en un solo lugar.</p>
+        </div>
 
-  <!-- CTA Final -->
-  <section class="py-24 px-6 text-center" style="background: linear-gradient(135deg, var(--color-blue-electric) 0%, var(--color-green-mint) 100%);">
-    <div class="container mx-auto">
-      <h2 class="text-5xl font-bold mb-8 text-white">
-        ¿Listo para transformar tus ventas?
-      </h2>
-      <p class="text-2xl mb-12 max-w-3xl mx-auto text-white opacity-95">
-        Empieza hoy mismo y descubre cómo Zellfy puede llevar tu negocio al siguiente nivel.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="/contacto" class="inline-block px-10 py-5 bg-white font-bold text-lg rounded-full hover:bg-gray-100 transition shadow-lg" style="color: var(--color-blue-electric);">
-          Solicitar Demo
-        </a>
-        <a href="/pricing" class="inline-block px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white transition" style="hover:color: var(--color-blue-electric);">
-          Ver Precios
-        </a>
+        <div class="card">
+          <img src="/crm-dashboard.jpg" alt="CRM Inteligente" class="card-image" />
+          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
+            <span>📊</span>
+          </div>
+          <h3>CRM Inteligente</h3>
+          <p>Seguimiento 24/7, recordatorios automáticos y priorización con IA.</p>
+        </div>
+
+        <div class="card">
+          <img src="/social-apps.jpg" alt="Respuesta instantánea" class="card-image" />
+          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
+            <span>💬</span>
+          </div>
+          <h3>Respuesta Instantánea</h3>
+          <p>Mensajería automatizada vía WhatsApp, email y SMS.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop" alt="Cierre rápido" class="card-image" />
+          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
+            <span>✅</span>
+          </div>
+          <h3>Cierre Rápido</h3>
+          <p>Firma electrónica, cotizaciones digitales y validaciones en tiempo real.</p>
+        </div>
+
+        <div class="card">
+          <img src="/automation-workflow.jpg" alt="Dashboard en vivo" class="card-image" />
+          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
+            <span>📈</span>
+          </div>
+          <h3>Dashboard en Vivo</h3>
+          <p>Visibilidad total de tu pipeline. Métricas en tiempo real.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" alt="Seguridad total" class="card-image" />
+          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
+            <span>🔒</span>
+          </div>
+          <h3>Seguridad Total</h3>
+          <p>Cumplimiento normativo, encriptación y respaldo automático.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <style>
-    @keyframes blob {
-      0%, 100% { transform: translate(0px, 0px) scale(1); }
-      33% { transform: translate(30px, -50px) scale(1.1); }
-      66% { transform: translate(-20px, 20px) scale(0.9); }
-    }
-    .animate-blob {
-      animation: blob 7s infinite;
-    }
-    .animation-delay-2000 {
-      animation-delay: 2s;
-    }
-    .animation-delay-4000 {
-      animation-delay: 4s;
-    }
-  </style>
+  <!-- Nueva Sección: Automatización en Acción -->
+  <section class="automation-showcase">
+    <div class="container">
+      <div class="showcase-grid">
+        <div class="showcase-content">
+          <h2>Automatización que funciona mientras duermes</h2>
+          <p class="mb-4">Zellfy captura, califica y responde a tus leads automáticamente. Tu equipo solo se enfoca en cerrar ventas.</p>
+          <ul class="feature-list">
+            <li>✓ Respuesta inmediata a cada lead</li>
+            <li>✓ Calificación inteligente con IA</li>
+            <li>✓ Seguimiento automático multicanal</li>
+            <li>✓ Recordatorios personalizados</li>
+          </ul>
+        </div>
+        <div class="showcase-image">
+          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=700&h=500&fit=crop" alt="Automatización de procesos" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nueva Sección: Flujo de Trabajo Visual -->
+  <section class="workflow-section">
+    <div class="container">
+      <div class="showcase-grid reverse">
+        <div class="showcase-image">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700&h=500&fit=crop" alt="Equipo trabajando con procesos" />
+        </div>
+        <div class="showcase-content">
+          <h2>Visibilidad total de tu pipeline</h2>
+          <p class="mb-4">Dashboards en tiempo real que muestran cada etapa del proceso. Desde el primer contacto hasta el cierre.</p>
+          <ul class="feature-list">
+            <li>✓ Métricas actualizadas al instante</li>
+            <li>✓ Reportes automáticos personalizados</li>
+            <li>✓ Alertas de oportunidades críticas</li>
+            <li>✓ Análisis predictivo con IA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final Rediseñado -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-header">
+        <span class="cta-badge-center">✨ Demo Gratuita</span>
+        <h2 class="cta-title-big">¿Listo para automatizar tu proceso de ventas?</h2>
+        <p class="cta-description">Agenda una demo de 20 minutos y descubre cómo Zellfy puede transformar tu negocio</p>
+      </div>
+
+      <div class="form-wrapper">
+        <form class="demo-form" id="demoForm">
+          <div class="form-row">
+            <input type="text" name="nombre" placeholder="Nombre completo" required />
+            <input type="text" name="empresa" placeholder="Empresa" required />
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Email corporativo" required />
+            <input type="tel" name="telefono" placeholder="WhatsApp" required />
+          </div>
+          <div class="form-row-full">
+            <select name="objetivo" required>
+              <option value="">¿Qué quieres lograr con Zellfy?</option>
+              <option value="aumentar-ventas">Aumentar ventas</option>
+              <option value="automatizar">Automatizar seguimiento</option>
+              <option value="captar-leads">Captar más leads</option>
+              <option value="organizar-equipo">Organizar mi equipo</option>
+              <option value="integrar">Integrar herramientas</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-cta-big">
+            <span>Agendar Demo Gratis</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <p class="trust-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14z" fill="#00C48C"/><path d="M11.5 6L7 10.5 4.5 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Sin compromiso • Sin tarjeta de crédito • Setup en 5 minutos
+          </p>
+        </form>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-item">
+          <div class="trust-number">500+</div>
+          <div class="trust-label">Empresas confían</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">40%</div>
+          <div class="trust-label">Más conversiones</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">24/7</div>
+          <div class="trust-label">Soporte activo</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">14 días</div>
+          <div class="trust-label">Prueba gratis</div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Animaciones Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+    padding: 6rem 1.5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 196, 140, 0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 191, 255, 0.1) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite reverse;
+  }
+
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-image {
+    position: relative;
+  }
+
+  .main-hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+    animation: float 6s ease-in-out infinite;
+    border: 2px solid rgba(0, 191, 255, 0.2);
+  }
+
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%);
+    color: #00C48C;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.6s ease-out;
+    box-shadow: 0 4px 15px rgba(0, 196, 140, 0.2);
+    border: 1px solid rgba(0, 196, 140, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 196, 140, 0.3);
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #212529;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+    background: linear-gradient(135deg, #212529 0%, #00BFFF 50%, #00C48C 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-text {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.6s ease-out 0.6s both;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-start;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(226, 232, 240, 0.6);
+    animation: fadeInUp 0.6s ease-out 0.8s both;
+  }
+
+  .stat {
+    transition: transform 0.3s ease;
+  }
+
+  .stat:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+
+  /* Features Section */
+  .features {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    position: relative;
+  }
+
+  .card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    transition: transform 0.5s ease;
+  }
+
+  .card:hover .card-image {
+    transform: scale(1.1);
+  }
+
+  .card:nth-child(1) { animation-delay: 0.1s; }
+  .card:nth-child(2) { animation-delay: 0.2s; }
+  .card:nth-child(3) { animation-delay: 0.3s; }
+  .card:nth-child(4) { animation-delay: 0.4s; }
+  .card:nth-child(5) { animation-delay: 0.5s; }
+  .card:nth-child(6) { animation-delay: 0.6s; }
+
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00BFFF, #00C48C);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.25);
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 35px rgba(0, 191, 255, 0.35);
+  }
+
+  /* Final CTA Section */
+  .final-cta {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    padding: 6rem 1.5rem;
+    text-align: center;
+  }
+
+  .cta-header {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+
+  .cta-badge-center {
+    display: inline-block;
+    background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%);
+    color: #00C48C;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 196, 140, 0.2);
+  }
+
+  .cta-title-big {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #212529;
+    font-weight: 700;
+  }
+
+  .cta-description {
+    font-size: 1.25rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .form-wrapper {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+  }
+
+  .demo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-row-full {
+    width: 100%;
+  }
+
+  .demo-form input,
+  .demo-form select {
+    padding: 1rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+    transition: all 0.3s ease;
+    background: white;
+  }
+
+  .demo-form input:focus,
+  .demo-form select:focus {
+    outline: none;
+    border-color: #00BFFF;
+    box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.1);
+  }
+
+  .demo-form select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2364748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3e%3cpolyline points="6 9 12 15 18 9"%3e%3c/polyline%3e%3c/svg%3e');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 3rem;
+  }
+
+  .btn-cta-big {
+    background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);
+    color: white;
+    border: none;
+    padding: 1.25rem 2rem;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 196, 140, 0.3);
+    margin-top: 0.5rem;
+  }
+
+  .btn-cta-big:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 196, 140, 0.4);
+  }
+
+  .trust-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+
+  .trust-badges {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .trust-item {
+    text-align: center;
+  }
+
+  .trust-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+
+  .trust-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  /* Button Enhancements */
+  .btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary {
+    box-shadow: 0 10px 30px rgba(0, 196, 140, 0.4);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 196, 140, 0.5);
+  }
+
+  .btn-secondary {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    background: #e2e8f0;
+  }
+
+  /* Automation Showcase */
+  .automation-showcase {
+    padding: 6rem 1.5rem;
+    background: #ffffff;
+  }
+
+  .workflow-section {
+    padding: 6rem 1.5rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .showcase-grid.reverse {
+    direction: rtl;
+  }
+
+  .showcase-grid.reverse > * {
+    direction: ltr;
+  }
+
+  .showcase-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #212529;
+    line-height: 1.2;
+  }
+
+  .showcase-content p {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.7;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.75rem 0;
+    font-size: 1.125rem;
+    color: #212529;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-list li:hover {
+    transform: translateX(8px);
+    color: #00C48C;
+  }
+
+  .showcase-image {
+    position: relative;
+  }
+
+  .showcase-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 2px solid rgba(0, 191, 255, 0.1);
+  }
+
+  .showcase-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 968px) {
+    .hero-split {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .showcase-grid,
+    .showcase-grid.reverse {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      direction: ltr;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .trust-badges {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    .showcase-content h2 {
+      font-size: 1.75rem;
+    }
+
+    .cta-title-big {
+      font-size: 1.75rem;
+    }
+
+    .trust-badges {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .form-wrapper {
+      padding: 1.5rem;
+    }
+  }
+</style>
