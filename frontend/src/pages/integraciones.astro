@@ -3,124 +3,162 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Integraciones - Zellfy" description="Conecta Zellfy con tus herramientas favoritas">
-  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
+  <!-- Hero Section -->
+  <section style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 5rem 1.5rem 4rem;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <span style="display: inline-block; background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%); color: #00C48C; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(0, 196, 140, 0.2);">🔗 Conecta todo tu ecosistema</span>
+      <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: #212529; font-weight: 700;">
         Integraciones que potencian tu negocio
       </h1>
-      <p class="text-2xl max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Conecta Zellfy con las herramientas que ya usas
+      <p style="font-size: 1.25rem; color: #64748b; line-height: 1.6; max-width: 700px; margin: 0 auto;">
+        Conecta Zellfy con las plataformas que ya usas. Sincronización automática, sin código, con las mejores herramientas del mercado.
       </p>
     </div>
   </section>
 
-  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="text-4xl font-bold text-center mb-12" style="color: var(--color-graphite);">Red completa de conexiones</h2>
+  <!-- Featured Integrations by Category -->
+  <section style="padding: 5rem 1.5rem; background-color: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem; color: #212529; font-weight: 700;">
+        Red completa de conexiones
+      </h2>
+      <p style="font-size: 1.1rem; text-align: center; color: #64748b; margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Más de 50+ integraciones disponibles. Conecta con las herramientas que tu equipo ya utiliza.
+      </p>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">📢</div>
-          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Publicidad Digital</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li>Google Ads</li>
-            <li>Meta Business</li>
-            <li>TikTok Ads</li>
-            <li>LinkedIn Ads</li>
+      <!-- Integration Categories Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <!-- Publicidad Digital -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 191, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📢</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">📢 Publicidad Digital</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Google Ads</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Meta Business</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> TikTok Ads</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> LinkedIn Ads</li>
           </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">📊</div>
-          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">CRMs y Ventas</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li>HubSpot</li>
-            <li>Salesforce</li>
-            <li>Pipedrive</li>
-            <li>Zoho CRM</li>
+        <!-- CRMs y Ventas -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 196, 140, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📋</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">📋 CRMs y Ventas</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> HubSpot</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Salesforce</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Pipedrive</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Zoho CRM</li>
           </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">💬</div>
-          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Comunicacion</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li>WhatsApp Business API</li>
-            <li>Twilio</li>
-            <li>SendGrid</li>
-            <li>Mailchimp</li>
+        <!-- Comunicación -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 191, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💬</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">💬 Comunicación</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> WhatsApp Business API</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Twilio</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> SendGrid</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Mailchimp</li>
           </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">💳</div>
-          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Pagos y Finanzas</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li>Transbank WebPay</li>
-            <li>MercadoPago</li>
-            <li>Stripe</li>
-            <li>APIs Bancarias</li>
+        <!-- Pagos y Finanzas -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 196, 140, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💳</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">💳 Pagos y Finanzas</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Transbank WebPay</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> MercadoPago</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Stripe</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> APIs Bancarias</li>
           </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">📝</div>
-          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Firma Electronica</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li>FirmaVirtual</li>
-            <li>DocuSign</li>
-            <li>Clave Unica Chile</li>
-            <li>HelloSign</li>
+        <!-- Firma Electrónica -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 191, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📝</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">📝 Firma Electrónica</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> FirmaVirtual</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> DocuSign</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Clave Unica Chile</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> HelloSign</li>
           </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">🗂️</div>
-          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Productividad</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li>Google Workspace</li>
-            <li>Microsoft 365</li>
-            <li>Google Calendar</li>
-            <li>Google Sheets</li>
+        <!-- Productividad -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 196, 140, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📁</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">📁 Productividad</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Google Workspace</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Microsoft 365</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Google Calendar</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Google Sheets</li>
           </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">📈</div>
-          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Analisis y BI</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li>Google Analytics</li>
-            <li>Meta Pixel</li>
-            <li>Hotjar</li>
-            <li>Power BI</li>
+        <!-- Análisis y BI -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 191, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">📊 Análisis y BI</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Google Analytics</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Meta Pixel</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Hotjar</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Power BI</li>
           </ul>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue-electric);">Automatizacion</h3>
-          <ul class="space-y-2 text-gray-600">
-            <li>Zapier</li>
-            <li>Make Integromat</li>
-            <li>Webhooks personalizados</li>
-            <li>API REST propia</li>
+        <!-- Automatización -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 196, 140, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">⚡ Automatización</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Zapier</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Make Integromat</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Webhooks personalizados</li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> API REST propia</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-20 px-6 bg-gradient-to-r from-blue-500 to-green-500 text-white text-center">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold mb-6">
+  <!-- CTA Final -->
+  <section style="background: linear-gradient(135deg, rgba(0, 191, 255, 0.4) 0%, rgba(0, 196, 140, 0.4) 100%); background-color: #f5f6fa; padding: 5rem 1.5rem; position: relative; overflow: hidden;">
+    <!-- Animated orbs -->
+    <div style="position: absolute; top: -200px; right: -200px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 196, 140, 0.15), transparent); border-radius: 50%; animation: float 10s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -150px; left: -150px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0, 191, 255, 0.1), transparent); border-radius: 50%; animation: float 8s ease-in-out infinite reverse;"></div>
+    
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center; position: relative; z-index: 10;">
+      <h2 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937; letter-spacing: -0.5px;">
         Conecta todo tu ecosistema con Zellfy
       </h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">
-        Empieza hoy y descubre como nuestras integraciones pueden potenciar tu operacion
+      <p style="font-size: 1.2rem; color: #4b5563; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Empieza hoy y descubre cómo nuestras integraciones pueden potenciar tu operación
       </p>
-      <a href="/contacto" class="inline-block px-8 py-4 bg-white font-bold rounded-full hover:bg-gray-100 transition" style="color: var(--color-blue-electric);">
-        Solicitar Demo
-      </a>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contacto" style="display: inline-block; padding: 1.2rem 3rem; background-color: #00BFFF; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 191, 255, 0.3); font-size: 1rem;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 191, 255, 0.5)'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 191, 255, 0.3)'; this.style.transform='translateY(0) scale(1);">
+          🔗 Conectar Ahora
+        </a>
+        <a href="/como-funciona" style="display: inline-block; padding: 1.2rem 3rem; background-color: transparent; color: #00C48C; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; border: 2px solid #00C48C; transition: all 0.3s ease; font-size: 1rem;" onmouseover="this.style.backgroundColor='#00C48C'; this.style.color='white'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#00C48C'; this.style.transform='translateY(0) scale(1);">
+          📖 Ver Cómo Funciona
+        </a>
+      </div>
     </div>
   </section>
+
+  <style>
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
 </BaseLayout>
