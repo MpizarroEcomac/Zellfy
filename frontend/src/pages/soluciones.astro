@@ -15,68 +15,72 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Módulos Principales -->
-  <section class="py-20 px-6">
-    <div class="container mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4" style="color: var(--color-graphite);">
-          ¿Qué hace Zellfy por tu negocio?
-        </h2>
-        <p class="text-lg max-w-2xl mx-auto" style="color: #6b7280;">
-          Una plataforma modular que se adapta a cada industria y escala con tu crecimiento.
-        </p>
+  <!-- Módulos Principales - Layout Alternado tipo Odoo -->
+  <section style="padding: 3rem 1.5rem;">
+    <div class="container mx-auto" style="max-width: 1200px;">
+      <!-- Sección Captación -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
+        <div>
+          <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #1f2937;">
+            📡 Captación Inteligente
+          </h2>
+          <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+            Captura leads de múltiples canales automáticamente. Integra Google Ads, Meta, WhatsApp, formularios web y más. Nuestra IA califica cada prospecto en tiempo real.
+          </p>
+          <ul style="color: #4b5563; line-height: 2;">
+            <li>✓ Captura automática desde 50+ fuentes</li>
+            <li>✓ Calificación con IA en tiempo real</li>
+            <li>✓ Deduplicación inteligente</li>
+            <li>✓ Asignación automática a equipos</li>
+            <li>✓ Seguimiento de conversiones</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=500&fit=crop" alt="Captación" style="border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto;" />
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Módulo 1: Captación -->
-        <div class="solution-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-          <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Captación de leads" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-400/80 to-blue-600/80"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <div class="text-6xl mb-2">📡</div>
-              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Captación</h3>
-            </div>
-          </div>
-          <div class="p-6 text-center">
-            <p class="text-sm" style="color: #6b7280;">
-              Conecta con Google Ads, Meta, WhatsApp y formularios web. Captura automática y calificación con IA.
-            </p>
-          </div>
+      <!-- Sección CRM -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
+        <div>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=500&fit=crop" alt="CRM" style="border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto;" />
         </div>
-
-        <!-- Módulo 2: Gestión CRM -->
-        <div class="solution-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-          <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Gestión CRM" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-br from-green-400/80 to-emerald-600/80"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <div class="text-6xl mb-2">📊</div>
-              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Gestión CRM</h3>
-            </div>
-          </div>
-          <div class="p-6 text-center">
-            <p class="text-sm" style="color: #6b7280;">
-              CRM vivo que acompaña cada oportunidad. Seguimiento 24/7 y dashboard en tiempo real.
-            </p>
-          </div>
+        <div>
+          <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #1f2937;">
+            📊 Gestión CRM Integral
+          </h2>
+          <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+            Un CRM vivo que acompaña cada oportunidad desde el primer contacto. Vista kanban, seguimiento 24/7 y dashboards personalizados con métricas en tiempo real.
+          </p>
+          <ul style="color: #4b5563; line-height: 2;">
+            <li>✓ Vista kanban interactiva</li>
+            <li>✓ Historial completo de interacciones</li>
+            <li>✓ Dashboards personalizables</li>
+            <li>✓ Predicción de ingresos con IA</li>
+            <li>✓ Automatización de actividades</li>
+          </ul>
         </div>
+      </div>
 
-        <!-- Módulo 3: Cierre y Documentación -->
-        <div class="solution-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-          <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop" alt="Cierre y documentos" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-400/80 to-indigo-600/80"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <div class="text-6xl mb-2">✅</div>
-              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Cierre</h3>
-            </div>
-          </div>
-          <div class="p-6 text-center">
-            <p class="text-sm" style="color: #6b7280;">
-              Firma digital, validaciones y gestión documental. Flujos de aprobación automatizados.
-            </p>
-          </div>
+      <!-- Sección Cierre -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div>
+          <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #1f2937;">
+            ✅ Cierre Automatizado
+          </h2>
+          <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+            Cierra más rápido con firma digital, validaciones automáticas y flujos de aprobación. Gestión documental completa integrada en tu proceso de venta.
+          </p>
+          <ul style="color: #4b5563; line-height: 2;">
+            <li>✓ Firma digital certificada</li>
+            <li>✓ Generación automática de contratos</li>
+            <li>✓ Flujos de aprobación multi-nivel</li>
+            <li>✓ Validaciones en tiempo real</li>
+            <li>✓ Archivo digital seguro</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=500&fit=crop" alt="Cierre" style="border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto;" />
         </div>
       </div>
     </div>
