@@ -5,68 +5,74 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Cómo Funciona - Zellfy" description="Descubre el flujo completo de Zellfy que transforma tu proceso de ventas.">
   
   <!-- Hero Visual -->
-  <section class="hero-how">
-    <div class="container">
-      <div class="hero-content-center">
-        <span class="badge-how">✨ Tu proceso automatizado</span>
-        <h1>De Lead a Cliente en Piloto Automático</h1>
-        <p class="hero-subtitle">Zellfy conecta cada punto del proceso de ventas. Tú solo observas cómo fluyen los resultados.</p>
+  <section style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 5rem 1.5rem 4rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 900px; margin: 0 auto 4rem;">
+        <span style="display: inline-block; background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%); color: #00C48C; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(0, 196, 140, 0.2);">✨ Tu proceso automatizado</span>
+        <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: #212529; font-weight: 700;">
+          De Lead a Cliente en Piloto Automático
+        </h1>
+        <p style="font-size: 1.25rem; color: #64748b; line-height: 1.6; margin-bottom: 2rem;">
+          Zellfy conecta cada punto del proceso de ventas. Tú solo observas cómo fluyen los resultados.
+        </p>
       </div>
-      <div class="flow-visual">
-        <div class="flow-step">
-          <div class="flow-icon" style="background: linear-gradient(135deg, #00BFFF, #0099CC);">📢</div>
-          <span>Anuncio</span>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00BFFF, #0099CC); animation: float 6s ease-in-out infinite;">📢</div>
+          <span style="font-weight: 600; color: #212529; font-size: 0.95rem;">Anuncio</span>
         </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">
-          <div class="flow-icon" style="background: linear-gradient(135deg, #00C48C, #00a076);">🎯</div>
-          <span>Lead</span>
+        <div style="font-size: 2rem; color: #00BFFF; font-weight: bold;">→</div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00C48C, #00a076); animation: float 6s ease-in-out infinite 0.5s;">🎯</div>
+          <span style="font-weight: 600; color: #212529; font-size: 0.95rem;">Lead</span>
         </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">
-          <div class="flow-icon" style="background: linear-gradient(135deg, #00BFFF, #0099CC);">💬</div>
-          <span>Contacto</span>
+        <div style="font-size: 2rem; color: #00BFFF; font-weight: bold;">→</div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00BFFF, #0099CC); animation: float 6s ease-in-out infinite 1s;">💬</div>
+          <span style="font-weight: 600; color: #212529; font-size: 0.95rem;">Contacto</span>
         </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">
-          <div class="flow-icon" style="background: linear-gradient(135deg, #00C48C, #00a076);">✅</div>
-          <span>Cierre</span>
+        <div style="font-size: 2rem; color: #00BFFF; font-weight: bold;">→</div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00C48C, #00a076); animation: float 6s ease-in-out infinite 1.5s;">✅</div>
+          <span style="font-weight: 600; color: #212529; font-size: 0.95rem;">Cierre</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Comparación Antes/Después -->
-  <section class="comparison-section">
-    <div class="container">
-      <h2 class="section-title-center">Sin Zellfy vs Con Zellfy</h2>
-      <div class="comparison-grid">
-        <div class="comparison-card before">
-          <div class="comparison-header">
-            <span class="comparison-icon">❌</span>
-            <h3>Proceso Manual</h3>
+  <section style="padding: 5rem 1.5rem; background: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: #212529; font-weight: 700;">
+        Sin Zellfy vs Con Zellfy
+      </h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1100px; margin: 0 auto;">
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); border: 2px solid #fee2e2;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+            <span style="font-size: 2.5rem;">❌</span>
+            <h3 style="font-size: 1.75rem; font-weight: 700; color: #212529;">Proceso Manual</h3>
           </div>
-          <ul class="comparison-list">
-            <li>⚠️ Leads se pierden entre planillas</li>
-            <li>⚠️ Respuestas lentas (horas o días)</li>
-            <li>⚠️ Seguimiento inconsistente</li>
-            <li>⚠️ Sin visibilidad del pipeline</li>
-            <li>⚠️ Documentos en emails y carpetas</li>
-            <li>⚠️ Equipo sobrecargado</li>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Leads se pierden entre planillas</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Respuestas lentas (horas o días)</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Seguimiento inconsistente</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Sin visibilidad del pipeline</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Documentos en emails y carpetas</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; line-height: 1.6;">⚠️ Equipo sobrecargado</li>
           </ul>
         </div>
-        <div class="comparison-card after">
-          <div class="comparison-header">
-            <span class="comparison-icon">✅</span>
-            <h3>Con Zellfy</h3>
+        <div style="background: linear-gradient(135deg, rgba(0, 196, 140, 0.05) 0%, rgba(0, 191, 255, 0.05) 100%); border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 196, 140, 0.15); border: 2px solid #00C48C;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+            <span style="font-size: 2.5rem;">✅</span>
+            <h3 style="font-size: 1.75rem; font-weight: 700; color: #212529;">Con Zellfy</h3>
           </div>
-          <ul class="comparison-list">
-            <li>✓ Cada lead capturado automáticamente</li>
-            <li>✓ Respuesta instantánea 24/7</li>
-            <li>✓ Seguimiento automatizado e inteligente</li>
-            <li>✓ Dashboard en tiempo real</li>
-            <li>✓ Carpeta digital centralizada</li>
-            <li>✓ Equipo enfocado en cerrar ventas</li>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Cada lead capturado automáticamente</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Respuesta instantánea 24/7</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Seguimiento automatizado e inteligente</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Dashboard en tiempo real</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Carpeta digital centralizada</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; line-height: 1.6;">✓ Equipo enfocado en cerrar ventas</li>
           </ul>
         </div>
       </div>
@@ -173,13 +179,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- CTA Final -->
-  <section class="cta-how">
-    <div class="container text-center">
-      <h2>Ve Zellfy en Acción</h2>
-      <p class="cta-subtitle">Agenda una demo de 15 minutos y descubre cómo automatizar tu proceso completo</p>
-      <a href="/contacto" class="btn btn-primary-big">Solicitar Demo Gratis</a>
+  <section style="background: linear-gradient(135deg, rgba(0, 191, 255, 0.4) 0%, rgba(0, 196, 140, 0.4) 100%); background-color: #f5f6fa; padding: 5rem 1.5rem; position: relative; overflow: hidden;">
+    <!-- Animated orbs -->
+    <div style="position: absolute; top: -200px; right: -200px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 196, 140, 0.15), transparent); border-radius: 50%; animation: float 10s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -150px; left: -150px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0, 191, 255, 0.1), transparent); border-radius: 50%; animation: float 8s ease-in-out infinite reverse;"></div>
+    
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center; position: relative; z-index: 10;">
+      <h2 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937; letter-spacing: -0.5px;">
+        Ve Zellfy en Acción
+      </h2>
+      <p style="font-size: 1.2rem; color: #4b5563; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Agenda una demo de 15 minutos y descubre cómo automatizar tu proceso completo
+      </p>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contacto" style="display: inline-block; padding: 1.2rem 3rem; background-color: #00BFFF; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 191, 255, 0.3); font-size: 1rem;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 191, 255, 0.5)'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 191, 255, 0.3)'; this.style.transform='translateY(0) scale(1);">
+          🚀 Solicitar Demo Gratis
+        </a>
+        <a href="/casos" style="display: inline-block; padding: 1.2rem 3rem; background-color: transparent; color: #00C48C; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; border: 2px solid #00C48C; transition: all 0.3s ease; font-size: 1rem;" onmouseover="this.style.backgroundColor='#00C48C'; this.style.color='white'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#00C48C'; this.style.transform='translateY(0) scale(1);">
+          📊 Ver Casos de Éxito
+        </a>
+      </div>
     </div>
   </section>
+
+  <style>
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
 </BaseLayout>
 
 <style>
