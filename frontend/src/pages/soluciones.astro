@@ -86,66 +86,89 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Zellfy en Acción -->
-  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
-    <div class="container mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4" style="color: var(--color-graphite);">
+  <!-- Zellfy en Acción - Soluciones por Industria -->
+  <section style="padding: 3rem 1.5rem; background-color: var(--color-white-smoke);">
+    <div class="container mx-auto" style="max-width: 1200px;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937;">
           Zellfy en Acción
         </h2>
-        <p class="text-lg max-w-2xl mx-auto" style="color: #6b7280;">Soluciones adaptadas a cada industria</p>
+        <p style="font-size: 1.1rem; color: #4b5563; max-width: 600px; margin: 0 auto;">
+          Soluciones adaptadas a cada industria. Ve cómo Zellfy transforma procesos de venta en diferentes sectores.
+        </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="industry-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-          <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="Inmobiliario" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <div class="text-5xl mb-3">🏢</div>
-              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">Inmobiliario</h3>
-            </div>
-          </div>
-          <div class="p-5 text-center">
-            <p class="text-sm" style="color: #6b7280;">Desde el anuncio hasta la escritura. Gestión completa de propiedad y cliente.</p>
+
+      <!-- Inmobiliario -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+        <div>
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=500&fit=crop" alt="Inmobiliario" style="border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto;" />
+        </div>
+        <div>
+          <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #1f2937;">
+            🏢 Sector Inmobiliario
+          </h3>
+          <p style="font-size: 1rem; color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+            Desde el anuncio de la propiedad hasta la escritura. Zellfy gestiona el entire lifecycle del cliente inmobiliario.
+          </p>
+          <div style="background-color: white; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 1rem;">
+            <p style="font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Acciones clave:</p>
+            <ul style="color: #4b5563; line-height: 2;">
+              <li>✓ Captura de leads desde portales inmobiliarios y redes sociales</li>
+              <li>✓ Automatización de agendamiento de visitas y tours virtuales</li>
+              <li>✓ Cotizaciones y propuestas personalizadas de financiamiento</li>
+              <li>✓ Generación de contratos y documentación con firma digital</li>
+              <li>✓ Seguimiento post-cierre y comunicación con escrituras</li>
+            </ul>
           </div>
         </div>
-        <div class="industry-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-          <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop" alt="Automotriz" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <div class="text-5xl mb-3">🚗</div>
-              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">Automotriz</h3>
-            </div>
-          </div>
-          <div class="p-5 text-center">
-            <p class="text-sm" style="color: #6b7280;">Test drives, cotizaciones y financiamiento integrado con bancos.</p>
-          </div>
-        </div>
-        <div class="industry-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-          <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop" alt="Créditos" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <div class="text-5xl mb-3">💳</div>
-              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">Créditos</h3>
-            </div>
-          </div>
-          <div class="p-5 text-center">
-            <p class="text-sm" style="color: #6b7280;">Evaluación crediticia, aprobaciones y seguimiento automatizado.</p>
+      </div>
+
+      <!-- Automotriz -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+        <div>
+          <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #1f2937;">
+            🚗 Sector Automotriz
+          </h3>
+          <p style="font-size: 1rem; color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+            Gestiona todo el proceso de venta de vehículos, desde el interés inicial hasta la entrega y financiamiento.
+          </p>
+          <div style="background-color: white; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 1rem;">
+            <p style="font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Acciones clave:</p>
+            <ul style="color: #4b5563; line-height: 2;">
+              <li>✓ Reserva de test drives y gestión de citas</li>
+              <li>✓ Cotizaciones y comparación de modelos automática</li>
+              <li>✓ Integración con instituciones financieras para aprobación de crédito</li>
+              <li>✓ Generación de documentación de venta y transfer enciaautomática</li>
+              <li>✓ Seguimiento de servicio post-venta y recordatorio de mantenimiento</li>
+            </ul>
           </div>
         </div>
-        <div class="industry-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-          <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop" alt="E-commerce" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <div class="text-5xl mb-3">🛍️</div>
-              <h3 class="text-xl font-bold text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">E-commerce</h3>
-            </div>
-          </div>
-          <div class="p-5 text-center">
-            <p class="text-sm" style="color: #6b7280;">Recuperación de carritos y seguimiento post-venta.</p>
+        <div>
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=500&fit=crop" alt="Automotriz" style="border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto;" />
+        </div>
+      </div>
+
+      <!-- Créditos/Finanzas -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div>
+          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=500&fit=crop" alt="Créditos" style="border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto;" />
+        </div>
+        <div>
+          <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #1f2937;">
+            💳 Sector Financiero
+          </h3>
+          <p style="font-size: 1rem; color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+            Automatiza evaluación crediticia, aprobaciones y seguimiento de créditos con total seguridad y cumplimiento regulatorio.
+          </p>
+          <div style="background-color: white; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 1rem;">
+            <p style="font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Acciones clave:</p>
+            <ul style="color: #4b5563; line-height: 2;">
+              <li>✓ Captura y validación de documentación de solicitantes</li>
+              <li>✓ Evaluación crediticia automática con scoring de IA</li>
+              <li>✓ Flujos de aprobación multi-nivel con auditoría</li>
+              <li>✓ Notificación instantánea de estados y desembolsos</li>
+              <li>✓ Seguimiento de pagos y gestión de cobranza integrada</li>
+            </ul>
           </div>
         </div>
       </div>
