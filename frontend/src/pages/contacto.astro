@@ -3,45 +3,114 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ContactForm.vue';
 ---
 
-<BaseLayout title="Contacto - Zellfy" description="Déjanos tus datos. Nosotros haremos que tus ventas fluyan.">
-  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
-        Déjanos tus datos
+<BaseLayout title="Contacto - Zellfy" description="Conecta con nosotros. Estamos listos para ayudarte a hacer crecer tus ventas.">
+  <!-- Hero Section -->
+  <section style="background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%); padding: 6rem 1.5rem; color: white; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2;">
+        Hablemos de tu negocio
       </h1>
-      <p class="text-2xl mb-4 max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Nosotros haremos que tus ventas fluyan.
+      <p style="font-size: 1.2rem; margin-bottom: 1rem; opacity: 0.95; line-height: 1.8;">
+        Nosotros usamos Zellfy todos los días. Sabemos exactamente cómo puede transformar tu equipo de ventas. Conecta con nosotros de la forma que prefieras.
       </p>
-      <p class="text-lg max-w-2xl mx-auto" style="color: #6b7280;">
-        Completa el formulario y un especialista te contactará en menos de 24 horas
+      <p style="font-size: 1rem; opacity: 0.85;">
+        🚀 Respuesta en menos de 15 minutos
       </p>
     </div>
   </section>
 
-  <section class="py-20 px-6">
-    <div class="container mx-auto max-w-2xl">
+  <!-- Canales de Contacto principales -->
+  <section style="padding: 5rem 1.5rem; background: linear-gradient(135deg, #F8FAFC 0%, #E8F4FD 100%);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="font-size: 2.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">
+          Elige tu canal favorito
+        </h2>
+        <p style="font-size: 1.1rem; color: #64748b; max-width: 700px; margin: 0 auto;">
+          Los mismos canales que usamos con nuestros clientes. Porque nosotros vendemos lo que usamos.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        
+        <!-- Chat Widget -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 25px rgba(0,191,255,0.1); border: 2px solid #E0F2FE; overflow: hidden; text-align: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 40px rgba(0,191,255,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,191,255,0.1)';">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💬</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Chat en Vivo</h3>
+          <p style="color: #64748b; margin-bottom: 1.5rem; line-height: 1.6;">
+            Habla con nuestro equipo al instante. Sin esperas, sin bots. Gente real.
+          </p>
+          <button onclick="openChat()" style="background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%); color: white; border: none; padding: 0.8rem 2rem; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 0.95rem;">
+            Abrir Chat
+          </button>
+        </div>
+
+        <!-- WhatsApp -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 25px rgba(0,196,140,0.1); border: 2px solid #E8F9F5; overflow: hidden; text-align: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 40px rgba(0,196,140,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,196,140,0.1)';">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">WhatsApp</h3>
+          <p style="color: #64748b; margin-bottom: 1.5rem; line-height: 1.6;">
+            Rápido, directo, sin ruido. Envía tu pregunta y nosotros respondemos.
+          </p>
+          <a href="https://wa.me/56987654321?text=Hola%20Zellfy%2C%20quiero%20conocer%20más%20sobre%20cómo%20aumentar%20mis%20ventas" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #00C48C 0%, #00BFFF 100%); color: white; padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; cursor: pointer; font-size: 0.95rem;">
+            Enviar WhatsApp
+          </a>
+        </div>
+
+        <!-- Llamada Telefónica -->
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 25px rgba(245,87,108,0.1); border: 2px solid #FFE8DB; overflow: hidden; text-align: center; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 40px rgba(245,87,108,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(245,87,108,0.1)';">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">☎️</div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Llamada Directa</h3>
+          <p style="color: #64748b; margin-bottom: 1.5rem; line-height: 1.6;">
+            Hablemos de persona a persona. A veces es lo mejor. Llamada corta, soluciones rápidas.
+          </p>
+          <a href="tel:+56987654321" style="display: inline-block; background: linear-gradient(135deg, #F5576C 0%, #FF8C42 100%); color: white; padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; cursor: pointer; font-size: 0.95rem;">
+            Llamar Ahora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section style="padding: 5rem 1.5rem;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="font-size: 2rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">
+          O déjanos tus datos
+        </h2>
+        <p style="color: #64748b;">
+          Si prefieres que nosotros nos pongamos en contacto primero, completa este formulario.
+        </p>
+      </div>
       <ContactForm client:load />
     </div>
   </section>
 
-  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
-    <div class="container mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-8" style="color: var(--color-graphite);">También puedes contactarnos directamente</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+  <!-- Info adicional -->
+  <section style="padding: 5rem 1.5rem; background: linear-gradient(135deg, #F8FAFC 0%, #E8F4FD 100%);">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
         <div>
-          <div class="text-4xl mb-3">📧</div>
-          <p class="font-semibold">Email</p>
-          <p class="text-gray-600">contacto@zellfy.ai</p>
+          <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #00BFFF;">⚡</div>
+          <h4 style="font-size: 1.2rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Respuesta Rápida</h4>
+          <p style="color: #64748b;">
+            Respondemos en menos de 15 minutos durante horario de oficina
+          </p>
         </div>
         <div>
-          <div class="text-4xl mb-3">📱</div>
-          <p class="font-semibold">WhatsApp</p>
-          <p class="text-gray-600">+56 9 XXXX XXXX</p>
+          <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #00C48C;">🧠</div>
+          <h4 style="font-size: 1.2rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Expertos Reales</h4>
+          <p style="color: #64748b;">
+            Hablamos con especialistas que usan Zellfy todos los días
+          </p>
         </div>
         <div>
-          <div class="text-4xl mb-3">🏢</div>
-          <p class="font-semibold">Oficina</p>
-          <p class="text-gray-600">Santiago, Chile</p>
+          <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #F5576C;">🎯</div>
+          <h4 style="font-size: 1.2rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Sin Presión</h4>
+          <p style="color: #64748b;">
+            Solo queremos entender tu situación. Nada de hard sell.
+          </p>
         </div>
       </div>
     </div>
