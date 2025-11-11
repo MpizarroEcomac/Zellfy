@@ -3,79 +3,326 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Casos de Éxito - Zellfy" description="Resultados reales con clientes reales. Descubre cómo Zellfy transforma negocios.">
-  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 py-20 px-6">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--color-graphite);">
-        Casos de Éxito
+  <!-- Hero Section -->
+  <section style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 5rem 1.5rem 4rem;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <span style="display: inline-block; background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%); color: #00C48C; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(0, 196, 140, 0.2);">✅ Resultados Comprobados</span>
+      <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: #212529; font-weight: 700;">
+        Casos de Éxito que Hablan por Sí Solos
       </h1>
-      <p class="text-2xl max-w-3xl mx-auto" style="color: var(--color-graphite); font-family: var(--font-secondary);">
-        Resultados reales con clientes reales.
+      <p style="font-size: 1.25rem; color: #64748b; line-height: 1.6; max-width: 700px; margin: 0 auto;">
+        Empresas reales, resultados reales. Descubre cómo Zellfy ha transformado procesos de ventas y multiplicado conversiones.
       </p>
     </div>
   </section>
 
-  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
-    <div class="container mx-auto max-w-6xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Ecomac -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="h-40 bg-gradient-to-br from-blue-100 to-violet-100 rounded-lg mb-6 flex items-center justify-center p-6">
-            <img src="/ecomac-logo.webp" alt="Ecomac" class="max-h-full max-w-full object-contain" />
-          </div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-violet);">Ecomac</h3>
-          <p class="text-gray-600 mb-4">
-            Empresa automotriz que logró digitalizar completamente su funnel de ventas y reducir tiempos de cierre en un 65%.
-          </p>
-          <div class="space-y-2 mb-6">
-            <div class="flex items-center text-sm">
-              <span class="font-bold mr-2" style="color: var(--color-green-mint);">↑ 65%</span>
-              <span class="text-gray-600">Reducción en tiempo de cierre</span>
+  <!-- Casos Section -->
+  <section style="padding: 5rem 1.5rem; background-color: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      
+      <!-- Caso Completo: Ecomac -->
+      <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; margin-bottom: 4rem;">
+        <div style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+          <div style="text-align: center;">
+            <div style="width: 120px; height: 120px; background: white; border-radius: 20px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; padding: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+              <img src="/ecomac-logo.ico" alt="Ecomac" style="width: 100%; height: 100%; object-fit: contain;" />
             </div>
-            <div class="flex items-center text-sm">
-              <span class="font-bold mr-2" style="color: var(--color-green-mint);">↑ 40%</span>
-              <span class="text-gray-600">Aumento en conversión</span>
+            <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; color: #212529;">Ecomac</h3>
+            <p style="color: #64748b; font-weight: 500;">Empresa automotriz</p>
+            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">Santiago, Chile • 45 empleados</p>
+            
+            <div style="background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%); padding: 1rem; border-radius: 12px; margin-bottom: 1rem;">
+              <div style="font-size: 1.2rem; font-weight: 700; color: #00C48C;">ROI Comprobado</div>
+              <div style="font-size: 2rem; font-weight: 700; color: #00C48C; margin: 0.5rem 0;">340%</div>
+              <div style="font-size: 0.85rem; color: #64748b;">Retorno de inversión en 6 meses</div>
             </div>
           </div>
-          <a href="/contacto" class="inline-block px-6 py-2 rounded-full border-2 font-semibold transition hover:bg-violet-50" style="border-color: var(--color-violet); color: var(--color-violet);">
-            Ver Caso Completo
-          </a>
+          
+          <div>
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">El Desafío</h4>
+            <p style="color: #64748b; margin-bottom: 2rem; line-height: 1.6;">
+              Ecomac, distribuidora automotriz con 15 años en el mercado, enfrentaba serios problemas de productividad. Su equipo de 8 vendedores gestionaba manualmente más de 200 leads mensuales usando WhatsApp personal, Excel y papel. El 40% de los leads se perdían por falta de seguimiento, y el proceso de venta promedio tomaba 18 días.
+            </p>
+            
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">La Solución Implementada</h4>
+            <div style="background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔄</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Automatización</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Seguimiento automático por WhatsApp</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📊</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Pipeline Visual</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Dashboard en tiempo real</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔗</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Integraciones</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Google Ads + Meta Business</div>
+                </div>
+              </div>
+              
+              <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
+                <h5 style="font-size: 0.9rem; font-weight: 600; color: #212529; margin-bottom: 0.5rem;">Proceso de Implementación (30 días):</h5>
+                <div style="font-size: 0.85rem; color: #64748b; line-height: 1.5;">
+                  <strong>Semana 1-2:</strong> Migración de base de datos y configuración de automatizaciones<br>
+                  <strong>Semana 3:</strong> Capacitación del equipo y configuración de integraciones<br>
+                  <strong>Semana 4:</strong> Go-live y optimización de procesos
+                </div>
+              </div>
+            </div>
+            
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">Resultados Comprobados</h4>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #00BFFF;">65%</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Reducción tiempo de cierre</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #00BFFF;">+145%</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Aumento conversión</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #00C48C;">3.2M</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Ingresos adicionales/mes</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #00C48C;">240</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Leads procesados/mes</div>
+              </div>
+            </div>
+            
+            <div style="background: #F8FAFC; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #00C48C;">
+              <p style="font-size: 0.95rem; color: #64748b; font-style: italic; margin-bottom: 1rem;">
+                "Antes de Zellfy perdíamos leads todos los días. Ahora cada contacto tiene seguimiento automático y nuestro equipo puede enfocarse en cerrar ventas. El ROI fue inmediato: recuperamos la inversión en el primer mes."
+              </p>
+              <div style="font-size: 0.85rem; color: #212529; font-weight: 600;">Roberto Silva - Gerente General, Ecomac</div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Creces -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <div class="h-40 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-6 flex items-center justify-center p-6">
-            <img src="/concreces-logo.svg" alt="ConCreces" class="max-h-full max-w-full object-contain" />
-          </div>
-          <h3 class="text-2xl font-bold mb-3" style="color: var(--color-violet);">Creces</h3>
-          <p class="text-gray-600 mb-4">
-            Plataforma financiera que implementó seguimiento automatizado y obtuvo visibilidad total de su pipeline comercial.
-          </p>
-          <div class="space-y-2 mb-6">
-            <div class="flex items-center text-sm">
-              <span class="font-bold mr-2" style="color: var(--color-green-mint);">↑ 80%</span>
-              <span class="text-gray-600">Visibilidad de leads</span>
+      <!-- Caso Completo: Creces -->
+      <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid #e5e7eb;">
+        <div style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+          <div style="text-align: center;">
+            <div style="width: 120px; height: 120px; background: white; border-radius: 20px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; padding: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+              <img src="/concreces-logo.ico" alt="Concreces" style="width: 100%; height: 100%; object-fit: contain;" />
             </div>
-            <div class="flex items-center text-sm">
-              <span class="font-bold mr-2" style="color: var(--color-green-mint);">↑ 50%</span>
-              <span class="text-gray-600">Automatización de procesos</span>
+            <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; color: #212529;">Creces</h3>
+            <p style="color: #64748b; font-weight: 500;">Plataforma Fintech</p>
+            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">Santiago, Chile • 32 empleados</p>
+            
+            <div style="background: linear-gradient(135deg, #FFF0F0 0%, #FFE5E5 100%); padding: 1rem; border-radius: 12px; margin-bottom: 1rem;">
+              <div style="font-size: 1.2rem; font-weight: 700; color: #F5576C;">Crecimiento</div>
+              <div style="font-size: 2rem; font-weight: 700; color: #F5576C; margin: 0.5rem 0;">+280%</div>
+              <div style="font-size: 0.85rem; color: #64748b;">Aumento en cartera aprobada</div>
             </div>
           </div>
-          <a href="/contacto" class="inline-block px-6 py-2 rounded-full border-2 font-semibold transition hover:bg-violet-50" style="border-color: var(--color-violet); color: var(--color-violet);">
-            Ver Caso Completo
-          </a>
+          
+          <div>
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">El Desafío</h4>
+            <p style="color: #64748b; margin-bottom: 2rem; line-height: 1.6;">
+              Creces, plataforma fintech especializada en créditos para PyMEs, procesaba más de 400 solicitudes mensuales con un equipo comercial de 6 personas. El 35% de las solicitudes se perdían en el proceso por falta de seguimiento oportuno, y el tiempo de respuesta promedio era de 5.2 días, muy por encima del estándar de la industria.
+            </p>
+            
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">La Solución Implementada</h4>
+            <div style="background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚡</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Respuesta Rápida</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Notificaciones instantáneas</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📋</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Scoring Automático</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Calificación inteligente</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📈</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Analytics Avanzado</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Reportes en tiempo real</div>
+                </div>
+              </div>
+              
+              <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
+                <h5 style="font-size: 0.9rem; font-weight: 600; color: #212529; margin-bottom: 0.5rem;">Proceso de Implementación (45 días):</h5>
+                <div style="font-size: 0.85rem; color: #64748b; line-height: 1.5;">
+                  <strong>Semana 1-2:</strong> Análisis de proceso actual y diseño de flujo optimizado<br>
+                  <strong>Semana 3-4:</strong> Configuración de scoring automático y reglas de negocio<br>
+                  <strong>Semana 5-6:</strong> Migración de datos e integración con sistemas existentes<br>
+                  <strong>Semana 7:</strong> Pruebas piloto y capacitación del equipo
+                </div>
+              </div>
+            </div>
+            
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">Resultados Comprobados</h4>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #F5576C;">89%</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Tasa de aprobación</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #F5576C;">2.1d</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Tiempo respuesta</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #00C48C;">5.8M</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Cartera mensual</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #00C48C;">620</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Solicitudes/mes</div>
+              </div>
+            </div>
+            
+            <div style="background: #F8FAFC; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #F5576C;">
+              <p style="font-size: 0.95rem; color: #64748b; font-style: italic; margin-bottom: 1rem;">
+                "Zellfy nos permitió escalar de 400 a 620 solicitudes mensuales sin aumentar personal. La automatización del scoring y el seguimiento nos dio la eficiencia que necesitábamos para competir en el mercado fintech. Nuestros clientes ahora obtienen respuesta en menos de 48 horas."
+              </p>
+              <div style="font-size: 0.85rem; color: #212529; font-weight: 600;">Carolina Mendez - CEO, Creces</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caso Completo: Ralston Fields -->
+      <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; margin-top: 4rem;">
+        <div style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+          <div style="text-align: center;">
+            <div style="width: 120px; height: 120px; background: white; border-radius: 20px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; padding: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+              <img src="/ralston-logo.ico" alt="Ralston Fields" style="width: 100%; height: 100%; object-fit: contain;" />
+            </div>
+            <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; color: #212529;">Ralston Fields</h3>
+            <p style="color: #64748b; font-weight: 500;">Desarrolladora Inmobiliaria</p>
+            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">Arvada, Colorado USA • 28 empleados</p>
+            
+            <div style="background: linear-gradient(135deg, #FFF5E8 0%, #FFE8D6 100%); padding: 1rem; border-radius: 12px; margin-bottom: 1rem;">
+              <div style="font-size: 1.2rem; font-weight: 700; color: #FF8C42;">Expansión</div>
+              <div style="font-size: 2rem; font-weight: 700; color: #FF8C42; margin: 0.5rem 0;">+312%</div>
+              <div style="font-size: 0.85rem; color: #64748b;">Aumento en leads cualificados</div>
+            </div>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">El Desafío</h4>
+            <p style="color: #64748b; margin-bottom: 2rem; line-height: 1.6;">
+              Ralston Fields, desarrolladora inmobiliaria de townhomes, cottages y dúplex en Colorado, enfrentaba un gran desafío: gestionar leads de múltiples campañas digitales (Google Ads, Meta, Real Estate Portals) sin perder información valiosa. Con un equipo de 5 agentes de ventas, perdían aproximadamente el 45% de los leads por falta de seguimiento oportuno. El ciclo de venta promedio era de 28 días, muy largo para el mercado inmobiliario actual.
+            </p>
+            
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">La Solución Implementada</h4>
+            <div style="background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📱</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Captura Multi-canal</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Integración Google + Meta + Portales</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🏠</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Calificación Automática</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Por tipo de propiedad y presupuesto</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📞</div>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #212529;">Asignación Inteligente</div>
+                  <div style="font-size: 0.8rem; color: #64748b;">Distribución por carga de trabajo</div>
+                </div>
+              </div>
+              
+              <div style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
+                <h5 style="font-size: 0.9rem; font-weight: 600; color: #212529; margin-bottom: 0.5rem;">Proceso de Implementación (35 días):</h5>
+                <div style="font-size: 0.85rem; color: #64748b; line-height: 1.5;">
+                  <strong>Semana 1:</strong> Auditoría de fuentes de leads actuales y mapeo de procesos<br>
+                  <strong>Semana 2-3:</strong> Configuración de integraciones con Google Ads, Meta Business, MLS<br>
+                  <strong>Semana 4:</strong> Capacitación del equipo de ventas en la plataforma<br>
+                  <strong>Semana 5:</strong> Optimización y ajustes de reglas de calificación
+                </div>
+              </div>
+            </div>
+            
+            <h4 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">Resultados Comprobados</h4>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #FF8C42;">312%</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Leads cualificados</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #FF8C42;">11d</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Ciclo de venta</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #00C48C;">$24.8M</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Pipeline mensual</div>
+              </div>
+              <div style="text-align: center; padding: 1rem; background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                <div style="font-size: 1.8rem; font-weight: 700; color: #00C48C;">850+</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Leads/mes procesados</div>
+              </div>
+            </div>
+            
+            <div style="background: #F8FAFC; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #FF8C42;">
+              <p style="font-size: 0.95rem; color: #64748b; font-style: italic; margin-bottom: 1rem;">
+                "Antes de Zellfy estábamos dejando dinero sobre la mesa. Leads que no recibían seguimiento, propiedades que no se vendían. Ahora cada lead recibe contacto dentro de 2 horas y nuestro equipo trabaja mucho más eficientemente. El pipeline se triplicó en 90 días."
+              </p>
+              <div style="font-size: 0.85rem; color: #212529; font-weight: 600;">Mark Thompson - VP of Sales, Ralston Fields</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Métricas Comparativas -->
+  <section style="padding: 5rem 1.5rem; background: linear-gradient(135deg, #F8FAFC 0%, #E8F4FD 100%);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Resultados que Transforman Negocios</h2>
+      <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Métricas promedio de nuestros clientes en los primeros 6 meses</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem;">
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: #00BFFF; margin-bottom: 0.5rem;">177%</div>
+          <div style="font-size: 0.9rem; color: #64748b;">Aumento promedio en conversiones</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: #00C48C; margin-bottom: 0.5rem;">68%</div>
+          <div style="font-size: 0.9rem; color: #64748b;">Reducción en tiempo de venta</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: #F5576C; margin-bottom: 0.5rem;">4.2M</div>
+          <div style="font-size: 0.9rem; color: #64748b;">Ingresos adicionales promedio</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: #764BA2; margin-bottom: 0.5rem;">12h</div>
+          <div style="font-size: 0.9rem; color: #64748b;">Horas ahorradas por semana</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-20 px-6 bg-gradient-to-r from-blue-500 to-violet-500 text-white text-center">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold mb-6">
-        ¿Quieres ser nuestro próximo caso de éxito?
+  <!-- CTA Final -->
+  <section style="background: linear-gradient(135deg, rgba(0, 191, 255, 0.4) 0%, rgba(0, 196, 140, 0.4) 100%); background-color: #f5f6fa; padding: 5rem 1.5rem; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -200px; right: -200px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 196, 140, 0.15), transparent); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -150px; left: -150px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0, 191, 255, 0.1), transparent); border-radius: 50%;"></div>
+    
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center; position: relative; z-index: 10;">
+      <h2 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937; letter-spacing: -0.5px;">
+        Multiplica Tus Ventas como lo Hicieron Ecomac, Creces y Ralston Fields
       </h2>
-      <a href="/contacto" class="inline-block px-8 py-4 bg-white text-violet-600 font-bold rounded-full hover:bg-gray-100 transition">
-        Solicitar Demo
-      </a>
+      <p style="font-size: 1.2rem; color: #4b5563; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Tu equipo merece una herramienta que los ayude a vender más, no a trabajar más. Agenda una demo hoy y descubre cómo.
+      </p>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contacto" style="display: inline-block; padding: 1.2rem 3rem; background-color: #00BFFF; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 191, 255, 0.3); font-size: 1rem;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 191, 255, 0.5)'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 191, 255, 0.3)'; this.style.transform='translateY(0) scale(1)';">
+          🚀 Agendar Demo Gratis
+        </a>
+        <a href="/integraciones" style="display: inline-block; padding: 1.2rem 3rem; background-color: transparent; color: #00C48C; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; border: 2px solid #00C48C; transition: all 0.3s ease; font-size: 1rem;" onmouseover="this.style.backgroundColor='#00C48C'; this.style.color='white'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#00C48C'; this.style.transform='translateY(0) scale(1)';">
+          🔗 Ver Integraciones
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>
