@@ -1,102 +1,116 @@
 <template>
-  <div class="w-full">
-    <form @submit.prevent="handleSubmit" class="space-y-6">
-        <!-- Nombre completo -->
-        <div>
-          <label class="block text-sm font-semibold text-slate-700 mb-3">Nombre completo</label>
+  <div class="w-full max-w-md mx-auto">
+    <div class="bg-gradient-to-b from-blue-100/60 to-purple-100/40 rounded-3xl p-8 backdrop-blur-sm border border-white/40 shadow-2xl">
+      <form @submit.prevent="handleSubmit" class="space-y-4">
+        <!-- Nombre -->
+        <div class="relative">
+          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
           <input 
             v-model="formData.name" 
             type="text" 
-            class="w-full px-4 py-3 border-2 rounded-lg bg-white focus:outline-none transition-all font-medium text-slate-900"
-            :class="{'border-red-500 focus:border-red-500': errors.name, 'border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200': !errors.name}"
-            placeholder="Tu nombre completo" 
+            placeholder="First Name"
+            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
             @blur="validateField('name')"
           />
-          <p v-if="errors.name" class="text-red-600 text-sm mt-2 font-medium">{{ errors.name }}</p>
+          <p v-if="errors.name" class="text-red-600 text-xs mt-1 ml-4">{{ errors.name }}</p>
         </div>
-        
-        <!-- Empresa -->
-        <div>
-          <label class="block text-sm font-semibold text-slate-700 mb-3">Empresa</label>
+
+        <!-- Apellido (Empresa) -->
+        <div class="relative">
+          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"></path>
+          </svg>
           <input 
             v-model="formData.company" 
             type="text" 
-            class="w-full px-4 py-3 border-2 rounded-lg bg-white focus:outline-none transition-all font-medium text-slate-900"
-            :class="{'border-red-500 focus:border-red-500': errors.company, 'border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200': !errors.company}"
-            placeholder="Nombre de tu empresa" 
+            placeholder="Last Name"
+            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
             @blur="validateField('company')"
           />
-          <p v-if="errors.company" class="text-red-600 text-sm mt-2 font-medium">{{ errors.company }}</p>
+          <p v-if="errors.company" class="text-red-600 text-xs mt-1 ml-4">{{ errors.company }}</p>
         </div>
 
-        <!-- Email y Teléfono -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-3">Email</label>
-            <input 
-              v-model="formData.email" 
-              type="email" 
-              class="w-full px-4 py-3 border-2 rounded-lg bg-white focus:outline-none transition-all font-medium text-slate-900"
-              :class="{'border-red-500 focus:border-red-500': errors.email, 'border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200': !errors.email}"
-              placeholder="tu@email.com" 
-              @blur="validateField('email')"
-            />
-            <p v-if="errors.email" class="text-red-600 text-sm mt-2 font-medium">{{ errors.email }}</p>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-700 mb-3">Teléfono</label>
-            <input 
-              v-model="formData.phone" 
-              type="tel" 
-              class="w-full px-4 py-3 border-2 rounded-lg bg-white focus:outline-none transition-all font-medium text-slate-900"
-              :class="{'border-red-500 focus:border-red-500': errors.phone, 'border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200': !errors.phone}"
-              placeholder="+56 9 XXXX XXXX" 
-              @blur="validateField('phone')"
-            />
-            <p v-if="errors.phone" class="text-red-600 text-sm mt-2 font-medium">{{ errors.phone }}</p>
-          </div>
+        <!-- Username/Email -->
+        <div class="relative">
+          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <input 
+            v-model="formData.email" 
+            type="email" 
+            placeholder="Email"
+            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
+            @blur="validateField('email')"
+          />
+          <p v-if="errors.email" class="text-red-600 text-xs mt-1 ml-4">{{ errors.email }}</p>
         </div>
 
-        <!-- Mensaje -->
-        <div>
-          <label class="block text-sm font-semibold text-slate-700 mb-3">Mensaje</label>
-          <textarea 
+        <!-- Password (Teléfono) -->
+        <div class="relative">
+          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+          <input 
+            v-model="formData.phone" 
+            type="tel" 
+            placeholder="Password"
+            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
+            @blur="validateField('phone')"
+          />
+          <p v-if="errors.phone" class="text-red-600 text-xs mt-1 ml-4">{{ errors.phone }}</p>
+        </div>
+
+        <!-- Confirm Password (Mensaje) -->
+        <div class="relative">
+          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+          <input 
             v-model="formData.message" 
-            rows="5" 
-            class="w-full px-4 py-3 border-2 rounded-lg bg-white focus:outline-none transition-all font-medium text-slate-900 resize-none"
-            :class="{'border-red-500 focus:border-red-500': errors.message, 'border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200': !errors.message}"
-            placeholder="Cuéntanos sobre tu proyecto, necesidades y objetivos..." 
+            type="text" 
+            placeholder="Confirm Password"
+            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
             @blur="validateField('message')"
-          ></textarea>
-          <p v-if="errors.message" class="text-red-600 text-sm mt-2 font-medium">{{ errors.message }}</p>
+          />
+          <p v-if="errors.message" class="text-red-600 text-xs mt-1 ml-4">{{ errors.message }}</p>
         </div>
 
-        <!-- Botón Enviar -->
+        <!-- Checkbox -->
+        <div class="flex items-center gap-2 px-4 py-2">
+          <input type="checkbox" id="terms" class="rounded cursor-pointer" />
+          <label for="terms" class="text-sm text-gray-600 cursor-pointer">
+            I agree to the Terms of Use and Privacy Policy
+          </label>
+        </div>
+
+        <!-- Sign Up Button -->
         <button 
           type="submit" 
           :disabled="isSubmitting"
-          class="w-full px-6 py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 mt-8"
-          :class="isSubmitting ? 'opacity-60 cursor-not-allowed bg-slate-400' : 'bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5'"
+          class="w-full px-6 py-3 rounded-full text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 mt-6"
+          :class="isSubmitting ? 'opacity-60 cursor-not-allowed bg-gray-400' : 'bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 hover:shadow-lg transform hover:-translate-y-1'"
         >
-          <span v-if="isSubmitting" class="flex items-center justify-center">
-            <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-            Enviando...
-          </span>
-          <span v-else>Enviar Mensaje</span>
+          {{ isSubmitting ? 'Enviando...' : 'SIGN UP' }}
         </button>
 
-        <!-- Mensajes de éxito y error -->
-        <div v-if="successMessage" class="p-4 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-500 text-green-700 rounded-lg text-center font-semibold">
+        <!-- Sign In Link -->
+        <p class="text-center text-sm text-gray-600 mt-4">
+          Already a member? 
+          <a href="#" class="text-purple-600 font-semibold hover:underline">Sign In</a>
+        </p>
+
+        <!-- Messages -->
+        <div v-if="successMessage" class="p-3 bg-green-100 text-green-700 rounded-lg text-center text-sm font-semibold mt-4">
           ✓ {{ successMessage }}
         </div>
         
-        <div v-if="errorMessage" class="p-4 bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-500 text-red-700 rounded-lg text-center font-semibold">
+        <div v-if="errorMessage" class="p-3 bg-red-100 text-red-700 rounded-lg text-center text-sm font-semibold mt-4">
           ✕ {{ errorMessage }}
         </div>
       </form>
+    </div>
   </div>
 </template>
 
