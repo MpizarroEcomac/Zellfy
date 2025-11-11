@@ -6,71 +6,85 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- SECCIÓN 2: NUESTROS VALORES Y CULTURA (QUIÉNES SOMOS) -->
   <div id="seccion-valores">
     
-    <!-- Propósito, Visión, Misión con Historias -->
-    <section style="padding: 5rem 1.5rem;">
+    <!-- Propósito, Visión, Misión con Historias - DISEÑO MEJORADO -->
+    <section style="padding: 5rem 1.5rem; background: linear-gradient(135deg, rgba(248,250,252,0.5) 0%, rgba(232,244,253,0.5) 100%);">
       <div style="max-width: 1200px; margin: 0 auto;">
-        <h1 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: #212529;">
-          Nuestro Propósito, Visión y Misión
-        </h1>
-        <p style="font-size: 1.1rem; text-align: center; color: #64748b; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-          No son solo palabras bonitas. Son promesas que vivimos cada día.
-        </p>
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <h1 style="font-size: 3rem; font-weight: 700; color: #212529; margin-bottom: 1rem; line-height: 1.2;">
+            Quiénes Somos
+          </h1>
+          <p style="font-size: 1.1rem; color: #64748b; max-width: 600px; margin: 0 auto; line-height: 1.8;">
+            Tres promesas que vivimos cada día. No son palabras bonitas en una pared. Son decisiones reales que tomamos a cada momento.
+          </p>
+        </div>
 
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;">
           
           <!-- Propósito -->
-          <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 6px solid #00BFFF; display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start;">
-            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00BFFF 0%, #00BFFF 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; flex-shrink: 0;">
-              🎯
-            </div>
-            <div>
-              <h2 style="font-size: 1.8rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Nuestro Propósito</h2>
-              <p style="color: #64748b; margin-bottom: 1rem; line-height: 1.6; font-size: 1.05rem;">
-                Liberar tiempo de las personas para que hagan lo que realmente importa: vender, conectar, impactar.
-              </p>
-              <div style="background: #F0F9FF; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
-                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem;"><strong style="color: #00BFFF;">La Historia Real:</strong></p>
-                <p style="font-size: 0.9rem; color: #64748b;">
-                  Vimos a gerentes de ventas trabajar 14 horas respondiendo WhatsApp, actualizando Excel, persiguiendo leads. Zellfy nació para devolverles 5 horas diarias a sus vidas.
+          <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 8px 30px rgba(0,191,255,0.12); overflow: hidden; transition: all 0.3s;">
+            <div style="display: grid; grid-template-columns: 120px 1fr; gap: 3rem; align-items: start;">
+              <div style="text-align: center;">
+                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #E0F7FF 0%, #F0FBFF 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0;">
+                  ⏰
+                </div>
+              </div>
+              <div>
+                <h2 style="font-size: 2rem; font-weight: 700; color: #00BFFF; margin-bottom: 1rem;">Propósito</h2>
+                <p style="color: #212529; margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.1rem;">
+                  <strong>Liberar tiempo de las personas</strong> para que hagan lo que realmente importa: vender, conectar, impactar.
                 </p>
+                <div style="background: linear-gradient(135deg, #F0F9FF 0%, #E8F4FD 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #00BFFF;">
+                  <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;"><strong style="color: #00BFFF;">La Historia Real:</strong></p>
+                  <p style="font-size: 0.95rem; color: #212529; line-height: 1.6;">
+                    Vimos gerentes de ventas trabajar 14 horas respondiendo WhatsApp, actualizando Excel, persiguiendo leads manualmente. <strong>Eso no es vender. Es administrar.</strong> Zellfy nació para devolverles 5 horas diarias a sus vidas.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Visión -->
-          <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 6px solid #00C48C; display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start;">
-            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00C48C 0%, #00C48C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; flex-shrink: 0;">
-              🌎
-            </div>
-            <div>
-              <h2 style="font-size: 1.8rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Nuestra Visión</h2>
-              <p style="color: #64748b; margin-bottom: 1rem; line-height: 1.6; font-size: 1.05rem;">
-                Ser la plataforma de ventas que toda empresa ama usar, no porque la obliga su jefe, sino porque genera resultados reales.
-              </p>
-              <div style="background: #E8F9F5; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
-                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem;"><strong style="color: #00C48C;">La Historia Real:</strong></p>
-                <p style="font-size: 0.9rem; color: #64748b;">
-                  Imagina un equipo comercial que mira con ansia sus leads pendientes por la mañana, porque sabe exactamente cuales cerrará primero. Eso es lo que queremos para Latinoamérica.
+          <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 8px 30px rgba(0,196,140,0.12); overflow: hidden; transition: all 0.3s;">
+            <div style="display: grid; grid-template-columns: 120px 1fr; gap: 3rem; align-items: start;">
+              <div style="text-align: center;">
+                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #E8F9F5 0%, #F0FDF9 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0;">
+                  🎯
+                </div>
+              </div>
+              <div>
+                <h2 style="font-size: 2rem; font-weight: 700; color: #00C48C; margin-bottom: 1rem;">Visión</h2>
+                <p style="color: #212529; margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.1rem;">
+                  Ser la plataforma de ventas que toda empresa <strong>ama usar</strong>, no porque la obliga su jefe, sino porque <strong>genera resultados reales</strong>.
                 </p>
+                <div style="background: linear-gradient(135deg, #E8F9F5 0%, #F0FDF9 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #00C48C;">
+                  <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;"><strong style="color: #00C48C;">La Historia Real:</strong></p>
+                  <p style="font-size: 0.95rem; color: #212529; line-height: 1.6;">
+                    Imagina un equipo comercial que mira con ansia sus leads por la mañana, porque sabe exactamente cuales cerrará primero. Que compite internamente no por leads, sino por quién cierra más. <strong>Eso es lo que queremos para Latinoamérica.</strong>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Misión -->
-          <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 6px solid #F5576C; display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start;">
-            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #F5576C 0%, #F5576C 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; flex-shrink: 0;">
-              🚀
-            </div>
-            <div>
-              <h2 style="font-size: 1.8rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Nuestra Misión</h2>
-              <p style="color: #64748b; margin-bottom: 1rem; line-height: 1.6; font-size: 1.05rem;">
-                Construir una herramienta que funciona como un gerente de ventas invisible: captura leads, los prioriza, los sigue, y los cierra.
-              </p>
-              <div style="background: #FFF0F0; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
-                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem;"><strong style="color: #F5576C;">La Historia Real:</strong></p>
-                <p style="font-size: 0.9rem; color: #64748b;">
-                  Nosotros lo usamos a diario. Si Zellfy no cierra nuestras propias ventas, no puede cerrar las de nuestros clientes. Y por eso funciona.
+          <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 8px 30px rgba(245,87,108,0.12); overflow: hidden; transition: all 0.3s;">
+            <div style="display: grid; grid-template-columns: 120px 1fr; gap: 3rem; align-items: start;">
+              <div style="text-align: center;">
+                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FFF0F0 0%, #FFE8E8 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0;">
+                  ⚙️
+                </div>
+              </div>
+              <div>
+                <h2 style="font-size: 2rem; font-weight: 700; color: #F5576C; margin-bottom: 1rem;">Misión</h2>
+                <p style="color: #212529; margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.1rem;">
+                  Construir una herramienta que funciona como <strong>un gerente de ventas invisible</strong>: captura leads, los prioriza, los sigue, y los cierra.
                 </p>
+                <div style="background: linear-gradient(135deg, #FFF0F0 0%, #FFE8E8 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #F5576C;">
+                  <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0.75rem;"><strong style="color: #F5576C;">La Historia Real:</strong></p>
+                  <p style="font-size: 0.95rem; color: #212529; line-height: 1.6;">
+                    <strong>Nosotros lo usamos a diario.</strong> Si Zellfy no cierra nuestras propias ventas, no puede cerrar las de nuestros clientes. Y por eso funciona. No vendemos algo que no usamos. No predicamos desde la orilla.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -168,15 +182,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </section>
 
-    <!-- Cómo Usamos Zellfy Nosotros -->
+    <!-- Cómo Usamos Zellfy Nosotros - SECCIÓN MAS HUMANA -->
     <section style="background: linear-gradient(135deg, #F8FAFC 0%, #E8F4FD 100%); padding: 5rem 1.5rem;">
       <div style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: #212529;">
-          Cómo Usamos Zellfy Nosotros
-        </h2>
-        <p style="font-size: 1.1rem; text-align: center; color: #64748b; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-          No predicamos desde la orilla. Zellfy genera prospectos de venta para Zellfy. Aquí está nuestro proceso real:
-        </p>
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <h2 style="font-size: 2.5rem; font-weight: 700; color: #212529; margin-bottom: 1.5rem;">
+            Cómo Usamos Zellfy Nosotros
+          </h2>
+          <p style="font-size: 1.1rem; color: #64748b; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+            <strong>No predicamos desde la orilla.</strong> Zellfy genera prospectos de venta para Zellfy. Cada día procesamos nuestros propios leads, nuestros propios datos, nuestras propias conversiones. Esto es nuestro proceso real:
+          </p>
+        </div>
 
         <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid #e5e7eb;">
           <!-- Timeline del Proceso -->
@@ -250,79 +266,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </section>
 
-    <!-- Testimoniales Completos de Clientes -->
-    <section style="padding: 5rem 1.5rem;">
+    <!-- Testimoniales Completos de Clientes - MÁS HUMANO -->
+    <section style="padding: 5rem 1.5rem; background: linear-gradient(135deg, #FFFFFF 0%, #F0F9FF 100%);">
       <div style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: #212529;">
-          Voces que Confían en Zellfy
-        </h2>
-        <p style="font-size: 1.1rem; text-align: center; color: #64748b; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-          Historias reales de líderes que ya están vendiendo más inteligentemente.
-        </p>
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <h2 style="font-size: 2.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">
+            Historias Reales
+          </h2>
+          <p style="font-size: 1.1rem; color: #64748b; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+            Líderes empresariales que ya viven el resultado. Estos no son testimoniales comprados. Son relaciones comerciales reales con beneficios tangibles.
+          </p>
+        </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
           
           <!-- Testimonio 1: Osvaldo Covarrubias -->
-          <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid #00BFFF;">
-            <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem; margin-right: 1rem;">OC</div>
-              <div>
-                <h3 style="font-size: 1.1rem; font-weight: 700; color: #212529; margin-bottom: 0.25rem;">Osvaldo Covarrubias</h3>
-                <p style="font-size: 0.9rem; color: #64748b;">Gerente General, Ecomac</p>
-              </div>
+          <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 8px 25px rgba(0,191,255,0.15); border: 2px solid #E0F2FE; overflow: hidden; transition: all 0.3s;">
+            <div style="background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); padding: 1.5rem; border-radius: 12px; text-align: center; margin-bottom: 2rem; color: white;">
+              <p style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.5rem;">ECOMAC - CHILE</p>
+              <h3 style="font-size: 1.25rem; font-weight: 700; margin: 0;">Osvaldo Covarrubias</h3>
+              <p style="font-size: 0.9rem; opacity: 0.85; margin: 0.5rem 0 0 0;">Gerente General</p>
             </div>
-            <p style="color: #64748b; line-height: 1.8; font-style: italic; margin-bottom: 1rem;">
-              "Zellfy no es solo un sistema. Es un cambio de cultura. Nuestro equipo ya no pierde ni un lead. En el primer mes recuperamos nuestra inversión completa. Hoy Zellfy es indispensable."
+            <p style="color: #212529; line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; font-size: 1rem;">
+              "<strong>Zellfy es indispensable.</strong> No es solo un sistema. Es un cambio de cultura. Nuestro equipo ya no pierde ni un lead. En el primer mes recuperamos nuestra inversión completa."
             </p>
-            <div style="display: flex; gap: 0.5rem;">
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
+            <div style="display: flex; gap: 0.25rem; align-items: center; margin-bottom: 1rem;">
+              <span style="color: #FFB800; font-size: 1.2rem;">⭐⭐⭐⭐⭐</span>
+              <span style="color: #64748b; font-size: 0.85rem; margin-left: 0.5rem;">5 de 5</span>
             </div>
+            <p style="font-size: 0.85rem; color: #64748b; padding-top: 1rem; border-top: 1px solid #E5E7EB;">
+              📊 <strong>Resultado:</strong> 0% de leads perdidos
+            </p>
           </div>
 
           <!-- Testimonio 2: Gabriela Moraga -->
-          <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid #00C48C;">
-            <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem; margin-right: 1rem;">GM</div>
-              <div>
-                <h3 style="font-size: 1.1rem; font-weight: 700; color: #212529; margin-bottom: 0.25rem;">Gabriela Moraga</h3>
-                <p style="font-size: 0.9rem; color: #64748b;">Gerente General, Concreces</p>
-              </div>
+          <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 8px 25px rgba(0,196,140,0.15); border: 2px solid #E8F9F5; overflow: hidden; transition: all 0.3s;">
+            <div style="background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%); padding: 1.5rem; border-radius: 12px; text-align: center; margin-bottom: 2rem; color: white;">
+              <p style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.5rem;">CONCRECES - FINTECH CHILE</p>
+              <h3 style="font-size: 1.25rem; font-weight: 700; margin: 0;">Gabriela Moraga</h3>
+              <p style="font-size: 0.9rem; opacity: 0.85; margin: 0.5rem 0 0 0;">Gerente General</p>
             </div>
-            <p style="color: #64748b; line-height: 1.8; font-style: italic; margin-bottom: 1rem;">
-              "En fintech, tiempo es dinero. Zellfy nos permitió responder a leads en 2 horas en lugar de 5 días. Nuestros clientes están más satisfechos. Nuestro equipo más feliz. Todo mejor."
+            <p style="color: #212529; line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; font-size: 1rem;">
+              "<strong>En fintech, tiempo es dinero.</strong> Zellfy nos permitió responder a leads en 2 horas en lugar de 5 días. Nuestros clientes están más satisfechos. Nuestro equipo más feliz."
             </p>
-            <div style="display: flex; gap: 0.5rem;">
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
+            <div style="display: flex; gap: 0.25rem; align-items: center; margin-bottom: 1rem;">
+              <span style="color: #FFB800; font-size: 1.2rem;">⭐⭐⭐⭐⭐</span>
+              <span style="color: #64748b; font-size: 0.85rem; margin-left: 0.5rem;">5 de 5</span>
             </div>
+            <p style="font-size: 0.85rem; color: #64748b; padding-top: 1rem; border-top: 1px solid #E5E7EB;">
+              ⏱️ <strong>Tiempo de respuesta:</strong> De 5 días a 2 horas
+            </p>
           </div>
 
           <!-- Testimonio 3: Departamento de Ventas Ralston Fields -->
-          <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid #FF8C42;">
-            <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem; margin-right: 1rem;">RF</div>
-              <div>
-                <h3 style="font-size: 1.1rem; font-weight: 700; color: #212529; margin-bottom: 0.25rem;">Departamento de Ventas</h3>
-                <p style="font-size: 0.9rem; color: #64748b;">Ralston Fields, Colorado</p>
-              </div>
+          <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 8px 25px rgba(255,140,66,0.15); border: 2px solid #FFE8DB; overflow: hidden; transition: all 0.3s;">
+            <div style="background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%); padding: 1.5rem; border-radius: 12px; text-align: center; margin-bottom: 2rem; color: white;">
+              <p style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.5rem;">RALSTON FIELDS - REAL ESTATE USA</p>
+              <h3 style="font-size: 1.25rem; font-weight: 700; margin: 0;">Departamento de Ventas</h3>
+              <p style="font-size: 0.9rem; opacity: 0.85; margin: 0.5rem 0 0 0;">Colorado, Estados Unidos</p>
             </div>
-            <p style="color: #64748b; line-height: 1.8; font-style: italic; margin-bottom: 1rem;">
-              "Antes perdíamos leads en Google Ads, Meta, portales inmobiliarios. Ahora están todos capturados y asignados automáticamente. El pipeline creció 300% en 3 meses sin contratar más gente."
+            <p style="color: #212529; line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; font-size: 1rem;">
+              "<strong>El pipeline creció 300% en 3 meses.</strong> Antes perdíamos leads en Google Ads, Meta, portales inmobiliarios. Ahora están todos capturados y asignados automáticamente. Sin contratar más gente."
             </p>
-            <div style="display: flex; gap: 0.5rem;">
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
-              <span style="color: #FFB800;">⭐</span>
+            <div style="display: flex; gap: 0.25rem; align-items: center; margin-bottom: 1rem;">
+              <span style="color: #FFB800; font-size: 1.2rem;">⭐⭐⭐⭐⭐</span>
+              <span style="color: #64748b; font-size: 0.85rem; margin-left: 0.5rem;">5 de 5</span>
             </div>
+            <p style="font-size: 0.85rem; color: #64748b; padding-top: 1rem; border-top: 1px solid #E5E7EB;">
+              🚀 <strong>Crecimiento:</strong> Pipeline +300% en 3 meses
+            </p>
           </div>
         </div>
       </div>
