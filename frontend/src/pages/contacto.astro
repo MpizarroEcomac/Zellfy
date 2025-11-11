@@ -4,124 +4,102 @@ import ContactForm from '../components/ContactForm.vue';
 ---
 
 <BaseLayout title="Contacto - Zellfy" description="Conecta con nosotros. Estamos listos para ayudarte a hacer crecer tus ventas.">
-  <!-- Hero Section - Hermoso y atractivo -->
-  <section style="background: linear-gradient(135deg, #00BFFF 0%, #00C48C 50%, #1a1a2e 100%); padding: 8rem 1.5rem; color: white; text-align: center; position: relative; overflow: hidden;">
-    <div style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: -30%; left: 5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); border-radius: 50%;"></div>
-    <div style="max-width: 900px; margin: 0 auto; position: relative; z-index: 1;">
-      <div style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.3);">
-        <p style="font-size: 0.9rem; margin: 0; font-weight: 600;">📱 Conecta con nosotros en tu canal favorito</p>
-      </div>
-      <h1 style="font-size: 4rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -1px;">
-        Transforma tu equipo de ventas
+  <!-- Hero con Gradiente Azul -->
+  <section style="background: linear-gradient(135deg, #00BFFF 0%, #0099FF 100%); padding: 4rem 1.5rem 6rem 1.5rem; color: white; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h1 style="font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2;">
+        Hablemos sobre tu negocio
       </h1>
-      <p style="font-size: 1.3rem; margin-bottom: 0.5rem; opacity: 0.95; line-height: 1.8; font-weight: 300;">
-        Nosotros lo vivimos cada día. Sabemos exactamente qué necesitas.
-      </p>
-      <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 0;">
-        Elige cómo prefieres contactarnos. Estamos listos.
+      <p style="font-size: 1.1rem; opacity: 0.95; line-height: 1.6;">
+        Nosotros vivimos Zellfy cada día. Sabemos exactamente qué necesitas para crecer.
       </p>
     </div>
   </section>
 
-  <!-- Canales principales - Diseño espectacular -->
-  <section style="padding: 6rem 1.5rem; background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);">
-    <div style="max-width: 1300px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: 4rem;">
-        <h2 style="font-size: 3rem; font-weight: 800; color: #212529; margin-bottom: 1rem; line-height: 1.1;">
-          Tu camino más rápido hacia el crecimiento
-        </h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+  <!-- Tarjeta Principal Blanca -->
+  <section style="padding: 0 1.5rem 5rem 1.5rem; background: white;">
+    <div style="max-width: 1000px; margin: -4rem auto 0 auto;">
+      <div style="background: white; border-radius: 30px; padding: 4rem 3rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
         
-        <!-- Chat Widget - Premium -->
-        <div style="background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); border-radius: 25px; padding: 3rem; color: white; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 30px 80px rgba(102, 126, 234, 0.4)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 20px 60px rgba(102, 126, 234, 0.3)';">
-          <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; blur: blur(50px);"></div>
-          <div style="position: relative; z-index: 1;">
-            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));">💬</div>
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.5px;">Chat en Vivo</h3>
-            <p style="font-size: 1.05rem; margin-bottom: 2rem; opacity: 0.9; line-height: 1.7;">
-              Habla directamente con nuestro equipo en tiempo real. Sin bots, sin esperas. Personas que entienden tu negocio.
+        <!-- Grid: Formulario + Canales -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+          
+          <!-- Formulario -->
+          <div>
+            <h2 style="font-size: 1.8rem; font-weight: 700; color: #212529; margin-bottom: 1.5rem;">
+              Completa el formulario
+            </h2>
+            <p style="color: #64748b; margin-bottom: 2rem; line-height: 1.6;">
+              Cuéntanos sobre tu situación. Nos contactaremos en menos de 15 minutos.
             </p>
-            <button onclick="openChat()" style="background: white; color: #667EEA; border: none; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 800; cursor: pointer; font-size: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-              Abrir Chat Ahora
-            </button>
+            <ContactForm client:load />
           </div>
-        </div>
 
-        <!-- WhatsApp - Premium -->
-        <div style="background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%); border-radius: 25px; padding: 3rem; color: white; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(245, 87, 108, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 30px 80px rgba(245, 87, 108, 0.4)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 20px 60px rgba(245, 87, 108, 0.3)';">
-          <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
-          <div style="position: relative; z-index: 1;">
-            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));">📱</div>
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.5px;">WhatsApp</h3>
-            <p style="font-size: 1.05rem; margin-bottom: 2rem; opacity: 0.9; line-height: 1.7;">
-              Rápido, casual, eficiente. Envía tu mensaje y nosotros respondemos en minutos. Sin formalidades innecesarias.
-            </p>
-            <a href="https://wa.me/56987654321?text=Hola%20Zellfy%21%20Quiero%20conocer%20c%u00f3mo%20aumentar%20mis%20ventas" target="_blank" style="display: inline-block; background: white; color: #F5576C; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; cursor: pointer; font-size: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-              Enviar WhatsApp
-            </a>
-          </div>
-        </div>
+          <!-- Canales -->
+          <div>
+            <h2 style="font-size: 1.8rem; font-weight: 700; color: #212529; margin-bottom: 2rem;">
+              O contáctanos directamente
+            </h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              
+              <!-- Chat -->
+              <a href="javascript:openChat()" style="display: block; padding: 1.5rem; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); color: white; border-radius: 15px; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(102, 126, 234, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(102, 126, 234, 0.2)';" style="box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <div style="font-size: 1.8rem;">💬</div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Chat en Vivo</div>
+                    <div style="font-size: 0.85rem; opacity: 0.9;">Sin bots. Gente real.</div>
+                  </div>
+                </div>
+              </a>
 
-        <!-- Llamada Telefónica - Premium -->
-        <div style="background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%); border-radius: 25px; padding: 3rem; color: #212529; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(79, 172, 254, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 30px 80px rgba(79, 172, 254, 0.4)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 20px 60px rgba(79, 172, 254, 0.3)';">
-          <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.2); border-radius: 50%;"></div>
-          <div style="position: relative; z-index: 1;">
-            <div style="font-size: 3.5rem; margin-bottom: 1.5rem;">☎️</div>
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.5px;">Llamada Directa</h3>
-            <p style="font-size: 1.05rem; margin-bottom: 2rem; opacity: 0.85; line-height: 1.7;">
-              A veces una conversación es más poderosa. Habla directamente con un especialista que entiende tu industria.
-            </p>
-            <a href="tel:+56987654321" style="display: inline-block; background: #212529; color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; cursor: pointer; font-size: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-              Llamar Ahora
-            </a>
+              <!-- WhatsApp -->
+              <a href="https://wa.me/56987654321?text=Hola%20Zellfy%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20c%C3%B3mo%20aumentar%20mis%20ventas" target="_blank" style="display: block; padding: 1.5rem; background: linear-gradient(135deg, #25D366 0%, #20BA58 100%); color: white; border-radius: 15px; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(37, 211, 102, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(37, 211, 102, 0.2)';" style="box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <div style="font-size: 1.8rem;">📱</div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">WhatsApp</div>
+                    <div style="font-size: 0.85rem; opacity: 0.9;">Rápido y directo.</div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Teléfono -->
+              <a href="tel:+56987654321" style="display: block; padding: 1.5rem; background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%); color: #212529; border-radius: 15px; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 40px rgba(79, 172, 254, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(79, 172, 254, 0.2)';" style="box-shadow: 0 10px 30px rgba(79, 172, 254, 0.2);">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <div style="font-size: 1.8rem;">☎️</div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Llamada Directa</div>
+                    <div style="font-size: 0.85rem; opacity: 0.85;">Persona a persona.</div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Formulario de Contacto -->
-  <section style="padding: 6rem 1.5rem; background: linear-gradient(135deg, #f8fafc 0%, #e8f4fd 100%);">
-    <div style="max-width: 700px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: 3rem;">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #212529; margin-bottom: 0.5rem;">
-          O déjanos tus datos
-        </h2>
-        <p style="color: #64748b; font-size: 1.05rem;">
-          Preferimos conocer tu situación primero. Nosotros nos contactaremos.
-        </p>
-      </div>
-      <ContactForm client:load />
-    </div>
-  </section>
-
-  <!-- Garantías -->
-  <section style="padding: 6rem 1.5rem; background: white;">
+  <!-- Beneficios Footer -->
+  <section style="padding: 5rem 1.5rem; background: #f8fafc;">
     <div style="max-width: 1000px; margin: 0 auto;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-        <div style="text-align: center;">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
-          <h4 style="font-size: 1.3rem; font-weight: 800; color: #212529; margin-bottom: 0.5rem;">15 minutos máximo</h4>
-          <p style="color: #64748b; line-height: 1.6;">
-            Respondemos en menos de 15 minutos. Sin excepciones, sin esperas.
-          </p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; text-align: center;">
+        <div>
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Respuesta rápida</h3>
+          <p style="color: #64748b; font-size: 0.95rem;">Menos de 15 minutos</p>
         </div>
-        <div style="text-align: center;">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">🧠</div>
-          <h4 style="font-size: 1.3rem; font-weight: 800; color: #212529; margin-bottom: 0.5rem;">Expertos de verdad</h4>
-          <p style="color: #64748b; line-height: 1.6;">
-            Hablas con gente que vive Zellfy a diario en sus propios negocios.
-          </p>
+        <div>
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Expertos reales</h3>
+          <p style="color: #64748b; font-size: 0.95rem;">Usan Zellfy diariamente</p>
         </div>
-        <div style="text-align: center;">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
-          <h4 style="font-size: 1.3rem; font-weight: 800; color: #212529; margin-bottom: 0.5rem;">Conversación real</h4>
-          <p style="color: #64748b; line-height: 1.6;">
-            Solo queremos conocer tu negocio. Cero presión, cero frase hechas.
-          </p>
+        <div>
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Sin presión</h3>
+          <p style="color: #64748b; font-size: 0.95rem;">Solo entender tu negocio</p>
         </div>
       </div>
     </div>
