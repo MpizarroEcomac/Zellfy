@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icons.astro';
 ---
 
 <BaseLayout title="Planes y Precios - Zellfy" description="Escoge el plan que se adapta a tu negocio y escala cuando creces.">
@@ -160,7 +161,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
         <!-- Seguridad - Todos los planes -->
         <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" class="hover:scale-105">
-          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: bounce 2s infinite; transform-origin: center;">🔒</div>
+          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: bounce 2s infinite; transform-origin: center;"><Icon name="lock" size={60} color="white" /></div>
           <p style="font-size: 1.1rem; font-weight: 700; color: white;">
             Seguridad Empresarial
           </p>
@@ -171,7 +172,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         
         <!-- Apps Móviles - Plan Estándar+ -->
         <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(245, 87, 108, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" class="hover:scale-105">
-          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: pulse 2s infinite;">📱</div>
+          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: pulse 2s infinite;"><Icon name="messageCircle" size={60} color="white" /></div>
           <p style="font-size: 1.1rem; font-weight: 700; color: white;">
             Apps Nátivas
           </p>
@@ -182,7 +183,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         
         <!-- Automatización - Plan Personalizado -->
         <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(79, 172, 254, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" class="hover:scale-105">
-          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: spin 3s linear infinite;">🨸</div>
+          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: spin 3s linear infinite;"><Icon name="zap" size={60} color="white" /></div>
           <p style="font-size: 1.1rem; font-weight: 700; color: white;">
             Automatización IA
           </p>
@@ -193,7 +194,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         
         <!-- Onboarding - Plan Estándar+ -->
         <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(67, 233, 123, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" class="hover:scale-105">
-          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: bounce 2s infinite; animation-delay: 0.3s;">💬</div>
+          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: bounce 2s infinite; animation-delay: 0.3s;"><Icon name="messageCircle" size={60} color="white" /></div>
           <p style="font-size: 1.1rem; font-weight: 700; color: white;">
             Capacitación
           </p>
@@ -204,7 +205,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         
         <!-- Integraciones Avanzadas - Plan Personalizado -->
         <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(250, 112, 154, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" class="hover:scale-105">
-          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: pulse 2s infinite; animation-delay: 0.5s;">🔗</div>
+          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: pulse 2s infinite; animation-delay: 0.5s;"><Icon name="link" size={60} color="white" /></div>
           <p style="font-size: 1.1rem; font-weight: 700; color: white;">
             +100 Integraciones
           </p>
@@ -215,7 +216,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         
         <!-- Soporte Prioritario - Plan Estándar+ -->
         <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(168, 237, 234, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" class="hover:scale-105">
-          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: bounce 2s infinite; animation-delay: 0.6s;">🌟</div>
+          <div style="font-size: 5rem; margin-bottom: 1.5rem; display: inline-block; animation: bounce 2s infinite; animation-delay: 0.6s;"><Icon name="spark" size={60} color="#333" /></div>
           <p style="font-size: 1.1rem; font-weight: 700; color: #333;">
             Soporte 24/7
           </p>

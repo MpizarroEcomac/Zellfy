@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icons.astro';
 ---
 
 <BaseLayout title="Nosotros - Zellfy" description="Somos Zellfy. Donde vender vuelve a ser natural.">
@@ -10,7 +11,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
         <div>
           <div style="display: inline-block; background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
-            🎯 Nuestra Historia
+            <Icon name="target" size={18} color="white" style="display: inline-block; margin-right: 0.5rem;" /> Nuestra Historia
           </div>
           <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529; line-height: 1.2;">
             Nacimos de una necesidad real
@@ -67,7 +68,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Punto 1 -->
         <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 2px solid #E8F4FD;">
           <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00BFFF 0%, #00BFFF 100%); border-radius: 12px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
-            📱
+            <Icon name="messageCircle" size={32} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">El Problema</h3>
           <p style="color: #64748b; line-height: 1.6;">
@@ -78,7 +79,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Punto 2 -->
         <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 2px solid #E8F9F5;">
           <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00C48C 0%, #00C48C 100%); border-radius: 12px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
-            😤
+            <Icon name="checkCircle" size={32} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">La Realidad</h3>
           <p style="color: #64748b; line-height: 1.6;">
@@ -89,7 +90,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Punto 3 -->
         <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 2px solid #FFF0F0;">
           <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #F5576C 0%, #F5576C 100%); border-radius: 12px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
-            💡
+            <Icon name="spark" size={32} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">La Solución</h3>
           <p style="color: #64748b; line-height: 1.6;">

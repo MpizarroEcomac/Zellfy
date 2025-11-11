@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icons.astro';
 ---
 
 <BaseLayout title="Nuestros Valores - Zellfy" description="Descubre los valores y la cultura de Zellfy que nos impulsan a transformar la forma de vender.">
@@ -25,7 +26,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div style="display: grid; grid-template-columns: 120px 1fr; gap: 3rem; align-items: start;">
               <div style="text-align: center;">
                 <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #E0F7FF 0%, #F0FBFF 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0;">
-                  ⏰
+                  <Icon name="zap" size={60} color="#00BFFF" />
                 </div>
               </div>
               <div>
@@ -51,7 +52,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div style="display: grid; grid-template-columns: 120px 1fr; gap: 3rem; align-items: start;">
               <div style="text-align: center;">
                 <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #E8F9F5 0%, #F0FDF9 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0;">
-                  🎯
+                  <Icon name="target" size={60} color="#00C48C" />
                 </div>
               </div>
               <div>
@@ -77,7 +78,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div style="display: grid; grid-template-columns: 120px 1fr; gap: 3rem; align-items: start;">
               <div style="text-align: center;">
                 <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FFF0F0 0%, #FFE8E8 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0;">
-                  ⚙️
+                  <Icon name="tool" size={60} color="#F5576C" />
                 </div>
               </div>
               <div>
@@ -136,7 +137,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           
           <!-- Excelencia -->
           <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #00BFFF; text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;"><Icon name="spark" size={48} color="#00BFFF" /></div>
             <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Excelencia</h3>
             <p style="color: #64748b; line-height: 1.6;">
               Compromiso con la calidad en cada detalle. Desde Ecomac con 60 años, hasta Zellfy con precisión automática.
@@ -145,7 +146,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Innovación -->
           <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #00C48C; text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">💡</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;"><Icon name="spark" size={48} color="#00C48C" /></div>
             <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Innovación</h3>
             <p style="color: #64748b; line-height: 1.6;">
               Crear soluciones que no existen. Zellfy es el resultado de pensar diferente sobre cómo vender.
@@ -154,7 +155,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Sostenibilidad -->
           <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #F5576C; text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🌱</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;"><Icon name="check" size={48} color="#F5576C" /></div>
             <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Sostenibilidad</h3>
             <p style="color: #64748b; line-height: 1.6;">
               Construimos para el largo plazo. Nuestras decisiones consideran impacto económico y social.
@@ -163,7 +164,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Seguridad -->
           <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #764BA2; text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;"><Icon name="lock" size={48} color="#764BA2" /></div>
             <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Seguridad</h3>
             <p style="color: #64748b; line-height: 1.6;">
               Protegemos datos, procesos y personas. Confianza es el fundamento de nuestras relaciones.
@@ -172,7 +173,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Fluidez -->
           <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #FF8C42; text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;"><Icon name="zap" size={48} color="#FF8C42" /></div>
             <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Fluidez</h3>
             <p style="color: #64748b; line-height: 1.6;">
               Eliminamos fricciones. Los procesos fluyen naturalmente sin obstáculos ni tareas manuales.
@@ -181,7 +182,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Conexión -->
           <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #00F2FE; text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+            <div style="font-size: 3rem; margin-bottom: 1rem;"><Icon name="messageCircle" size={48} color="#00F2FE" /></div>
             <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem;">Conexión</h3>
             <p style="color: #64748b; line-height: 1.6;">
               Tecnología que acerca personas, no que las reemplaza. Zellfy conecta clientes con vendedores.

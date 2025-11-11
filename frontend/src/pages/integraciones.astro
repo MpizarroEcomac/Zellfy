@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icons.astro';
 ---
 
 <BaseLayout title="Integraciones - Zellfy" description="Conecta Zellfy con tus herramientas favoritas">
@@ -18,7 +19,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 1 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">📢</span>
+            <Icon name="broadcast" size={40} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Publicidad Digital</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -32,7 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 2 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">📋</span>
+            <Icon name="clipboard" size={40} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">CRMs y Ventas</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -46,7 +47,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 3 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">💬</span>
+            <Icon name="messageCircle" size={40} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Comunicación</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -60,7 +61,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 4 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FA709A 0%, #FEE140 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">💳</span>
+            <Icon name="creditCard" size={40} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Pagos y Finanzas</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -74,7 +75,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 5 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #A8EDEA 0%, #FED6E3 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">✍️</span>
+            <Icon name="checkCircle" size={40} color="#F5576C" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Firma Electrónica</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -88,7 +89,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 6 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 90%, #2BFF88 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">📂</span>
+            <Icon name="folder" size={40} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Productividad</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -102,7 +103,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 7 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FFD89B 0%, #19547B 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">📊</span>
+            <Icon name="barChart" size={40} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Análisis y BI</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -116,7 +117,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 8 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FF6E7F 0%, #BFE9FF 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">⚡</span>
+            <Icon name="zap" size={40} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Automatización</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -130,7 +131,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tarjeta 9 -->
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
           <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #A445B6 0%, #FF3CAC 100%); border-radius: 16px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 2.5rem;">☁️</span>
+            <Icon name="home" size={40} color="white" />
           </div>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #212529;">Cloud Storage</h3>
           <ul style="list-style: none; padding: 0; color: #64748b; text-align: left;">
@@ -142,9 +143,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <!-- Cloud Storage -->
-        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 191, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08)';">
-          <div style="font-size: 2.5rem; margin-bottom: 1rem;">☁️</div>
-          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;">☁️ Cloud Storage</h3>
+        <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border: 1px solid #e5e7eb; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(0, 191, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0, 0, 0, 0.08);">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;"><Icon name="home" size={40} color="#333" /></div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #212529;"><Icon name="home" size={24} color="#333" /> Cloud Storage</h3>
           <ul style="list-style: none; padding: 0; margin: 0; color: #64748b;">
             <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> Google Drive</li>
             <li style="padding: 0.5rem 0; display: flex; align-items: center;"><span style="margin-right: 0.5rem;">→</span> OneDrive</li>
