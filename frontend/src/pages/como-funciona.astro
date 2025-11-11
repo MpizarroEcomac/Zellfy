@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icons.astro';
 ---
 
 <BaseLayout title="Cómo Funciona - Zellfy" description="Descubre el flujo completo de Zellfy que transforma tu proceso de ventas.">
@@ -8,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 5rem 1.5rem 4rem;">
     <div style="max-width: 1200px; margin: 0 auto;">
       <div style="text-align: center; max-width: 900px; margin: 0 auto 4rem;">
-        <span style="display: inline-block; background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%); color: #00C48C; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(0, 196, 140, 0.2);">✨ Tu proceso automatizado</span>
+        <span style="display: inline-block; background: linear-gradient(135deg, #E8F9F5 0%, #d4f4ec 100%); color: #00C48C; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(0, 196, 140, 0.2);"><Icon name="spark" size={14} color="#00C48C" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Tu proceso automatizado</span>
         <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: #212529; font-weight: 700;">
           De Lead a Cliente en Piloto Automático
         </h1>
@@ -18,22 +19,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
         <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
-          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00BFFF, #0099CC); animation: float 6s ease-in-out infinite;">📢</div>
+          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00BFFF, #0099CC); animation: float 6s ease-in-out infinite;"><Icon name="broadcast" size={40} color="white" /></div>
           <span style="font-weight: 600; color: #212529; font-size: 0.95rem;">Anuncio</span>
         </div>
         <div style="font-size: 2rem; color: #00BFFF; font-weight: bold;">→</div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
-          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00C48C, #00a076); animation: float 6s ease-in-out infinite 0.5s;">🎯</div>
+          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00C48C, #00a076); animation: float 6s ease-in-out infinite 0.5s;"><Icon name="target" size={40} color="white" /></div>
           <span style="font-weight: 600; color: #212529; font-size: 0.95rem;">Lead</span>
         </div>
         <div style="font-size: 2rem; color: #00BFFF; font-weight: bold;">→</div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
-          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00BFFF, #0099CC); animation: float 6s ease-in-out infinite 1s;">💬</div>
+          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00BFFF, #0099CC); animation: float 6s ease-in-out infinite 1s;"><Icon name="messageCircle" size={40} color="white" /></div>
           <span style="font-weight: 600; color: #212529; font-size: 0.95rem;">Contacto</span>
         </div>
         <div style="font-size: 2rem; color: #00BFFF; font-weight: bold;">→</div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
-          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00C48C, #00a076); animation: float 6s ease-in-out infinite 1.5s;">✅</div>
+          <div style="width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); background: linear-gradient(135deg, #00C48C, #00a076); animation: float 6s ease-in-out infinite 1.5s;"><Icon name="check" size={40} color="white" /></div>
           <span style="font-weight: 600; color: #212529; font-size: 0.95rem;">Cierre</span>
         </div>
       </div>
@@ -49,30 +50,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1100px; margin: 0 auto;">
         <div style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); border: 2px solid #fee2e2;">
           <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
-            <span style="font-size: 2.5rem;">❌</span>
+            <Icon name="lock" size={32} color="#dc2626" />
             <h3 style="font-size: 1.75rem; font-weight: 700; color: #212529;">Proceso Manual</h3>
           </div>
           <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Leads se pierden entre planillas</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Respuestas lentas (horas o días)</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Seguimiento inconsistente</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Sin visibilidad del pipeline</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;">⚠️ Documentos en emails y carpetas</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; line-height: 1.6;">⚠️ Equipo sobrecargado</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;"><Icon name="lock" size={16} color="#dc2626" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Leads se pierden entre planillas</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;"><Icon name="lock" size={16} color="#dc2626" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Respuestas lentas (horas o días)</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;"><Icon name="lock" size={16} color="#dc2626" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Seguimiento inconsistente</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;"><Icon name="lock" size={16} color="#dc2626" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Sin visibilidad del pipeline</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; border-bottom: 1px solid #fecaca; line-height: 1.6;"><Icon name="lock" size={16} color="#dc2626" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Documentos en emails y carpetas</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #dc2626; line-height: 1.6;"><Icon name="lock" size={16} color="#dc2626" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Equipo sobrecargado</li>
           </ul>
         </div>
         <div style="background: linear-gradient(135deg, rgba(0, 196, 140, 0.05) 0%, rgba(0, 191, 255, 0.05) 100%); border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0, 196, 140, 0.15); border: 2px solid #00C48C;">
           <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
-            <span style="font-size: 2.5rem;">✅</span>
+            <Icon name="check" size={32} color="#00C48C" />
             <h3 style="font-size: 1.75rem; font-weight: 700; color: #212529;">Con Zellfy</h3>
           </div>
           <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Cada lead capturado automáticamente</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Respuesta instantánea 24/7</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Seguimiento automatizado e inteligente</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Dashboard en tiempo real</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;">✓ Carpeta digital centralizada</li>
-            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; line-height: 1.6;">✓ Equipo enfocado en cerrar ventas</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;"><Icon name="check" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Cada lead capturado automáticamente</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;"><Icon name="check" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Respuesta instantánea 24/7</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;"><Icon name="check" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Seguimiento automatizado e inteligente</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;"><Icon name="check" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Dashboard en tiempo real</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; border-bottom: 1px solid rgba(0, 196, 140, 0.2); line-height: 1.6;"><Icon name="check" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Carpeta digital centralizada</li>
+            <li style="padding: 1rem 0; font-size: 1.05rem; color: #00C48C; line-height: 1.6;"><Icon name="check" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Equipo enfocado en cerrar ventas</li>
           </ul>
         </div>
       </div>
@@ -88,56 +89,56 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-number">1</div>
-          <div class="step-icon-big">📢</div>
+          <div class="step-icon-big"><Icon name="broadcast" size={48} color="#00BFFF" /></div>
           <h3>Publicidad & Atracción</h3>
           <p>Conecta Google Ads, Meta, TikTok y LinkedIn. Zellfy captura cada clic automáticamente.</p>
         </div>
 
         <div class="step-card">
           <div class="step-number">2</div>
-          <div class="step-icon-big">🎯</div>
+          <div class="step-icon-big"><Icon name="target" size={48} color="#00BFFF" /></div>
           <h3>Captura Inteligente</h3>
           <p>Formularios que detectan fuente, campaña e interés. Ingreso instantáneo al CRM.</p>
         </div>
 
         <div class="step-card">
           <div class="step-number">3</div>
-          <div class="step-icon-big">💬</div>
+          <div class="step-icon-big"><Icon name="messageCircle" size={48} color="#00BFFF" /></div>
           <h3>Respuesta Automática</h3>
           <p>WhatsApp, SMS o email. Respuesta inmediata con IA o agente humano.</p>
         </div>
 
         <div class="step-card">
           <div class="step-number">4</div>
-          <div class="step-icon-big">📚</div>
+          <div class="step-icon-big"><Icon name="folder" size={48} color="#00BFFF" /></div>
           <h3>Educación & Oferta</h3>
           <p>Catálogos digitales, videos y contenido personalizado según perfil del lead.</p>
         </div>
 
         <div class="step-card">
           <div class="step-number">5</div>
-          <div class="step-icon-big">🔄</div>
+          <div class="step-icon-big"><Icon name="arrowRight" size={48} color="#00BFFF" /></div>
           <h3>Seguimiento 24/7</h3>
           <p>Recontacto automatizado, recordatorios y remarketing inteligente.</p>
         </div>
 
         <div class="step-card">
           <div class="step-number">6</div>
-          <div class="step-icon-big">✅</div>
+          <div class="step-icon-big"><Icon name="check" size={48} color="#00BFFF" /></div>
           <h3>Cierre de Venta</h3>
           <p>Propuestas digitales, cotizaciones y aprobaciones en tiempo real.</p>
         </div>
 
         <div class="step-card">
           <div class="step-number">7</div>
-          <div class="step-icon-big">📄</div>
+          <div class="step-icon-big"><Icon name="clipboard" size={48} color="#00BFFF" /></div>
           <h3>Gestión Documental</h3>
           <p>Carpeta digital, firma electrónica y Clave Única integrada.</p>
         </div>
 
         <div class="step-card">
           <div class="step-number">8</div>
-          <div class="step-icon-big">🎁</div>
+          <div class="step-icon-big"><Icon name="barChart" size={48} color="#00BFFF" /></div>
           <h3>Postventa & Fidelización</h3>
           <p>Encuestas, upselling y remarketing. El ciclo comienza de nuevo.</p>
         </div>
@@ -151,25 +152,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 class="section-title-center">Funciona en Cualquier Industria</h2>
       <div class="use-cases-grid">
         <div class="use-case-card">
-          <div class="use-case-icon">🏢</div>
+          <div class="use-case-icon"><Icon name="home" size={48} color="#00BFFF" /></div>
           <h4>Inmobiliario</h4>
           <p>Captura leads de portales, automatiza visitas y gestiona documentación de propiedades.</p>
           <div class="use-case-tag">+45% conversiones</div>
         </div>
         <div class="use-case-card">
-          <div class="use-case-icon">🚗</div>
+          <div class="use-case-icon"><Icon name="car" size={48} color="#00BFFF" /></div>
           <h4>Automotriz</h4>
           <p>Gestiona test drives, cotizaciones y financiamiento integrado con bancos.</p>
           <div class="use-case-tag">-60% tiempo cierre</div>
         </div>
         <div class="use-case-card">
-          <div class="use-case-icon">💳</div>
+          <div class="use-case-icon"><Icon name="creditCard" size={48} color="#00BFFF" /></div>
           <h4>Financiero</h4>
           <p>Evalúa clientes, automatiza evaluaciones crediticias y aprobaciones en minutos.</p>
           <div class="use-case-tag">80% automatización</div>
         </div>
         <div class="use-case-card">
-          <div class="use-case-icon">🛒</div>
+          <div class="use-case-icon"><Icon name="barChart" size={48} color="#00BFFF" /></div>
           <h4>E-commerce</h4>
           <p>Recupera carritos abandonados, segmenta clientes y optimiza conversión.</p>
           <div class="use-case-tag">+35% recuperación</div>
@@ -193,10 +194,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
       <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
         <a href="/contacto" style="display: inline-block; padding: 1.2rem 3rem; background-color: #00BFFF; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 191, 255, 0.3); font-size: 1rem;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 191, 255, 0.5)'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 191, 255, 0.3)'; this.style.transform='translateY(0) scale(1);">
-          🚀 Solicitar Demo Gratis
+          <Icon name="rocketIcon" size={16} color="white" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Solicitar Demo Gratis
         </a>
         <a href="/casos" style="display: inline-block; padding: 1.2rem 3rem; background-color: transparent; color: #00C48C; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; border: 2px solid #00C48C; transition: all 0.3s ease; font-size: 1rem;" onmouseover="this.style.backgroundColor='#00C48C'; this.style.color='white'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#00C48C'; this.style.transform='translateY(0) scale(1);">
-          📊 Ver Casos de Éxito
+          <Icon name="barChart" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem; vertical-align: middle;" />Ver Casos de Éxito
         </a>
       </div>
     </div>
