@@ -1,14 +1,6 @@
 <template>
-  <div class="w-full max-w-2xl mx-auto px-4">
-    <div class="bg-gradient-to-br from-slate-50 via-white to-slate-50 rounded-2xl shadow-xl p-8 md:p-10 border border-slate-100">
-      <!-- Encabezado -->
-      <div class="mb-8">
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-2">Completa el formulario</h2>
-        <p class="text-lg text-slate-600 font-light">Cuéntanos sobre tu situación. Nos contactaremos en menos de 15 minutos.</p>
-      </div>
-
-      <!-- Formulario -->
-      <form @submit.prevent="handleSubmit" class="space-y-6">
+  <div class="w-full">
+    <form @submit.prevent="handleSubmit" class="space-y-6">
         <!-- Nombre completo -->
         <div>
           <label class="block text-sm font-semibold text-slate-700 mb-3">Nombre completo</label>
@@ -105,7 +97,6 @@
           ✕ {{ errorMessage }}
         </div>
       </form>
-    </div>
   </div>
 </template>
 
