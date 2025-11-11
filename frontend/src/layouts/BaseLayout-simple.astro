@@ -1,0 +1,95 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Zellfy.ai" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: #ffffff;
+        color: #212529;
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .header {
+        background: white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        padding: 1rem 1.5rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        display: flex;
+        align-items: baseline;
+        gap: 2px;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .logo-text {
+        color: #00BFFF;
+      }
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+      .nav-menu a {
+        color: #212529;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav-menu a:hover {
+        color: #00BFFF;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-container">
+        <a href="/" class="logo"><span class="logo-text">Zellfy</span>.ai</a>
+        <ul class="nav-menu">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/como-funciona">Cómo Funciona</a></li>
+          <li><a href="/soluciones">Soluciones</a></li>
+          <li><a href="/integraciones/">Integraciones</a></li>
+          <li><a href="/casos">Casos</a></li>
+          <li><a href="/pricing">Precios</a></li>
+        </ul>
+      </nav>
+    </header>
+    <slot />
+  </body>
+</html>
