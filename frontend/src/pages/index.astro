@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icons.astro';
 ---
 
 <BaseLayout title="Zellfy - Transforma tu proceso de ventas">
@@ -8,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="hero-split">
         <div class="hero-content">
-          <span class="badge">✨ Plataforma Todo-en-Uno</span>
+          <span class="badge"><Icon name="spark" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem;" /> Plataforma Todo-en-Uno</span>
           <h1>Transforma tu proceso de ventas en flujo continuo</h1>
           <p class="hero-text">Conecta leads, automatiza seguimiento y cierra más ventas con la plataforma CRM diseñada para equipos modernos.</p>
           <div class="hero-buttons">
@@ -49,7 +50,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="card">
           <img src="/business-chart.jpg" alt="Captación automática" class="card-image" />
           <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <span>⚡</span>
+            <Icon name="zap" size={32} color="white" />
           </div>
           <h3>Captación Automática</h3>
           <p>Conecta con Google Ads, Meta y WhatsApp. Todos tus leads en un solo lugar.</p>
@@ -58,7 +59,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="card">
           <img src="/crm-dashboard.jpg" alt="CRM Inteligente" class="card-image" />
           <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <span>📊</span>
+            <Icon name="barChart" size={32} color="white" />
           </div>
           <h3>CRM Inteligente</h3>
           <p>Seguimiento 24/7, recordatorios automáticos y priorización con IA.</p>
@@ -67,7 +68,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="card">
           <img src="/social-apps.jpg" alt="Respuesta instantánea" class="card-image" />
           <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <span>💬</span>
+            <Icon name="messageCircle" size={32} color="white" />
           </div>
           <h3>Respuesta Instantánea</h3>
           <p>Mensajería automatizada vía WhatsApp, email y SMS.</p>
@@ -76,7 +77,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="card">
           <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop" alt="Cierre rápido" class="card-image" />
           <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <span>✅</span>
+            <Icon name="check" size={32} color="white" />
           </div>
           <h3>Cierre Rápido</h3>
           <p>Firma electrónica, cotizaciones digitales y validaciones en tiempo real.</p>
@@ -85,7 +86,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="card">
           <img src="/automation-workflow.jpg" alt="Dashboard en vivo" class="card-image" />
           <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <span>📈</span>
+            <Icon name="barChart2" size={32} color="white" />
           </div>
           <h3>Dashboard en Vivo</h3>
           <p>Visibilidad total de tu pipeline. Métricas en tiempo real.</p>
@@ -94,7 +95,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="card">
           <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" alt="Seguridad total" class="card-image" />
           <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <span>🔒</span>
+            <Icon name="lock" size={32} color="white" />
           </div>
           <h3>Seguridad Total</h3>
           <p>Cumplimiento normativo, encriptación y respaldo automático.</p>
@@ -111,10 +112,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2>Automatización que funciona mientras duermes</h2>
           <p class="mb-4">Zellfy captura, califica y responde a tus leads automáticamente. Tu equipo solo se enfoca en cerrar ventas.</p>
           <ul class="feature-list">
-            <li>✓ Respuesta inmediata a cada lead</li>
-            <li>✓ Calificación inteligente con IA</li>
-            <li>✓ Seguimiento automático multicanal</li>
-            <li>✓ Recordatorios personalizados</li>
+            <li><Icon name="check" size={20} color="#00C48C" style="display: inline; margin-right: 0.75rem;" />Respuesta inmediata a cada lead</li>
+            <li><Icon name="check" size={20} color="#00C48C" style="display: inline; margin-right: 0.75rem;" />Calificación inteligente con IA</li>
+            <li><Icon name="check" size={20} color="#00C48C" style="display: inline; margin-right: 0.75rem;" />Seguimiento automático multicanal</li>
+            <li><Icon name="check" size={20} color="#00C48C" style="display: inline; margin-right: 0.75rem;" />Recordatorios personalizados</li>
           </ul>
         </div>
         <div class="showcase-image">
@@ -135,10 +136,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2>Visibilidad total de tu pipeline</h2>
           <p class="mb-4">Dashboards en tiempo real que muestran cada etapa del proceso. Desde el primer contacto hasta el cierre.</p>
           <ul class="feature-list">
-            <li>✓ Métricas actualizadas al instante</li>
-            <li>✓ Reportes automáticos personalizados</li>
-            <li>✓ Alertas de oportunidades críticas</li>
-            <li>✓ Análisis predictivo con IA</li>
+            <li><Icon name="check" size={20} color="#00C48C" style="display: inline; margin-right: 0.75rem;" />Métricas actualizadas al instante</li>
+            <li><Icon name="check" size={20} color="#00C48C" style="display: inline; margin-right: 0.75rem;" />Reportes automáticos personalizados</li>
+            <li><Icon name="check" size={20} color="#00C48C" style="display: inline; margin-right: 0.75rem;" />Alertas de oportunidades críticas</li>
+            <li><Icon name="check" size={20} color="#00C48C" style="display: inline; margin-right: 0.75rem;" />Análisis predictivo con IA</li>
           </ul>
         </div>
       </div>
@@ -149,7 +150,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="final-cta">
     <div class="container">
       <div class="cta-header">
-        <span class="cta-badge-center">✨ Demo Gratuita</span>
+        <span class="cta-badge-center"><Icon name="spark" size={16} color="#00C48C" style="display: inline; margin-right: 0.5rem;" />Demo Gratuita</span>
         <h2 class="cta-title-big">¿Listo para automatizar tu proceso de ventas?</h2>
         <p class="cta-description">Agenda una demo de 20 minutos y descubre cómo Zellfy puede transformar tu negocio</p>
       </div>
