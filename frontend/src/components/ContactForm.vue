@@ -1,116 +1,125 @@
 <template>
-  <div class="w-full max-w-md mx-auto">
-    <div class="bg-gradient-to-b from-blue-100/60 to-purple-100/40 rounded-3xl p-8 backdrop-blur-sm border border-white/40 shadow-2xl">
-      <form @submit.prevent="handleSubmit" class="space-y-4">
+  <div style="width: 100%;">
+    <form @submit.prevent="handleSubmit" style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <!-- Fila 1: Nombre y Empresa -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
         <!-- Nombre -->
-        <div class="relative">
-          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-          </svg>
-          <input 
-            v-model="formData.name" 
-            type="text" 
-            placeholder="First Name"
-            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
-            @blur="validateField('name')"
-          />
-          <p v-if="errors.name" class="text-red-600 text-xs mt-1 ml-4">{{ errors.name }}</p>
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500; color: #111827;">Nombre completo</label>
+        <input 
+          v-model="formData.name" 
+          type="text" 
+          placeholder="Juan García"
+          style="width: 100%; padding: 0.75rem; color: #111827; border: 1px solid #d1d5db; border-radius: 0.5rem; background-color: #f9fafb; font-size: 0.875rem; transition: all 0.2s ease;"
+          @blur="onBlur('name', $event)"
+          @focus="(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.1)'; }"
+        />
+          <p v-if="errors.name" style="margin-top: 0.5rem; font-size: 0.875rem; color: #dc2626;">{{ errors.name }}</p>
         </div>
 
-        <!-- Apellido (Empresa) -->
-        <div class="relative">
-          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"></path>
-          </svg>
-          <input 
-            v-model="formData.company" 
-            type="text" 
-            placeholder="Last Name"
-            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
-            @blur="validateField('company')"
-          />
-          <p v-if="errors.company" class="text-red-600 text-xs mt-1 ml-4">{{ errors.company }}</p>
+        <!-- Empresa -->
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500; color: #111827;">Empresa</label>
+        <input 
+          v-model="formData.company" 
+          type="text" 
+          placeholder="Mi Empresa S.A."
+          style="width: 100%; padding: 0.75rem; color: #111827; border: 1px solid #d1d5db; border-radius: 0.5rem; background-color: #f9fafb; font-size: 0.875rem; transition: all 0.2s ease;"
+          @blur="onBlur('company', $event)"
+          @focus="(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.1)'; }"
+        />
+          <p v-if="errors.company" style="margin-top: 0.5rem; font-size: 0.875rem; color: #dc2626;">{{ errors.company }}</p>
+        </div>
+      </div>
+
+      <!-- Fila 2: Email y Teléfono -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <!-- Email -->
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500; color: #111827;">Correo electrónico</label>
+        <input 
+          v-model="formData.email" 
+          type="email" 
+          placeholder="contacto@empresa.com"
+          style="width: 100%; padding: 0.75rem; color: #111827; border: 1px solid #d1d5db; border-radius: 0.5rem; background-color: #f9fafb; font-size: 0.875rem; transition: all 0.2s ease;"
+          @blur="onBlur('email', $event)"
+          @focus="(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.1)'; }"
+        />
+          <p v-if="errors.email" style="margin-top: 0.5rem; font-size: 0.875rem; color: #dc2626;">{{ errors.email }}</p>
         </div>
 
-        <!-- Username/Email -->
-        <div class="relative">
-          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          <input 
-            v-model="formData.email" 
-            type="email" 
-            placeholder="Email"
-            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
-            @blur="validateField('email')"
-          />
-          <p v-if="errors.email" class="text-red-600 text-xs mt-1 ml-4">{{ errors.email }}</p>
+        <!-- Teléfono -->
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500; color: #111827;">Teléfono</label>
+        <input 
+          v-model="formData.phone" 
+          type="tel" 
+          placeholder="+56 9 1234 5678"
+          style="width: 100%; padding: 0.75rem; color: #111827; border: 1px solid #d1d5db; border-radius: 0.5rem; background-color: #f9fafb; font-size: 0.875rem; transition: all 0.2s ease;"
+          @blur="onBlur('phone', $event)"
+          @focus="(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.1)'; }"
+        />
+          <p v-if="errors.phone" style="margin-top: 0.5rem; font-size: 0.875rem; color: #dc2626;">{{ errors.phone }}</p>
         </div>
+      </div>
 
-        <!-- Password (Teléfono) -->
-        <div class="relative">
-          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-          </svg>
-          <input 
-            v-model="formData.phone" 
-            type="tel" 
-            placeholder="Password"
-            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
-            @blur="validateField('phone')"
-          />
-          <p v-if="errors.phone" class="text-red-600 text-xs mt-1 ml-4">{{ errors.phone }}</p>
-        </div>
+      <!-- Mensaje -->
+      <div>
+        <label style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500; color: #111827;">Cuéntanos sobre tu caso</label>
+        <textarea 
+          v-model="formData.message" 
+          placeholder="Describe brevemente qué necesitas..."
+          rows="5"
+          style="width: 100%; padding: 0.75rem; color: #111827; border: 1px solid #d1d5db; border-radius: 0.5rem; background-color: #f9fafb; font-size: 0.875rem; resize: none; font-family: inherit; transition: all 0.2s ease;"
+          @blur="onBlur('message', $event)"
+          @focus="(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.1)'; }"
+        />
+        <p v-if="errors.message" style="margin-top: 0.5rem; font-size: 0.875rem; color: #dc2626;">{{ errors.message }}</p>
+      </div>
 
-        <!-- Confirm Password (Mensaje) -->
-        <div class="relative">
-          <svg class="absolute left-4 top-4 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-          </svg>
-          <input 
-            v-model="formData.message" 
-            type="text" 
-            placeholder="Confirm Password"
-            class="w-full pl-12 pr-4 py-3 rounded-full bg-white/90 placeholder-gray-400 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
-            @blur="validateField('message')"
-          />
-          <p v-if="errors.message" class="text-red-600 text-xs mt-1 ml-4">{{ errors.message }}</p>
-        </div>
+      <!-- Checkbox de Términos -->
+      <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+        <input 
+          type="checkbox" 
+          id="terms" 
+          v-model="agreeToTerms"
+          style="width: 1rem; height: 1rem; margin-top: 0.25rem; border: 1px solid #d1d5db; border-radius: 0.25rem; background-color: #f9fafb; cursor: pointer; accent-color: #3b82f6;"
+        />
+        <label for="terms" style="font-size: 0.875rem; font-weight: 500; color: #111827; cursor: pointer;">
+          Acepto los <a href="#" style="color: #2563eb; text-decoration: none;">Términos de Servicio</a> y la <a href="#" style="color: #2563eb; text-decoration: none;">Política de Privacidad</a>
+        </label>
+      </div>
 
-        <!-- Checkbox -->
-        <div class="flex items-center gap-2 px-4 py-2">
-          <input type="checkbox" id="terms" class="rounded cursor-pointer" />
-          <label for="terms" class="text-sm text-gray-600 cursor-pointer">
-            I agree to the Terms of Use and Privacy Policy
-          </label>
-        </div>
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        :disabled="isSubmitting || !agreeToTerms"
+        :style="{
+          width: '100%',
+          color: 'white',
+          backgroundColor: isSubmitting || !agreeToTerms ? '#9ca3af' : '#1d4ed8',
+          fontWeight: '500',
+          borderRadius: '0.5rem',
+          fontSize: '0.875rem',
+          padding: '0.75rem 1.25rem',
+          textAlign: 'center',
+          transition: 'all 0.2s ease',
+          cursor: isSubmitting || !agreeToTerms ? 'not-allowed' : 'pointer',
+          border: 'none'
+        }"
+      >
+        {{ isSubmitting ? 'Enviando...' : 'Enviar Consulta' }}
+      </button>
 
-        <!-- Sign Up Button -->
-        <button 
-          type="submit" 
-          :disabled="isSubmitting"
-          class="w-full px-6 py-3 rounded-full text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 mt-6"
-          :class="isSubmitting ? 'opacity-60 cursor-not-allowed bg-gray-400' : 'bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 hover:shadow-lg transform hover:-translate-y-1'"
-        >
-          {{ isSubmitting ? 'Enviando...' : 'SIGN UP' }}
-        </button>
-
-        <!-- Sign In Link -->
-        <p class="text-center text-sm text-gray-600 mt-4">
-          Already a member? 
-          <a href="#" class="text-purple-600 font-semibold hover:underline">Sign In</a>
-        </p>
-
-        <!-- Messages -->
-        <div v-if="successMessage" class="p-3 bg-green-100 text-green-700 rounded-lg text-center text-sm font-semibold mt-4">
-          ✓ {{ successMessage }}
-        </div>
-        
-        <div v-if="errorMessage" class="p-3 bg-red-100 text-red-700 rounded-lg text-center text-sm font-semibold mt-4">
-          ✕ {{ errorMessage }}
-        </div>
-      </form>
-    </div>
+      <!-- Messages -->
+      <div v-if="successMessage" style="padding: 1rem; font-size: 0.875rem; color: #047857; border-radius: 0.5rem; background-color: #f0fdf4; border: 1px solid #bbf7d0;" role="alert">
+        <span style="font-weight: 600;">¡Éxito!</span> {{ successMessage }}
+      </div>
+      
+      <div v-if="errorMessage" style="padding: 1rem; font-size: 0.875rem; color: #dc2626; border-radius: 0.5rem; background-color: #fef2f2; border: 1px solid #fecaca;" role="alert">
+        <span style="font-weight: 600;">Error.</span> {{ errorMessage }}
+      </div>
+    </form>
   </div>
 </template>
 
@@ -136,6 +145,7 @@ const errors = reactive({
 const isSubmitting = ref(false);
 const successMessage = ref('');
 const errorMessage = ref('');
+const agreeToTerms = ref(false);
 
 const validateField = (field) => {
   errors[field] = '';
@@ -162,6 +172,12 @@ const validateField = (field) => {
   }
   
   return true;
+};
+
+const onBlur = (field, event) => {
+  validateField(field);
+  event.target.style.borderColor = '#d1d5db';
+  event.target.style.boxShadow = 'none';
 };
 
 const validateForm = () => {
