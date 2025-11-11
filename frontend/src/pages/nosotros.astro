@@ -274,50 +274,90 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Nuestra Historia -->
-  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
-    <div class="container mx-auto max-w-4xl">
-      <h2 class="text-4xl font-bold text-center mb-16" style="color: var(--color-graphite);">
-        Nuestra Historia
+  <section style="background: linear-gradient(135deg, #F8FAFC 0%, #E8F4FD 100%); padding: 5rem 1.5rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: #212529;">
+        De la Frustración al Impacto
       </h2>
-      
-      <div class="space-y-12">
+      <p style="font-size: 1.1rem; text-align: center; color: #64748b; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Este es el camino de Zellfy: desde un problema que todos compartíamos, hasta una solución que transforma negocios.
+      </p>
+
+      <!-- Timeline Vertical -->
+      <div style="position: relative; padding: 2rem 0;">
+        <!-- Línea conectora -->
+        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #00BFFF 0%, #00C48C 50%, #F5576C 100%); transform: translateX(-1px);"></div>
+
         <!-- Milestone 1 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-24 h-24 rounded-full flex items-center justify-center text-3xl font-bold text-white" style="background-color: var(--color-blue-electric);">
-            2024
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-bottom: 4rem; position: relative;">
+          <div style="text-align: right; padding-right: 2rem;">
+            <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+              <div style="font-size: 2.5rem; font-weight: 700; color: #00BFFF; margin-bottom: 0.5rem;">2024</div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">El Problema se Hizo Claro</h3>
+              <p style="color: #64748b; line-height: 1.6; margin-bottom: 1rem;">
+                En Ecomac y Concreces, perdíamos el 40-50% de nuestros leads. No era una falla de nuestro equipo, sino de nuestros procesos. Excel, WhatsApp, Post-its.
+              </p>
+              <div style="font-size: 0.9rem; color: #64748b; padding: 1rem; background: #FFF5E8; border-radius: 8px; border-left: 3px solid #FF8C42;">
+                <strong style="color: #FF8C42;">Eureka:</strong> "¿Por qué no existe un sistema que piense como vendedor?"
+              </div>
+            </div>
           </div>
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold mb-3" style="color: var(--color-graphite);">El Comienzo</h3>
-            <p class="text-lg" style="color: #6b7280;">
-              Zellfy nace en Chile con la visión de transformar la gestión comercial. Implementamos nuestro primer cliente piloto en el rubro inmobiliario, validando el modelo de flujo completo.
-            </p>
-          </div>
+          <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background: white; border: 4px solid #00BFFF; border-radius: 50%; z-index: 10;"></div>
+          <div></div>
         </div>
 
         <!-- Milestone 2 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-24 h-24 rounded-full flex items-center justify-center text-3xl font-bold text-white" style="background-color: var(--color-green-mint);">
-            2025
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-bottom: 4rem; position: relative;">
+          <div></div>
+          <div style="text-align: left; padding-left: 2rem;">
+            <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+              <div style="font-size: 2.5rem; font-weight: 700; color: #00C48C; margin-bottom: 0.5rem;">H1 2025</div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">Zellfy Nace</h3>
+              <p style="color: #64748b; line-height: 1.6; margin-bottom: 1rem;">
+                No solo construimos una herramienta, construimos una solución que nosotros mismos necesitábamos. Zellfy fue primero la solución a nuestro problema.
+              </p>
+              <div style="font-size: 0.9rem; color: #64748b; padding: 1rem; background: #E8F9F5; border-radius: 8px; border-left: 3px solid #00C48C;">
+                <strong style="color: #00C48C;">Primer Win:</strong> Implementación en Ecomac → 65% reducción en tiempo de cierre
+              </div>
+            </div>
           </div>
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold mb-3" style="color: var(--color-graphite);">Expansión</h3>
-            <p class="text-lg" style="color: #6b7280;">
-              Incorporamos nuevas industrias: automotriz, créditos, seguros. Desarrollamos integraciones clave con APIs bancarias y plataformas de firma electrónica.
-            </p>
-          </div>
+          <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background: white; border: 4px solid #00C48C; border-radius: 50%; z-index: 10;"></div>
         </div>
 
         <!-- Milestone 3 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-24 h-24 rounded-full flex items-center justify-center text-3xl font-bold text-white" style="background-color: var(--color-blue-electric);">
-            2026
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-bottom: 4rem; position: relative;">
+          <div style="text-align: right; padding-right: 2rem;">
+            <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+              <div style="font-size: 2.5rem; font-weight: 700; color: #F5576C; margin-bottom: 0.5rem;">H2 2025</div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 1rem;">Validación Multi-Industria</h3>
+              <p style="color: #64748b; line-height: 1.6; margin-bottom: 1rem;">
+                Expandimos a Concreces (fintech) y Ralston Fields (inmobiliaria USA). Cada industria confirmó que el sistema funcionaba.
+              </p>
+              <div style="font-size: 0.9rem; color: #64748b; padding: 1rem; background: #FFF0F0; border-radius: 8px; border-left: 3px solid #F5576C;">
+                <strong style="color: #F5576C;">Resultado:</strong> 3 empresas, 2500+ leads/mes, cero pérdidas
+              </div>
+            </div>
           </div>
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold mb-3" style="color: var(--color-graphite);">Visión Latinoamérica</h3>
-            <p class="text-lg" style="color: #6b7280;">
-              Escalamos hacia otros países de la región. Consolidamos Zellfy como el ecosistema comercial líder que combina automatización, IA y visibilidad total.
-            </p>
+          <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background: white; border: 4px solid #F5576C; border-radius: 50%; z-index: 10;"></div>
+          <div></div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; position: relative;">
+          <div></div>
+          <div style="text-align: left; padding-left: 2rem;">
+            <div style="background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); color: white;">
+              <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">2026 y Más</div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">La Visión Latinoamericana</h3>
+              <p style="line-height: 1.6; margin-bottom: 1rem; opacity: 0.95;">
+                Hoy compartimos Zellfy con el mundo porque sabemos que funciona. Porque nosotros lo vivimos cada día.
+              </p>
+              <div style="font-size: 0.9rem; padding: 1rem; background: rgba(255,255,255,0.2); border-radius: 8px; border-left: 3px solid white;">
+                <strong>Próximo Capítulo:</strong> Que todas las empresas de Latinoamérica vendan como nosotros: inteligentemente, sin perder leads, ganando tiempo.
+              </div>
+            </div>
           </div>
+          <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background: white; border: 4px solid #667EEA; border-radius: 50%; z-index: 10;"></div>
         </div>
       </div>
     </div>
