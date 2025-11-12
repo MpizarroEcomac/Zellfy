@@ -25,22 +25,34 @@ Zellfy.ai es una plataforma de gestión de ventas con arquitectura monorepo que 
   - `src/layouts/`: Layout base compartido (BaseLayout.astro)
   - `src/components/`: Componentes Vue y Astro reutilizables
   - `src/styles/`: Variables CSS y estilos globales
+  - `src/content/`: Contenido estructurado
 
-- **Páginas principales**:
+- **Páginas implementadas**:
   - `/` - Inicio con hero y beneficios
   - `/como-funciona` - Timeline del journey del cliente
   - `/soluciones` - Zellfy (CRM) y Zellflow (automatización)
   - `/pricing` - Planes comparativos
   - `/casos` - Casos de éxito
   - `/contacto` - Formulario de contacto
+  - `/nosotros` - Sobre la empresa
+  - `/valores` - Valores corporativos
+  - `/integraciones` - Integraciones disponibles
+  - `/blog` - Blog y artículos
 
 ### Backend (Laravel)
 
-El directorio `backend/` está planificado pero aún no implementado. Cuando se desarrolle:
-- Laravel 11 con PHP 8.2+
-- API REST en `/api/*` endpoints
-- MySQL 8.0+ como base de datos
-- Endpoints planificados: `/api/pricing`, `/api/contact`, `/api/casos`, `/api/leads`, `/api/blog`
+- **Framework**: Laravel 12 con PHP 8.2+
+- **Base de datos**: MySQL 8.0+ (configurable con SQLite para desarrollo)
+- **API REST**: Endpoints en `/api/*`
+- **Estructura**:
+  - `app/`: Lógica de aplicación (Models, Controllers, Services)
+  - `routes/`: Definición de rutas (web.php, api.php)
+  - `database/`: Migraciones, seeders y factories
+  - `tests/`: Pruebas unitarias y de integración
+- **Comandos útiles de Composer**:
+  - `composer setup`: Instalación completa (dependencias + migración + build)
+  - `composer dev`: Servidor + queue + logs + vite (desarrollo completo)
+  - `composer test`: Ejecutar suite de pruebas
 
 ---
 
@@ -49,38 +61,46 @@ El directorio `backend/` está planificado pero aún no implementado. Cuando se 
 ### Frontend (Astro)
 
 **Desarrollo:**
-```powershell
+```bash
 cd frontend
 npm install           # Instalar dependencias
 npm run dev          # Servidor de desarrollo en http://localhost:4321
 ```
 
 **Build y Deploy:**
-```powershell
+```bash
 npm run build        # Construir para producción (debe ejecutarse antes de commits)
 npm run preview      # Previsualizar build de producción
 ```
 
-**Testing:**
-```powershell
-npm run test         # Ejecutar pruebas del frontend
+**Nota**: No hay comando `npm run test` configurado actualmente en el frontend.
+
+### Backend (Laravel)
+
+**Setup inicial:**
+```bash
+cd backend
+composer setup       # Instala dependencias, copia .env, genera key, migra DB, instala npm y builda
 ```
 
-### Backend (Laravel - cuando esté implementado)
-
-```powershell
-cd backend
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate --seed
+**Desarrollo:**
+```bash
+composer dev         # Inicia servidor + queue + logs + vite simultáneamente
+# O manualmente:
 php artisan serve    # API en http://localhost:8000
-php artisan test     # Ejecutar pruebas
+```
+
+**Otros comandos:**
+```bash
+composer install     # Solo instalar dependencias
+php artisan migrate  # Ejecutar migraciones
+php artisan db:seed  # Poblar base de datos
+composer test        # Ejecutar suite de pruebas (alias de php artisan test)
 ```
 
 ### Base de Datos
 
-```powershell
+```bash
 mysql -u root -p < database/schema.sql
 ```
 
@@ -125,16 +145,24 @@ Todo el contenido y UI debe estar en **español neutro**.
 ### Antes de Commits
 
 1. Ejecutar `npm run build` en frontend/ para verificar que no hay errores de compilación
-2. El backend Laravel, cuando esté implementado, requerirá `php artisan test` antes de commits
+2. Ejecutar `composer test` en backend/ para verificar que las pruebas pasen
 
-### Servidor en Background (PowerShell)
+### Servidor en Background (macOS/zsh)
 
-Iniciar el servidor como job en background para liberar la terminal:
+Iniciar el servidor en background para liberar la terminal:
 
-```powershell
+**Frontend:**
+```bash
 cd frontend
-Start-Job -ScriptBlock { npm run dev }
-Get-Job  # Verificar estado
+npm run dev &
+# O con nohup para mantenerlo después de cerrar terminal:
+nohup npm run dev > /dev/null 2>&1 &
+```
+
+**Backend (recomendado usar composer dev que maneja múltiples procesos):**
+```bash
+cd backend
+composer dev  # Esto ya maneja servidor, queue, logs y vite
 ```
 
 ### Análisis de Errores
@@ -242,23 +270,25 @@ WHATSAPP_API_TOKEN=xxxxx
 
 ### ✅ Implementado
 - Estructura frontend Astro + Vue + TailwindCSS
-- 6 páginas principales (index, como-funciona, soluciones, pricing, casos, contacto)
+- 10 páginas (index, como-funciona, soluciones, pricing, casos, contacto, nosotros, valores, integraciones, blog)
 - Layout base con navegación y footer
 - Sistema de diseño con variables CSS
 - Esquema de base de datos MySQL completo
+- Backend Laravel 12 con estructura base
+- Comandos composer automatizados (setup, dev, test)
 
 ### 🚧 En Desarrollo
 - Componentes Vue interactivos (formularios, animaciones)
-- Backend Laravel completo
 - API REST endpoints
 - Sistema CRM integrado
 - Integraciones externas (Google, Meta, WhatsApp)
+- Contenido del blog
 
 ### 📋 Pendiente
-- Sistema de blog con MDX
+- Sistema de blog con contenido MDX
 - Autenticación y roles de usuario
 - Dashboard de analytics
-- Tests automatizados
+- Tests automatizados frontend
 - SEO avanzado (Schema.org, sitemap dinámico)
 - Google Analytics 4 + Meta Pixel
 
@@ -273,53 +303,6 @@ WHATSAPP_API_TOKEN=xxxxx
 **Imágenes y recursos** deben almacenarse en:
 - `frontend/src/assets/` - Imágenes procesadas por Vite
 - `frontend/public/` - Assets públicos sin procesamiento
-
----
-
-## Troubleshooting en Windows/PowerShell
-
-### Error: "npm no reconocido como comando"
-```powershell
-# Verificar instalación de Node.js
-node --version
-npm --version
-
-# Si no está instalado, descargar desde: https://nodejs.org/
-```
-
-### Error: "Permisos denegados" al ejecutar scripts
-```powershell
-# Ejecutar PowerShell como Administrador
-# Cambiar política de ejecución (solo una vez)
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-### Error: "Puerto 4321 ya en uso"
-```powershell
-# Encontrar proceso usando el puerto
-Get-NetTCPConnection -LocalPort 4321 | Select-Object OwningProcess
-
-# Detener el proceso (reemplazar PID con el número del proceso)
-Stop-Process -Id PID -Force
-
-# O usar otro puerto
-npm run dev -- --port 3000
-```
-
-### Limpiar cache y reinstalar dependencias
-```powershell
-cd frontend
-Remove-Item -Recurse -Force node_modules, package-lock.json
-npm install
-```
-
-### Servidor no accesible desde otros dispositivos
-```powershell
-# Ejecutar con host 0.0.0.0
-npm run dev -- --host 0.0.0.0
-
-# Acceder desde: http://TU_IP_LOCAL:4321
-```
 
 ---
 

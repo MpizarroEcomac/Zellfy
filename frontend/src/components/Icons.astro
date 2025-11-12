@@ -5,9 +5,20 @@ interface Props {
   size?: number;
   color?: string;
   class?: string;
+  ariaLabel?: string;
 }
 
-const { name, size = 24, color = "currentColor", class: className } = Astro.props;
+const { 
+  name, 
+  size = 24, 
+  color = "currentColor", 
+  class: className,
+  ariaLabel 
+} = Astro.props;
+
+// Generar aria-label automáticamente si no se proporciona
+const defaultAriaLabel = name.replace(/([A-Z])/g, ' $1').trim();
+const finalAriaLabel = ariaLabel || defaultAriaLabel;
 
 const icons: Record<string, string> = {
   // Módulos
@@ -44,10 +55,14 @@ const iconSvg = icons[name] || '';
 
 {iconSvg && (
   <svg
-    set:html={iconSvg}
     width={size}
     height={size}
     class={className}
+    role="img"
+    aria-label={finalAriaLabel}
     style={{ display: 'inline-block' }}
-  />
+  >
+    <title>{finalAriaLabel}</title>
+    <g set:html={iconSvg} />
+  </svg>
 )}

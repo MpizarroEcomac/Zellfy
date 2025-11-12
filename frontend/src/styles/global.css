@@ -9,6 +9,40 @@
   box-sizing: border-box;
 }
 
+/* Focus States para Accesibilidad */
+*:focus {
+  outline: 3px solid #00BFFF;
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 3px solid #00BFFF;
+  outline-offset: 2px;
+}
+
+/* Skip to Content Link (Accesibilidad) */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 999;
+  padding: 1rem 1.5rem;
+  background: #00BFFF;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-to-content:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1rem;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
