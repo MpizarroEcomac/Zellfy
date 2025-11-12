@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icons.astro';
+import BenefitCard from '../components/BenefitCard.astro';
 ---
 
 <BaseLayout title="Zellfy - Transforma tu proceso de ventas">
@@ -54,101 +55,59 @@ import Icon from '../components/Icons.astro';
       </div>
       
       <div class="grid grid-cols-3">
-        <div class="card">
-          <img 
-            src="/business-chart.jpg" 
-            alt="Sistema de captación automática de leads con integraciones a Google Ads, Meta y WhatsApp Business" 
-            class="card-image"
-            loading="lazy"
-            width="400"
-            height="250"
-          />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <Icon name="zap" size={32} color="white" />
-          </div>
-          <h3>Captación Automática</h3>
-          <p>Conecta con Google Ads, Meta y WhatsApp. Todos tus leads en un solo lugar.</p>
-        </div>
+        <BenefitCard
+          imageSrc="/business-chart.jpg"
+          imageAlt="Sistema de captación automática de leads con integraciones a Google Ads, Meta y WhatsApp Business"
+          iconName="zap"
+          iconGradient="linear-gradient(135deg, #00BFFF 0%, #0099CC 100%)"
+          title="Captación Automática"
+          description="Conecta con Google Ads, Meta y WhatsApp. Todos tus leads en un solo lugar."
+        />
 
-        <div class="card">
-          <img 
-            src="/crm-dashboard.jpg" 
-            alt="CRM inteligente con seguimiento 24/7, recordatorios automáticos y priorización de leads con IA" 
-            class="card-image"
-            loading="lazy"
-            width="400"
-            height="250"
-          />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <Icon name="barChart" size={32} color="white" />
-          </div>
-          <h3>CRM Inteligente</h3>
-          <p>Seguimiento 24/7, recordatorios automáticos y priorización con IA.</p>
-        </div>
+        <BenefitCard
+          imageSrc="/crm-dashboard.jpg"
+          imageAlt="CRM inteligente con seguimiento 24/7, recordatorios automáticos y priorización de leads con IA"
+          iconName="barChart"
+          iconGradient="linear-gradient(135deg, #00C48C 0%, #00a076 100%)"
+          title="CRM Inteligente"
+          description="Seguimiento 24/7, recordatorios automáticos y priorización con IA."
+        />
 
-        <div class="card">
-          <img 
-            src="/social-apps.jpg" 
-            alt="Mensajería automatizada instantánea vía WhatsApp, email y SMS para atención 24/7" 
-            class="card-image"
-            loading="lazy"
-            width="400"
-            height="250"
-          />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <Icon name="messageCircle" size={32} color="white" />
-          </div>
-          <h3>Respuesta Instantánea</h3>
-          <p>Mensajería automatizada vía WhatsApp, email y SMS.</p>
-        </div>
+        <BenefitCard
+          imageSrc="/social-apps.jpg"
+          imageAlt="Mensajería automatizada instantánea vía WhatsApp, email y SMS para atención 24/7"
+          iconName="messageCircle"
+          iconGradient="linear-gradient(135deg, #00BFFF 0%, #0099CC 100%)"
+          title="Respuesta Instantánea"
+          description="Mensajería automatizada vía WhatsApp, email y SMS."
+        />
 
-        <div class="card">
-          <img 
-            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop" 
-            alt="Proceso de cierre rápido con firma electrónica, cotizaciones digitales y validaciones en tiempo real" 
-            class="card-image"
-            loading="lazy"
-            width="400"
-            height="250"
-          />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <Icon name="check" size={32} color="white" />
-          </div>
-          <h3>Cierre Rápido</h3>
-          <p>Firma electrónica, cotizaciones digitales y validaciones en tiempo real.</p>
-        </div>
+        <BenefitCard
+          imageSrc="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop"
+          imageAlt="Proceso de cierre rápido con firma electrónica, cotizaciones digitales y validaciones en tiempo real"
+          iconName="check"
+          iconGradient="linear-gradient(135deg, #00C48C 0%, #00a076 100%)"
+          title="Cierre Rápido"
+          description="Firma electrónica, cotizaciones digitales y validaciones en tiempo real."
+        />
 
-        <div class="card">
-          <img 
-            src="/automation-workflow.jpg" 
-            alt="Dashboard en tiempo real con visibilidad total del pipeline y métricas de rendimiento actualizadas al instante" 
-            class="card-image"
-            loading="lazy"
-            width="400"
-            height="250"
-          />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <Icon name="barChart2" size={32} color="white" />
-          </div>
-          <h3>Dashboard en Vivo</h3>
-          <p>Visibilidad total de tu pipeline. Métricas en tiempo real.</p>
-        </div>
+        <BenefitCard
+          imageSrc="/automation-workflow.jpg"
+          imageAlt="Dashboard en tiempo real con visibilidad total del pipeline y métricas de rendimiento actualizadas al instante"
+          iconName="barChart2"
+          iconGradient="linear-gradient(135deg, #00BFFF 0%, #0099CC 100%)"
+          title="Dashboard en Vivo"
+          description="Visibilidad total de tu pipeline. Métricas en tiempo real."
+        />
 
-        <div class="card">
-          <img 
-            src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" 
-            alt="Seguridad empresarial con cumplimiento normativo, encriptación SSL y respaldo automático de datos" 
-            class="card-image"
-            loading="lazy"
-            width="400"
-            height="250"
-          />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <Icon name="lock" size={32} color="white" />
-          </div>
-          <h3>Seguridad Total</h3>
-          <p>Cumplimiento normativo, encriptación y respaldo automático.</p>
-        </div>
+        <BenefitCard
+          imageSrc="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop"
+          imageAlt="Seguridad empresarial con cumplimiento normativo, encriptación SSL y respaldo automático de datos"
+          iconName="lock"
+          iconGradient="linear-gradient(135deg, #00C48C 0%, #00a076 100%)"
+          title="Seguridad Total"
+          description="Cumplimiento normativo, encriptación y respaldo automático."
+        />
       </div>
     </div>
   </section>
