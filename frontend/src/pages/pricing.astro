@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icons.astro';
+import PricingCard from '../components/PricingCard.astro';
 ---
 
 <BaseLayout title="Planes y Precios - Zellfy" description="Escoge el plan que se adapta a tu negocio y escala cuando creces.">
@@ -35,118 +36,48 @@ import Icon from '../components/Icons.astro';
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
         
         <!-- Starter - Free Plan -->
-        <div style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); overflow: hidden;">
-          <div style="height: 5px; background-color: #00BFFF;"></div>
-          <div style="padding: 2.5rem;">
-            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937; letter-spacing: -0.5px;">Una aplicación gratis</h3>
-            
-            <div style="margin-bottom: 2.5rem;">
-              <div style="margin-bottom: 0.5rem;">
-                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF; line-height: 1;">$</span><span style="font-size: 4rem; font-weight: 700; color: #00BFFF; line-height: 1;">0</span>
-              </div>
-            </div>
-            
-            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0;">
-              <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500;">
-                Una aplicación sin límite de usuarios
-              </p>
-              <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem;">
-                Zellfy en línea
-              </p>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <a href="/contacto" style="display: block; text-align: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px;">
-                COMIENZA AHORA
-              </a>
-            </div>
-          </div>
-        </div>
+        <PricingCard
+          title="Una aplicación gratis"
+          price="0"
+          description="Una aplicación sin límite de usuarios"
+          subDescription="Zellfy en línea"
+          ctaPrimary="COMIENZA AHORA"
+          color="blue"
+        />
 
         <!-- Pro - Standard Plan -->
-        <div style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); overflow: hidden;">
-          <div style="height: 5px; background-color: #FF6B6B;"></div>
-          <div style="padding: 2.5rem;">
-            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937; letter-spacing: -0.5px;">Estándar</h3>
-            
-            <div style="margin-bottom: 2.5rem;">
-              <div style="margin-bottom: 0.5rem;">
-                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B; line-height: 1;">$</span><span style="font-size: 4rem; font-weight: 700; color: #FF6B6B; line-height: 1;">7</span><span style="font-size: 1.5rem; font-weight: 700; color: #FF6B6B; line-height: 1;">.25</span>
-              </div>
-              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">
-                US$ 6.95 <span style="color: #ef4444; margin-left: 0.25rem;">*</span>
-              </p>
-            </div>
-            
-            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0;">
-              <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem;">
-                por usuario al mes (más IVA)
-              </p>
-              <p style="font-size: 0.95rem; color: #1f2937; font-weight: 600; line-height: 1.7;">
-                Todas las aplicaciones
-              </p>
-              <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem;">
-                Zellfy en línea
-              </p>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <a href="/contacto" style="display: block; text-align: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px;">
-                COMPRA AHORA
-              </a>
-              <a href="/contacto" style="display: block; text-align: center; padding: 1rem 1.5rem; background-color: #f3f4f6; color: #5B3A7D; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px;">
-                PRUÉBALO GRATIS
-              </a>
-            </div>
-          </div>
-        </div>
+        <PricingCard
+          title="Estándar"
+          price="7"
+          priceCents="25"
+          priceNote="US$ 6.95 *"
+          description="por usuario al mes (más IVA)"
+          subDescription="Todas las aplicaciones"
+          features={["Zellfy en línea"]}
+          ctaPrimary="COMPRA AHORA"
+          ctaSecondary="PRUÉBALO GRATIS"
+          color="red"
+          featured={true}
+        />
 
         <!-- Enterprise - Custom Plan -->
-        <div style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); overflow: hidden;">
-          <div style="height: 5px; background-color: #00C48C;"></div>
-          <div style="padding: 2.5rem;">
-            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937; letter-spacing: -0.5px;">Personalizado</h3>
-            
-            <div style="margin-bottom: 2.5rem;">
-              <div style="margin-bottom: 0.5rem;">
-                <span style="font-size: 4rem; font-weight: 700; color: #00C48C; line-height: 1;">$</span><span style="font-size: 4rem; font-weight: 700; color: #00C48C; line-height: 1;">10</span><span style="font-size: 1.5rem; font-weight: 700; color: #00C48C; line-height: 1;">.90</span>
-              </div>
-              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">
-                US$ 13.60 <span style="color: #ef4444; margin-left: 0.25rem;">*</span>
-              </p>
-            </div>
-            
-            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0;">
-              <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem;">
-                por usuario al mes (más IVA)
-              </p>
-              <p style="font-size: 0.95rem; color: #1f2937; font-weight: 600; line-height: 1.7;">
-                Todas las aplicaciones
-              </p>
-              <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem;">
-                Zellfy en línea / Zellfy.sh / Local
-              </p>
-              <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem;">
-                Studio de Zellfy
-              </p>
-              <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem;">
-                Multiempresa
-              </p>
-              <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem;">
-                API externa
-              </p>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <a href="/contacto" style="display: block; text-align: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px;">
-                COMPRA AHORA
-              </a>
-              <a href="/contacto" style="display: block; text-align: center; padding: 1rem 1.5rem; background-color: #f3f4f6; color: #5B3A7D; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px;">
-                PRUÉBALO GRATIS
-              </a>
-            </div>
-          </div>
-        </div>
+        <PricingCard
+          title="Personalizado"
+          price="10"
+          priceCents="90"
+          priceNote="US$ 13.60 *"
+          description="por usuario al mes (más IVA)"
+          subDescription="Todas las aplicaciones"
+          features={[
+            "Zellfy en línea / Zellfy.sh / Local",
+            "Studio de Zellfy",
+            "Multiempresa",
+            "API externa"
+          ]}
+          ctaPrimary="COMPRA AHORA"
+          ctaSecondary="PRUÉBALO GRATIS"
+          color="green"
+        />
 
       </div>
     </div>
