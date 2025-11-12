@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ContactForm.vue';
 import Icon from '../components/Icons.astro';
+import ContactChannel from '../components/ContactChannel.astro';
 ---
 
 <BaseLayout title="Contacto - Zellfy" description="Conecta con nosotros. Estamos listos para ayudarte a hacer crecer tus ventas.">
@@ -42,106 +43,53 @@ import Icon from '../components/Icons.astro';
           <ContactForm client:load />
         </div>
       </div>
-
       <!-- Otros Canales en Fila Horizontal -->
       <div style="animation: fadeInUp 0.8s ease-out 0.3s both;">
         <h2 style="font-size: 1.5rem; font-weight: 800; color: #1f2937; margin-bottom: 1.5rem;">
           Otros canales
         </h2>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-          <!-- Chat en Vivo -->
-          <div style="background: linear-gradient(135deg, #5B5FFF 0%, #6B3AD1 100%); padding: 1.5rem; border-radius: 1rem; color: white; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 20px 50px rgba(91, 95, 255, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(91, 95, 255, 0.2)';" style="box-shadow: 0 8px 30px rgba(91, 95, 255, 0.2);">
-            <div style="position: absolute; top: -50%; right: -50%; width: 150px; height: 150px; background: rgba(255,255,255,0.05); border-radius: 50%; animation: float 20s ease-in-out infinite;"></div>
-            <div style="position: relative; z-index: 1;">
-              <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                  <Icon name="broadcast" size={24} color="white" />
-                </div>
-                <div>
-                  <div style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Chat en Vivo</div>
-                  <div style="font-size: 0.75rem; opacity: 0.9;">Soporte inmediato</div>
-                </div>
-              </div>
-              <p style="font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem; opacity: 0.95;">
-                Personas reales, sin bots.
-              </p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; padding: 0.6rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-                <div style="text-align: center;">
-                  <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.15rem; text-transform: uppercase;">Horario</div>
-                  <div style="font-weight: 700; font-size: 0.75rem;">Lun-Vie 9-18h</div>
-                </div>
-                <div style="text-align: center;">
-                  <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.15rem; text-transform: uppercase;">Respuesta</div>
-                  <div style="font-weight: 700; font-size: 0.75rem;">5 min</div>
-                </div>
-              </div>
-              <button style="width: 100%; background: rgba(255,255,255,0.25); border: 1.5px solid rgba(255,255,255,0.5); color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 0.8rem;" onclick="openChat()" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.35)'; this.style.transform='scale(1.02)';" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.25)'; this.style.transform='scale(1)';">Iniciar Chat</button>
-            </div>
-          </div>
+          <ContactChannel
+            title="Chat en Vivo"
+            subtitle="Soporte inmediato"
+            description="Personas reales, sin bots."
+            iconName="broadcast"
+            gradient="purple"
+            buttonText="Iniciar Chat"
+            metaLabel1="Horario"
+            metaValue1="Lun-Vie 9-18h"
+            metaLabel2="Respuesta"
+            metaValue2="5 min"
+            onClick="openChat()"
+          />
 
-          <!-- WhatsApp -->
-          <a href="https://wa.me/56987654321?text=Hola%20Zellfy%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20c%C3%B3mo%20aumentar%20mis%20ventas" target="_blank" style="display: block; background: linear-gradient(135deg, #1FB854 0%, #128C45 100%); padding: 1.5rem; border-radius: 1rem; color: white; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 20px 50px rgba(31, 184, 84, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(31, 184, 84, 0.2)';" style="box-shadow: 0 8px 30px rgba(31, 184, 84, 0.2);">
-            <div style="position: absolute; top: -50%; right: -50%; width: 150px; height: 150px; background: rgba(255,255,255,0.05); border-radius: 50%; animation: float 20s ease-in-out infinite;"></div>
-            <div style="position: relative; z-index: 1;">
-              <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                  <Icon name="link" size={24} color="white" />
-                </div>
-                <div>
-                  <div style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">WhatsApp</div>
-                  <div style="font-size: 0.75rem; opacity: 0.9;">Acceso 24/7</div>
-                </div>
-              </div>
-              <p style="font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem; opacity: 0.95;">
-                Respuesta inmediata.
-              </p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; padding: 0.6rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-                <div style="text-align: center;">
-                  <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.15rem; text-transform: uppercase;">Disponible</div>
-                  <div style="font-weight: 700; font-size: 0.75rem;">24/7</div>
-                </div>
-                <div style="text-align: center;">
-                  <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.15rem; text-transform: uppercase;">Respuesta</div>
-                  <div style="font-weight: 700; font-size: 0.75rem;">1-2h</div>
-                </div>
-              </div>
-              <span style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; background: rgba(255,255,255,0.25); padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 600; font-size: 0.8rem; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.35)'; this.style.transform='scale(1.02)';" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.25)'; this.style.transform='scale(1)';">
-                Abrir WhatsApp
-              </span>
-            </div>
-          </a>
+          <ContactChannel
+            title="WhatsApp"
+            subtitle="Acceso 24/7"
+            description="Respuesta inmediata."
+            iconName="link"
+            gradient="green"
+            href="https://wa.me/56987654321?text=Hola%20Zellfy%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20c%C3%B3mo%20aumentar%20mis%20ventas"
+            buttonText="Abrir WhatsApp"
+            metaLabel1="Disponible"
+            metaValue1="24/7"
+            metaLabel2="Respuesta"
+            metaValue2="1-2h"
+          />
 
-          <!-- Teléfono -->
-          <a href="tel:+56987654321" style="display: block; background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%); padding: 1.5rem; border-radius: 1rem; color: white; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 20px 50px rgba(14, 165, 233, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(14, 165, 233, 0.2)';" style="box-shadow: 0 8px 30px rgba(14, 165, 233, 0.2);">
-            <div style="position: absolute; top: -50%; right: -50%; width: 150px; height: 150px; background: rgba(255,255,255,0.05); border-radius: 50%; animation: float 20s ease-in-out infinite;"></div>
-            <div style="position: relative; z-index: 1;">
-              <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                  <Icon name="rocketIcon" size={24} color="white" />
-                </div>
-                <div>
-                  <div style="font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem;">Llamada Directa</div>
-                  <div style="font-size: 0.75rem; opacity: 0.9;">Persona a persona</div>
-                </div>
-              </div>
-              <p style="font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem; opacity: 0.95;">
-                Con especialista.
-              </p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; padding: 0.6rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-                <div style="text-align: center;">
-                  <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.15rem; text-transform: uppercase;">Teléfono</div>
-                  <div style="font-weight: 700; font-size: 0.75rem;">+56987654321</div>
-                </div>
-                <div style="text-align: center;">
-                  <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.15rem; text-transform: uppercase;">Horario</div>
-                  <div style="font-weight: 700; font-size: 0.75rem;">Lun-Vie 9-18h</div>
-                </div>
-              </div>
-              <span style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; background: rgba(255,255,255,0.25); padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 600; font-size: 0.8rem; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.35)'; this.style.transform='scale(1.02)';" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.25)'; this.style.transform='scale(1)';">
-                Llamar Ahora
-              </span>
-            </div>
-          </a>
+          <ContactChannel
+            title="Llamada Directa"
+            subtitle="Persona a persona"
+            description="Con especialista."
+            iconName="rocketIcon"
+            gradient="blue"
+            href="tel:+56987654321"
+            buttonText="Llamar Ahora"
+            metaLabel1="Teléfono"
+            metaValue1="+56987654321"
+            metaLabel2="Horario"
+            metaValue2="Lun-Vie 9-18h"
+          />
         </div>
       </div>
     </div>

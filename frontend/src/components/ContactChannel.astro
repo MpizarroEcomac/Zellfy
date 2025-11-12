@@ -1,0 +1,245 @@
+---
+import Icon from './Icons.astro';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  description: string;
+  iconName: string;
+  gradient: 'purple' | 'green' | 'blue';
+  href?: string;
+  buttonText: string;
+  metaLabel1: string;
+  metaValue1: string;
+  metaLabel2: string;
+  metaValue2: string;
+  onClick?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  iconName,
+  gradient,
+  href,
+  buttonText,
+  metaLabel1,
+  metaValue1,
+  metaLabel2,
+  metaValue2,
+  onClick
+} = Astro.props;
+
+const gradients = {
+  purple: 'linear-gradient(135deg, #5B5FFF 0%, #6B3AD1 100%)',
+  green: 'linear-gradient(135deg, #1FB854 0%, #128C45 100%)',
+  blue: 'linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%)'
+};
+
+const shadowColors = {
+  purple: 'rgba(91, 95, 255, 0.2)',
+  green: 'rgba(31, 184, 84, 0.2)',
+  blue: 'rgba(14, 165, 233, 0.2)'
+};
+
+const shadowColorsHover = {
+  purple: 'rgba(91, 95, 255, 0.4)',
+  green: 'rgba(31, 184, 84, 0.4)',
+  blue: 'rgba(14, 165, 233, 0.4)'
+};
+
+const selectedGradient = gradients[gradient];
+const selectedShadow = shadowColors[gradient];
+const selectedShadowHover = shadowColorsHover[gradient];
+
+// Si href existe, es un enlace; si no, es un div
+const Tag = href ? 'a' : 'div';
+const additionalProps = href ? { href, target: '_blank' } : {};
+---
+
+<Tag 
+  {...additionalProps}
+  class="contact-channel"
+  data-shadow={selectedShadow}
+  data-shadow-hover={selectedShadowHover}
+  style={`background: ${selectedGradient}; box-shadow: 0 8px 30px ${selectedShadow};`}
+>
+  <div class="channel-orb"></div>
+  <div class="channel-content">
+    <div class="channel-header">
+      <div class="channel-icon">
+        <Icon name={iconName} size={24} color="white" />
+      </div>
+      <div>
+        <div class="channel-title">{title}</div>
+        <div class="channel-subtitle">{subtitle}</div>
+      </div>
+    </div>
+    <p class="channel-description">{description}</p>
+    <div class="channel-meta">
+      <div class="meta-item">
+        <div class="meta-label">{metaLabel1}</div>
+        <div class="meta-value">{metaValue1}</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">{metaLabel2}</div>
+        <div class="meta-value">{metaValue2}</div>
+      </div>
+    </div>
+    <button 
+      class="channel-button" 
+      type={href ? undefined : 'button'}
+      onclick={onClick}
+    >
+      {buttonText}
+    </button>
+  </div>
+</Tag>
+
+<style>
+  .contact-channel {
+    display: block;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .contact-channel:hover {
+    transform: translateY(-4px);
+  }
+
+  .channel-orb {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+  }
+
+  .channel-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .channel-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .channel-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .channel-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .channel-subtitle {
+    font-size: 0.75rem;
+    opacity: 0.9;
+  }
+
+  .channel-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    opacity: 0.95;
+  }
+
+  .channel-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding: 0.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+
+  .meta-item {
+    text-align: center;
+  }
+
+  .meta-label {
+    font-size: 0.65rem;
+    opacity: 0.7;
+    margin-bottom: 0.15rem;
+    text-transform: uppercase;
+  }
+
+  .meta-value {
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+
+  .channel-button {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+  }
+
+  .channel-button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.02);
+  }
+
+  /* Estilos adicionales para enlace vs div */
+  a.contact-channel {
+    display: block;
+  }
+</style>
+
+<script>
+  // Actualizar box-shadow al hover dinámicamente
+  document.addEventListener('DOMContentLoaded', () => {
+    const channels = document.querySelectorAll('.contact-channel');
+    channels.forEach((channel) => {
+      const shadowHover = channel.getAttribute('data-shadow-hover');
+      const shadow = channel.getAttribute('data-shadow');
+      
+      channel.addEventListener('mouseenter', () => {
+        channel.style.boxShadow = `0 20px 50px ${shadowHover}`;
+      });
+      
+      channel.addEventListener('mouseleave', () => {
+        channel.style.boxShadow = `0 8px 30px ${shadow}`;
+      });
+    });
+  });
+</script>
