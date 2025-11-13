@@ -166,7 +166,7 @@ import BenefitCard from '../components/BenefitCard.astro';
     </div>
   </section>
 
-  <!-- CTA Final Rediseñado -->
+  <!-- CTA Final -->
   <section class="final-cta">
     <div class="container">
       <div class="cta-header">
@@ -175,37 +175,13 @@ import BenefitCard from '../components/BenefitCard.astro';
         <p class="cta-description">Agenda una demo de 20 minutos y descubre cómo Zellfy puede transformar tu negocio</p>
       </div>
 
-      <div class="form-wrapper">
-        <form class="demo-form" id="demoForm">
-          <div class="form-row">
-            <input type="text" name="nombre" placeholder="Nombre completo" required />
-            <input type="text" name="empresa" placeholder="Empresa" required />
-          </div>
-          <div class="form-row">
-            <input type="email" name="email" placeholder="Email corporativo" required />
-            <input type="tel" name="telefono" placeholder="WhatsApp" required />
-          </div>
-          <div class="form-row-full">
-            <select name="objetivo" required>
-              <option value="">¿Qué quieres lograr con Zellfy?</option>
-              <option value="aumentar-ventas">Aumentar ventas</option>
-              <option value="automatizar">Automatizar seguimiento</option>
-              <option value="captar-leads">Captar más leads</option>
-              <option value="organizar-equipo">Organizar mi equipo</option>
-              <option value="integrar">Integrar herramientas</option>
-            </select>
-          </div>
-          <button type="submit" class="btn-cta-big">
-            <span>Agendar Demo Gratis</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <p class="trust-line">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14z" fill="#00C48C"/><path d="M11.5 6L7 10.5 4.5 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Sin compromiso • Sin tarjeta de crédito • Setup en 5 minutos
-          </p>
-        </form>
+      <div class="cta-buttons">
+        <a href="/contacto" class="btn btn-primary-large">
+          Solicitar Demo Gratis →
+        </a>
+        <a href="/como-funciona" class="btn btn-secondary-large">
+          Ver Cómo Funciona
+        </a>
       </div>
 
       <div class="trust-badges">
