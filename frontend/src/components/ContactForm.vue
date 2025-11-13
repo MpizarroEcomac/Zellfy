@@ -190,6 +190,8 @@ const validateForm = () => {
   return isValid;
 };
 
+const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:8000';
+
 const handleSubmit = async () => {
   successMessage.value = '';
   errorMessage.value = '';
@@ -202,24 +204,46 @@ const handleSubmit = async () => {
   isSubmitting.value = true;
   
   try {
-    // TODO: Conectar con API Laravel cuando esté disponible
-    // const response = await fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(formData)
-    // });
-    
-    // Simulación de envío exitoso
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    successMessage.value = '¡Mensaje enviado! Te contactaremos pronto.';
-    
-    // Limpiar formulario
-    Object.keys(formData).forEach(key => {
-      formData[key] = '';
+    const response = await fetch(`${API_URL}/api/leads`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company || null,
+        message: formData.message || null,
+        source: 'website'
+      })
     });
+
+    const data = await response.json();
+
+    if (data.success) {
+      successMessage.value = data.message || '¡Gracias por tu interés! Te contactaremos pronto.';
+      
+      // Google Analytics event (si está configurado)
+      if (window.gtag) {
+        window.gtag('event', 'form_submit', {
+          event_category: 'lead',
+          event_label: 'contact_form'
+        });
+      }
+      
+      // Limpiar formulario
+      Object.keys(formData).forEach(key => {
+        formData[key] = '';
+      });
+      agreeToTerms.value = false;
+    } else {
+      errorMessage.value = data.message || 'Error al enviar el formulario. Intenta nuevamente.';
+    }
   } catch (error) {
-    errorMessage.value = 'Error al enviar el mensaje. Intenta nuevamente.';
+    console.error('Form submission error:', error);
+    errorMessage.value = 'Error de conexión. Por favor intenta nuevamente o contáctanos directamente.';
   } finally {
     isSubmitting.value = false;
   }
