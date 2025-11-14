@@ -15,7 +15,7 @@ import BenefitCard from '../components/BenefitCard.astro';
           <p class="hero-text">Conecta leads, automatiza seguimiento y cierra más ventas con la plataforma CRM diseñada para equipos modernos.</p>
           <div class="hero-buttons">
             <a href="/contacto" class="btn btn-primary">Prueba Gratis →</a>
-            <a href="/como-funciona" class="btn btn-secondary">Ver Demo</a>
+            <button id="openVideoModal" class="btn btn-secondary">Ver Demo</button>
           </div>
           <div class="hero-stats">
             <div class="stat">
@@ -204,6 +204,29 @@ import BenefitCard from '../components/BenefitCard.astro';
       </div>
     </div>
   </section>
+
+  <!-- Modal de Video Demo -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-overlay"></div>
+    <div class="video-modal-content">
+      <button id="closeVideoModal" class="video-modal-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="video-container">
+        <!-- El video se agregará aquí más adelante -->
+        <div class="video-placeholder">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8" fill="#00BFFF"></polygon>
+          </svg>
+          <p>Video demo próximamente</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
 
 <style>
@@ -812,4 +835,146 @@ import BenefitCard from '../components/BenefitCard.astro';
       padding: 1.5rem;
     }
   }
+
+  /* Video Modal */
+  .video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-modal.active {
+    display: flex;
+  }
+
+  .video-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+  }
+
+  .video-modal-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    background: #1f2937;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+    animation: modalFadeIn 0.3s ease-out;
+  }
+
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .video-modal-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 3;
+  }
+
+  .video-modal-close:hover {
+    transform: scale(1.1) rotate(90deg);
+    background: #f87171;
+    color: white;
+  }
+
+  .video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    color: #64748b;
+  }
+
+  .video-placeholder p {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .video-modal-content {
+      width: 95%;
+      padding: 1rem;
+    }
+
+    .video-modal-close {
+      top: -10px;
+      right: -10px;
+      width: 40px;
+      height: 40px;
+    }
+  }
 </style>
+
+<script>
+  // Modal de video
+  const videoModal = document.getElementById('videoModal');
+  const openBtn = document.getElementById('openVideoModal');
+  const closeBtn = document.getElementById('closeVideoModal');
+  const overlay = document.querySelector('.video-modal-overlay');
+
+  // Abrir modal
+  openBtn?.addEventListener('click', () => {
+    videoModal?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Cerrar modal
+  const closeModal = () => {
+    videoModal?.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  closeBtn?.addEventListener('click', closeModal);
+  overlay?.addEventListener('click', closeModal);
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoModal?.classList.contains('active')) {
+      closeModal();
+    }
+  });
+</script>
