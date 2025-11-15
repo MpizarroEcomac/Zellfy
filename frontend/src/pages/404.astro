@@ -1,0 +1,256 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icons.astro';
+---
+
+<BaseLayout title="Página no encontrada - Zellfy" description="La página que buscas no existe o fue movida.">
+  <section class="error-404">
+    <div class="error-container">
+      <!-- Decorative orbs -->
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      
+      <div class="error-content">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Página no encontrada</h1>
+        <p class="error-description">
+          Parece que esta página no existe o fue movida. Pero no te preocupes, aquí te ayudamos a encontrar lo que buscas.
+        </p>
+        
+        <div class="error-actions">
+          <a href="/" class="btn-primary">
+            <Icon name="home" size={20} color="white" />
+            Volver al Inicio
+          </a>
+          <a href="/contacto" class="btn-secondary">
+            <Icon name="messageCircle" size={20} color="#00BFFF" />
+            Contactar Soporte
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <p class="quick-links-title">Enlaces útiles:</p>
+          <div class="links-grid">
+            <a href="/como-funciona" class="quick-link">
+              <Icon name="target" size={18} color="#00BFFF" />
+              Cómo Funciona
+            </a>
+            <a href="/pricing" class="quick-link">
+              <Icon name="creditCard" size={18} color="#00C48C" />
+              Precios
+            </a>
+            <a href="/casos" class="quick-link">
+              <Icon name="barChart" size={18} color="#6C63FF" />
+              Casos de Éxito
+            </a>
+            <a href="/integraciones" class="quick-link">
+              <Icon name="zap" size={18} color="#00BFFF" />
+              Integraciones
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .error-404 {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .orb-1 {
+    top: -150px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 191, 255, 0.2), transparent);
+  }
+
+  .orb-2 {
+    bottom: -150px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 196, 140, 0.2), transparent);
+    animation-delay: -10s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(180deg);
+    }
+  }
+
+  .error-container {
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .error-content {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .error-code {
+    font-size: 8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .error-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .error-description {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 191, 255, 0.4);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: #00BFFF;
+    border: 2px solid #00BFFF;
+  }
+
+  .btn-secondary:hover {
+    background: #f0f9ff;
+    transform: translateY(-3px);
+  }
+
+  .quick-links {
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .quick-links-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .quick-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    color: #1f2937;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .quick-link:hover {
+    background: #e0f2fe;
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 640px) {
+    .error-content {
+      padding: 2rem 1.5rem;
+    }
+
+    .error-code {
+      font-size: 5rem;
+    }
+
+    .error-title {
+      font-size: 1.5rem;
+    }
+
+    .error-description {
+      font-size: 1rem;
+    }
+
+    .error-actions {
+      flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .links-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

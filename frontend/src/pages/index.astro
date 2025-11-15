@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icons.astro';
+import BenefitCard from '../components/BenefitCard.astro';
 ---
 
 <BaseLayout title="Zellfy - Transforma tu proceso de ventas">
@@ -14,7 +15,7 @@ import Icon from '../components/Icons.astro';
           <p class="hero-text">Conecta leads, automatiza seguimiento y cierra más ventas con la plataforma CRM diseñada para equipos modernos.</p>
           <div class="hero-buttons">
             <a href="/contacto" class="btn btn-primary">Prueba Gratis →</a>
-            <a href="/como-funciona" class="btn btn-secondary">Ver Demo</a>
+            <button id="openVideoModal" class="btn btn-secondary">Ver Demo</button>
           </div>
           <div class="hero-stats">
             <div class="stat">
@@ -32,7 +33,14 @@ import Icon from '../components/Icons.astro';
           </div>
         </div>
         <div class="hero-image">
-          <img src="/dashboard-analytics.jpg" alt="Dashboard de análisis de ventas" class="main-hero-img" />
+          <img 
+            src="/dashboard-analytics.jpg" 
+            alt="Dashboard de análisis de ventas en tiempo real mostrando métricas de conversión, pipeline de oportunidades y gráficos de rendimiento del equipo comercial" 
+            class="main-hero-img"
+            loading="eager"
+            width="700"
+            height="500"
+          />
         </div>
       </div>
     </div>
@@ -47,59 +55,59 @@ import Icon from '../components/Icons.astro';
       </div>
       
       <div class="grid grid-cols-3">
-        <div class="card">
-          <img src="/business-chart.jpg" alt="Captación automática" class="card-image" />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <Icon name="zap" size={32} color="white" />
-          </div>
-          <h3>Captación Automática</h3>
-          <p>Conecta con Google Ads, Meta y WhatsApp. Todos tus leads en un solo lugar.</p>
-        </div>
+        <BenefitCard
+          imageSrc="/business-chart.jpg"
+          imageAlt="Sistema de captación automática de leads con integraciones a Google Ads, Meta, WhatsApp, email, SMS, redes sociales y campañas outbound"
+          iconName="zap"
+          iconGradient="linear-gradient(135deg, #00BFFF 0%, #0099CC 100%)"
+          title="Captación Automática"
+          description="Conecta Google Ads, Meta, WhatsApp, email, SMS, redes sociales y campañas outbound. Todos tus leads en un solo lugar."
+        />
 
-        <div class="card">
-          <img src="/crm-dashboard.jpg" alt="CRM Inteligente" class="card-image" />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <Icon name="barChart" size={32} color="white" />
-          </div>
-          <h3>CRM Inteligente</h3>
-          <p>Seguimiento 24/7, recordatorios automáticos y priorización con IA.</p>
-        </div>
+        <BenefitCard
+          imageSrc="/crm-dashboard.jpg"
+          imageAlt="CRM inteligente con priorización automática de leads mediante IA y datos actualizados en tiempo real"
+          iconName="barChart"
+          iconGradient="linear-gradient(135deg, #00C48C 0%, #00a076 100%)"
+          title="CRM Inteligente"
+          description="Priorización automática con IA, recordatorios inteligentes y datos actualizados en tiempo real."
+        />
 
-        <div class="card">
-          <img src="/social-apps.jpg" alt="Respuesta instantánea" class="card-image" />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <Icon name="messageCircle" size={32} color="white" />
-          </div>
-          <h3>Respuesta Instantánea</h3>
-          <p>Mensajería automatizada vía WhatsApp, email y SMS.</p>
-        </div>
+        <BenefitCard
+          imageSrc="/social-apps.jpg"
+          imageAlt="Respuesta inmediata a prospectos y clientes en tiempo real 24/7 vía WhatsApp, email y SMS"
+          iconName="messageCircle"
+          iconGradient="linear-gradient(135deg, #00BFFF 0%, #0099CC 100%)"
+          title="Respuesta Instantánea"
+          description="Responde a tus prospectos y clientes en tiempo real, 24 horas al día, 7 días a la semana."
+        />
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop" alt="Cierre rápido" class="card-image" />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <Icon name="check" size={32} color="white" />
-          </div>
-          <h3>Cierre Rápido</h3>
-          <p>Firma electrónica, cotizaciones digitales y validaciones en tiempo real.</p>
-        </div>
+        <BenefitCard
+          imageSrc="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop"
+          imageAlt="Proceso de cierre rápido mediante automatización que reduce tiempos y agiliza tus ventas"
+          iconName="check"
+          iconGradient="linear-gradient(135deg, #00C48C 0%, #00a076 100%)"
+          title="Cierre Rápido"
+          description="Automatización inteligente que acorta los tiempos de cierre y acelera tus ventas."
+        />
 
-        <div class="card">
-          <img src="/automation-workflow.jpg" alt="Dashboard en vivo" class="card-image" />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);">
-            <Icon name="barChart2" size={32} color="white" />
-          </div>
-          <h3>Dashboard en Vivo</h3>
-          <p>Visibilidad total de tu pipeline. Métricas en tiempo real.</p>
-        </div>
+        <BenefitCard
+          imageSrc="/automation-workflow.jpg"
+          imageAlt="Dashboard en tiempo real con visibilidad total del pipeline y métricas de rendimiento actualizadas al instante"
+          iconName="barChart2"
+          iconGradient="linear-gradient(135deg, #00BFFF 0%, #0099CC 100%)"
+          title="Dashboard en Vivo"
+          description="Visibilidad total de tu pipeline. Métricas en tiempo real."
+        />
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" alt="Seguridad total" class="card-image" />
-          <div class="card-icon" style="background: linear-gradient(135deg, #00C48C 0%, #00a076 100%);">
-            <Icon name="lock" size={32} color="white" />
-          </div>
-          <h3>Seguridad Total</h3>
-          <p>Cumplimiento normativo, encriptación y respaldo automático.</p>
-        </div>
+        <BenefitCard
+          imageSrc="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop"
+          imageAlt="Seguridad empresarial con cumplimiento normativo, encriptación SSL y respaldo automático de datos"
+          iconName="lock"
+          iconGradient="linear-gradient(135deg, #00C48C 0%, #00a076 100%)"
+          title="Seguridad Total"
+          description="Cumplimiento normativo, encriptación y respaldo automático."
+        />
       </div>
     </div>
   </section>
@@ -119,7 +127,13 @@ import Icon from '../components/Icons.astro';
           </ul>
         </div>
         <div class="showcase-image">
-          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=700&h=500&fit=crop" alt="Automatización de procesos" />
+          <img 
+            src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=700&h=500&fit=crop" 
+            alt="Automatización inteligente de procesos comerciales con IA que responde y califica leads las 24 horas" 
+            loading="lazy"
+            width="700"
+            height="500"
+          />
         </div>
       </div>
     </div>
@@ -130,7 +144,13 @@ import Icon from '../components/Icons.astro';
     <div class="container">
       <div class="showcase-grid reverse">
         <div class="showcase-image">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700&h=500&fit=crop" alt="Equipo trabajando con procesos" />
+          <img 
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700&h=500&fit=crop" 
+            alt="Equipo de ventas trabajando con procesos organizados y dashboards en tiempo real para maximizar productividad" 
+            loading="lazy"
+            width="700"
+            height="500"
+          />
         </div>
         <div class="showcase-content">
           <h2>Visibilidad total de tu pipeline</h2>
@@ -146,7 +166,7 @@ import Icon from '../components/Icons.astro';
     </div>
   </section>
 
-  <!-- CTA Final Rediseñado -->
+  <!-- CTA Final -->
   <section class="final-cta">
     <div class="container">
       <div class="cta-header">
@@ -155,37 +175,13 @@ import Icon from '../components/Icons.astro';
         <p class="cta-description">Agenda una demo de 20 minutos y descubre cómo Zellfy puede transformar tu negocio</p>
       </div>
 
-      <div class="form-wrapper">
-        <form class="demo-form" id="demoForm">
-          <div class="form-row">
-            <input type="text" name="nombre" placeholder="Nombre completo" required />
-            <input type="text" name="empresa" placeholder="Empresa" required />
-          </div>
-          <div class="form-row">
-            <input type="email" name="email" placeholder="Email corporativo" required />
-            <input type="tel" name="telefono" placeholder="WhatsApp" required />
-          </div>
-          <div class="form-row-full">
-            <select name="objetivo" required>
-              <option value="">¿Qué quieres lograr con Zellfy?</option>
-              <option value="aumentar-ventas">Aumentar ventas</option>
-              <option value="automatizar">Automatizar seguimiento</option>
-              <option value="captar-leads">Captar más leads</option>
-              <option value="organizar-equipo">Organizar mi equipo</option>
-              <option value="integrar">Integrar herramientas</option>
-            </select>
-          </div>
-          <button type="submit" class="btn-cta-big">
-            <span>Agendar Demo Gratis</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <p class="trust-line">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14z" fill="#00C48C"/><path d="M11.5 6L7 10.5 4.5 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Sin compromiso • Sin tarjeta de crédito • Setup en 5 minutos
-          </p>
-        </form>
+      <div class="cta-buttons">
+        <a href="/contacto" class="btn btn-primary-large">
+          Solicitar Demo Gratis →
+        </a>
+        <a href="/como-funciona" class="btn btn-secondary-large">
+          Ver Cómo Funciona
+        </a>
       </div>
 
       <div class="trust-badges">
@@ -208,6 +204,29 @@ import Icon from '../components/Icons.astro';
       </div>
     </div>
   </section>
+
+  <!-- Modal de Video Demo -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-overlay"></div>
+    <div class="video-modal-content">
+      <button id="closeVideoModal" class="video-modal-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="video-container">
+        <!-- El video se agregará aquí más adelante -->
+        <div class="video-placeholder">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#00BFFF" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8" fill="#00BFFF"></polygon>
+          </svg>
+          <p>Video demo próximamente</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
 
 <style>
@@ -816,4 +835,146 @@ import Icon from '../components/Icons.astro';
       padding: 1.5rem;
     }
   }
+
+  /* Video Modal */
+  .video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-modal.active {
+    display: flex;
+  }
+
+  .video-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+  }
+
+  .video-modal-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    background: #1f2937;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+    animation: modalFadeIn 0.3s ease-out;
+  }
+
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .video-modal-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 3;
+  }
+
+  .video-modal-close:hover {
+    transform: scale(1.1) rotate(90deg);
+    background: #f87171;
+    color: white;
+  }
+
+  .video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    color: #64748b;
+  }
+
+  .video-placeholder p {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .video-modal-content {
+      width: 95%;
+      padding: 1rem;
+    }
+
+    .video-modal-close {
+      top: -10px;
+      right: -10px;
+      width: 40px;
+      height: 40px;
+    }
+  }
 </style>
+
+<script>
+  // Modal de video
+  const videoModal = document.getElementById('videoModal');
+  const openBtn = document.getElementById('openVideoModal');
+  const closeBtn = document.getElementById('closeVideoModal');
+  const overlay = document.querySelector('.video-modal-overlay');
+
+  // Abrir modal
+  openBtn?.addEventListener('click', () => {
+    videoModal?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Cerrar modal
+  const closeModal = () => {
+    videoModal?.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  closeBtn?.addEventListener('click', closeModal);
+  overlay?.addEventListener('click', closeModal);
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoModal?.classList.contains('active')) {
+      closeModal();
+    }
+  });
+</script>

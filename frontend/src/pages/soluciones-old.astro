@@ -1,0 +1,764 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FlowbiteButton from '../components/FlowbiteButton.vue';
+import Icon from '../components/Icons.astro';
+---
+
+<BaseLayout title="Soluciones - Zellfy" description="Captación inteligente con IA, CRM integral y cierre automatizado. Conecta, gestiona y cierra ventas desde 50+ canales en una sola plataforma.">
+  <!-- Hero Section Mejorado -->
+  <section class="relative py-32 px-6 overflow-hidden">
+    <!-- Fondo con gradiente animado -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 191, 255, 0.05) 0%, rgba(0, 196, 140, 0.05) 100%); z-index: 0;"></div>
+    
+    <!-- Elementos decorativos flotantes -->
+    <div style="position: absolute; top: 10%; left: 5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0, 191, 255, 0.1), transparent); border-radius: 50%; animation: float 8s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: 10%; right: 5%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(0, 196, 140, 0.1), transparent); border-radius: 50%; animation: float 6s ease-in-out infinite reverse;"></div>
+    
+    <div class="container mx-auto text-center" style="position: relative; z-index: 1; max-width: 900px;">
+      <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #00BFFF, #00C48C); padding: 0.5rem 1.25rem; border-radius: 2rem; color: white; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2rem; animation: fadeInUp 0.8s ease-out;">
+        <Icon name="rocketIcon" size={16} color="white" />
+        Soluciones Inteligentes
+      </div>
+      
+      <h1 class="text-6xl md:text-7xl font-bold mb-6" style="color: var(--color-graphite); line-height: 1.1;">
+        La Plataforma Completa para tus Ventas
+      </h1>
+      <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-8" style="color: #6b7280;">
+        Conecta, gestiona y cierra. Un ecosistema vivo que acompaña cada etapa de tu proceso comercial.
+      </p>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="#modulos" class="px-8 py-4 bg-blue-electric text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-block" style="background-color: #00BFFF;">
+          Explorar Módulos
+        </a>
+        <a href="/contacto" class="px-8 py-4 bg-white text-blue-electric border-2 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 inline-block" style="border-color: #00BFFF;">
+          Solicitar Demo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Módulos Principales - ID para navegación -->
+  <section id="modulos" style="padding: 4rem 1.5rem;">
+    <div class="container mx-auto" style="max-width: 1200px;">
+      <!-- Sección Captación -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 6rem; animation: fadeInUp 0.8s ease-out;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #00BFFF, #00C48C); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <Icon name="broadcast" size={28} color="white" />
+            </div>
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; margin: 0;">
+              Captación Inteligente
+            </h2>
+          </div>
+          <p style="font-size: 1.1rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+            Captura leads de múltiples canales automáticamente. Nuestra IA califica cada prospecto en tiempo real.
+          </p>
+          <ul style="color: #6b7280; line-height: 2.2; list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Captura desde 50+ canales</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Calificación con IA en tiempo real</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Deduplicación inteligente</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Asignación automática</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Seguimiento de conversiones</li>
+          </ul>
+        </div>
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=500&fit=crop" alt="Captación" style="border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(0,191,255,0.15); width: 100%; height: auto; transition: transform 0.3s ease;" class="modulo-imagen" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(0, 196, 140, 0.1)); border-radius: 1.5rem; pointer-events: none;"></div>
+        </div>
+      </div>
+
+      <!-- Sección CRM -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 6rem; animation: fadeInUp 0.8s ease-out 0.2s both;">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=500&fit=crop" alt="CRM" style="border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(0,196,140,0.15); width: 100%; height: auto; transition: transform 0.3s ease;" class="modulo-imagen" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 196, 140, 0.1), rgba(0, 191, 255, 0.1)); border-radius: 1.5rem; pointer-events: none;"></div>
+        </div>
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #00C48C, #00BFFF); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <Icon name="clipboard" size={28} color="white" />
+            </div>
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; margin: 0;">
+              Gestión CRM Integral
+            </h2>
+          </div>
+          <p style="font-size: 1.1rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+            Un CRM vivo que acompaña cada oportunidad. Vista kanban, seguimiento 24/7 y dashboards personalizados con métricas en tiempo real.
+          </p>
+          <ul style="color: #6b7280; line-height: 2.2; list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Vista kanban interactiva</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Historial completo de interacciones</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Dashboards personalizables</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Predicción de ingresos con IA</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Automatización de actividades</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sección Cierre -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; animation: fadeInUp 0.8s ease-out 0.4s both;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #00BFFF, #00C48C); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <Icon name="checkCircle" size={28} color="white" />
+            </div>
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; margin: 0;">
+              Cierre Automatizado
+            </h2>
+          </div>
+          <p style="font-size: 1.1rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+            Cierra más rápido con firma digital, validaciones automáticas y flujos de aprobación. Gestión documental integrada.
+          </p>
+          <ul style="color: #6b7280; line-height: 2.2; list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Firma digital certificada</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Generación automática de contratos</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Flujos de aprobación multi-nivel</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Validaciones en tiempo real</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="color: #00C48C; font-weight: bold; font-size: 1.2rem;">✓</span> Archivo digital seguro</li>
+          </ul>
+        </div>
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=500&fit=crop" alt="Cierre" style="border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(0,191,255,0.15); width: 100%; height: auto; transition: transform 0.3s ease;" class="modulo-imagen" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(0, 196, 140, 0.1)); border-radius: 1.5rem; pointer-events: none;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zellfy en Acción - Soluciones por Industria -->
+  <section style="padding: 5rem 1.5rem; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
+    <div class="container mx-auto" style="max-width: 1200px;">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #00BFFF, #00C48C); padding: 0.5rem 1.25rem; border-radius: 2rem; color: white; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2rem;">
+          <Icon name="target" size={16} color="white" />
+          Por Industria
+        </div>
+        <h2 style="font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; color: #1f2937;">
+          Zellfy en Acción
+        </h2>
+        <p style="font-size: 1.1rem; color: #6b7280; max-width: 700px; margin: 0 auto;">
+          Soluciones adaptadas a cada industria. Ve cómo Zellfy transforma procesos de venta en diferentes sectores.
+        </p>
+      </div>
+
+      <!-- Inmobiliario -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem; animation: fadeInUp 0.8s ease-out 0.5s both;">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=500&fit=crop" alt="Inmobiliario" style="border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(0,191,255,0.15); width: 100%; height: auto;" />
+        </div>
+        <div class="industry-card">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00BFFF, #00C48C); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <Icon name="home" size={24} color="white" />
+            </div>
+            <h3 style="font-size: 2rem; font-weight: 700; color: #1f2937; margin: 0;">
+              Sector Inmobiliario
+            </h3>
+          </div>
+          <p style="font-size: 1rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+            Desde el anuncio de la propiedad hasta la escritura. Zellfy gestiona el lifecycle completo del cliente inmobiliario.
+          </p>
+          <div style="background: linear-gradient(135deg, rgba(0, 191, 255, 0.05), rgba(0, 196, 140, 0.05)); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #00BFFF;">
+            <p style="font-weight: 600; color: #1f2937; margin-bottom: 1rem; font-size: 0.95rem;">Acciones clave:</p>
+            <ul style="color: #6b7280; line-height: 2; list-style: none; padding: 0; margin: 0;">
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Captura desde portales inmobiliarios</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Tours virtuales automatizados</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Propuestas de financiamiento</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Contratos con firma digital</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Seguimiento post-cierre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automotriz -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem; animation: fadeInUp 0.8s ease-out 0.6s both;">
+        <div class="industry-card">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00C48C, #00BFFF); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <Icon name="car" size={24} color="white" />
+            </div>
+            <h3 style="font-size: 2rem; font-weight: 700; color: #1f2937; margin: 0;">
+              Sector Automotriz
+            </h3>
+          </div>
+          <p style="font-size: 1rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+            Gestiona el proceso completo de venta de vehículos, desde el interés inicial hasta la entrega.
+          </p>
+          <div style="background: linear-gradient(135deg, rgba(0, 196, 140, 0.05), rgba(0, 191, 255, 0.05)); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #00C48C;">
+            <p style="font-weight: 600; color: #1f2937; margin-bottom: 1rem; font-size: 0.95rem;">Acciones clave:</p>
+            <ul style="color: #6b7280; line-height: 2; list-style: none; padding: 0; margin: 0;">
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Reserva de test drives automática</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Cotizaciones y comparativas</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Integración financiera</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Documentación automática</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Seguimiento post-venta</li>
+            </ul>
+          </div>
+        </div>
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=500&fit=crop" alt="Automotriz" style="border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(0,196,140,0.15); width: 100%; height: auto;" />
+        </div>
+      </div>
+
+      <!-- Créditos/Finanzas -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; animation: fadeInUp 0.8s ease-out 0.7s both;">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=500&fit=crop" alt="Créditos" style="border-radius: 1.5rem; box-shadow: 0 20px 50px rgba(0,191,255,0.15); width: 100%; height: auto;" />
+        </div>
+        <div class="industry-card">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00BFFF, #00C48C); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <Icon name="creditCard" size={24} color="white" />
+            </div>
+            <h3 style="font-size: 2rem; font-weight: 700; color: #1f2937; margin: 0;">
+              Sector Financiero
+            </h3>
+          </div>
+          <p style="font-size: 1rem; color: #6b7280; line-height: 1.8; margin-bottom: 2rem;">
+            Automatiza evaluación crediticia y seguimiento de créditos con total seguridad y cumplimiento regulatorio.
+          </p>
+          <div style="background: linear-gradient(135deg, rgba(0, 191, 255, 0.05), rgba(0, 196, 140, 0.05)); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #00BFFF;">
+            <p style="font-weight: 600; color: #1f2937; margin-bottom: 1rem; font-size: 0.95rem;">Acciones clave:</p>
+            <ul style="color: #6b7280; line-height: 2; list-style: none; padding: 0; margin: 0;">
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Validación de documentación</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Scoring de IA automático</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Aprobaciones multi-nivel</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Notificaciones instantáneas</li>
+              <li style="display: flex; align-items: center; gap: 0.75rem;"><span style="color: #00C48C; font-weight: bold;">✓</span> Gestión de cobranza</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZellFlow - Producto Premium -->
+  <section style="padding: 6rem 1.5rem; position: relative; overflow: hidden;">
+    <!-- Fondo gradient animado -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #6C63FF 0%, #5B3A7D 50%, #3d2a5a 100%); opacity: 0.05; z-index: 0;"></div>
+    
+    <!-- Elementos decorativos -->
+    <div style="position: absolute; top: -200px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(108, 99, 255, 0.15), transparent); border-radius: 50%; animation: float 20s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(91, 58, 125, 0.12), transparent); border-radius: 50%; animation: float 15s ease-in-out infinite reverse;"></div>
+    
+    <div class="container mx-auto max-w-7xl" style="position: relative; z-index: 1;">
+      <!-- Layout: Imagen + Contenido -->
+      <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: center;">
+        <!-- Lado Izquierdo: Imagen/Ilustración -->
+        <div style="position: relative; animation: fadeInUp 0.8s ease-out 0.2s both;">
+          <div style="background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(91, 58, 125, 0.1)); border-radius: 2rem; padding: 3rem; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+            <!-- Círculos decorativos -->
+            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(108, 99, 255, 0.3), transparent); border-radius: 50%;"></div>
+            <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(91, 58, 125, 0.2), transparent); border-radius: 50%;"></div>
+            
+            <div style="position: relative; z-index: 1; text-align: center;">
+              <div style="width: 80px; height: 80px; margin: 0 auto 1rem; animation: float 3s ease-in-out infinite;">
+                <Icon name="zap" size={80} color="#6C63FF" />
+              </div>
+              <h2 style="font-size: 2.5rem; font-weight: 800; color: #1f2937; margin: 0;">ZellFlow</h2>
+              <div style="height: 4px; width: 60px; background: linear-gradient(90deg, #6C63FF, #5B3A7D); border-radius: 2px; margin: 1rem auto 0;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lado Derecho: Contenido -->
+        <div style="animation: fadeInUp 0.8s ease-out 0.3s both;">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #6C63FF, #5B3A7D); padding: 0.5rem 1.25rem; border-radius: 2rem; color: white; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.5rem;">
+            <Icon name="zap" size={16} color="white" />
+            Automatización Avanzada
+          </div>
+          
+          <h2 style="font-size: 2.8rem; font-weight: 800; color: #1f2937; margin: 0 0 1rem 0; line-height: 1.1;">
+            La Solución Integral para Procesos Complejos
+          </h2>
+          
+          <p style="font-size: 1.05rem; color: #6b7280; line-height: 1.8; margin: 0 0 2.5rem 0;">
+            Diseñado para empresas que requieren automatización avanzada, integraciones profundas y control total de sus operaciones. ZellFlow es el complemento perfecto para Zellfy.
+          </p>
+
+          <!-- Características principales -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+            <!-- Feature 1 -->
+            <div style="display: flex; gap: 1rem; padding: 1.5rem; background: rgba(108, 99, 255, 0.05); border-radius: 1rem; border-left: 4px solid #6C63FF;">
+              <div style="flex-shrink: 0;">
+                <Icon name="tool" size={28} color="#6C63FF" />
+              </div>
+              <div>
+                <h4 style="font-weight: 700; color: #1f2937; margin: 0 0 0.5rem 0; font-size: 0.95rem;">Flujos sin Código</h4>
+                <p style="color: #6b7280; font-size: 0.9rem; margin: 0;">Crea automatizaciones complejas sin escribir código</p>
+              </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div style="display: flex; gap: 1rem; padding: 1.5rem; background: rgba(108, 99, 255, 0.05); border-radius: 1rem; border-left: 4px solid #6C63FF;">
+              <div style="flex-shrink: 0;">
+                <Icon name="link" size={28} color="#6C63FF" />
+              </div>
+              <div>
+                <h4 style="font-weight: 700; color: #1f2937; margin: 0 0 0.5rem 0; font-size: 0.95rem;">Integraciones Profundas</h4>
+                <p style="color: #6b7280; font-size: 0.9rem; margin: 0;">Conecta con sistemas legacy y APIs externas</p>
+              </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div style="display: flex; gap: 1rem; padding: 1.5rem; background: rgba(108, 99, 255, 0.05); border-radius: 1rem; border-left: 4px solid #6C63FF;">
+              <div style="flex-shrink: 0;">
+                <Icon name="folder" size={28} color="#6C63FF" />
+              </div>
+              <div>
+                <h4 style="font-weight: 700; color: #1f2937; margin: 0 0 0.5rem 0; font-size: 0.95rem;">Gestión Documental</h4>
+                <p style="color: #6b7280; font-size: 0.9rem; margin: 0;">Control total de documentación corporativa</p>
+              </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div style="display: flex; gap: 1rem; padding: 1.5rem; background: rgba(108, 99, 255, 0.05); border-radius: 1rem; border-left: 4px solid #6C63FF;">
+              <div style="flex-shrink: 0;">
+                <Icon name="barChart" size={28} color="#6C63FF" />
+              </div>
+              <div>
+                <h4 style="font-weight: 700; color: #1f2937; margin: 0 0 0.5rem 0; font-size: 0.95rem;">Escalabilidad Total</h4>
+                <p style="color: #6b7280; font-size: 0.9rem; margin: 0;">Procesa miles de transacciones simultáneamente</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <a href="/contacto" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2.5rem; background: linear-gradient(135deg, #6C63FF, #5B3A7D); color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.75rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3); border: none; cursor: pointer;" onmouseover="this.style.boxShadow='0 15px 45px rgba(108, 99, 255, 0.5)'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.boxShadow='0 10px 30px rgba(108, 99, 255, 0.3)'; this.style.transform='translateY(0) scale(1);">
+              Consultar Ahora
+              <Icon name="arrowRight" size={18} color="white" />
+            </a>
+            <a href="/contacto" style="padding: 1rem 1.5rem; background: white; color: #6C63FF; font-weight: 600; border-radius: 0.75rem; text-decoration: none; border: 2px solid #6C63FF; transition: all 0.3s ease; display: inline-block;" onmouseover="this.style.backgroundColor='#6C63FF'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#6C63FF';">
+              Más Info
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frase Inspiradora -->
+  <section class="py-20 px-6" style="background-color: var(--color-white-smoke);">
+    <div class="container mx-auto text-center">
+      <blockquote class="text-2xl md:text-3xl font-bold italic max-w-4xl mx-auto" style="color: var(--color-violet);">
+        "Zellfy.ai no es solo software. Es una célula viva que impulsa, conecta y da visibilidad total al proceso de venta."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: linear-gradient(135deg, rgba(0, 191, 255, 0.4) 0%, rgba(0, 196, 140, 0.4) 100%); background-size: 200% 200%; animation: gradientShift 8s ease infinite; padding: 4rem 1.5rem; position: relative; overflow: hidden; background-color: #f5f6fa;">
+    <!-- Animated orbs -->
+    <div style="position: absolute; top: -200px; right: -200px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.15), transparent); border-radius: 50%; animation: float 10s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -150px; left: -150px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,0.1), transparent); border-radius: 50%; animation: float 8s ease-in-out infinite reverse;"></div>
+    
+    <div class="container mx-auto" style="max-width: 1200px; text-align: center; position: relative; z-index: 10;">
+      <h2 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: #1f2937; letter-spacing: -0.5px;">
+        Transforma tu proceso comercial hoy
+      </h2>
+      <p style="font-size: 1.2rem; color: #4b5563; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Empieza ahora y descubre cómo Zellfy puede revolucionar tu operación comercial
+      </p>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contacto" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.2rem 3rem; background-color: #00BFFF; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 191, 255, 0.3); font-size: 1rem;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0, 191, 255, 0.5)'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.boxShadow='0 8px 30px rgba(0, 191, 255, 0.3)'; this.style.transform='translateY(0) scale(1);">
+          Solicitar Demo
+          <Icon name="rocketIcon" size={18} color="white" />
+        </a>
+        <a href="/casos" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.2rem 3rem; background-color: transparent; color: #00C48C; font-weight: 700; font-size: 0.95rem; border-radius: 0.5rem; text-decoration: none; letter-spacing: 0.5px; border: 2px solid #00C48C; transition: all 0.3s ease; font-size: 1rem;" onmouseover="this.style.backgroundColor='#00C48C'; this.style.color='white'; this.style.transform='translateY(-3px) scale(1.05)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#00C48C'; this.style.transform='translateY(0) scale(1);">
+          Ver Casos de Éxito
+          <Icon name="chart" size={18} color="currentColor" />
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 50%, #d4f4ec 100%);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+  }
+
+  .hero-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .hero-circles::before,
+  .hero-circles::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 196, 140, 0.15), transparent 70%);
+  }
+
+  .hero-circles::before {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -100px;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .hero-circles::after {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+    animation: float 10s ease-in-out infinite reverse;
+  }
+
+  /* Animaciones Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Hero Section con gradiente animado */
+  section.bg-gradient-to-br {
+    background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 50%, #d4f4ec 100%);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.bg-gradient-to-br::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 60%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(0, 196, 140, 0.15) 0%, transparent 60%);
+    animation: float 8s ease-in-out infinite;
+  }
+
+  section h1, section h2 {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  section p {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  /* Todas las Cards - Comportamiento unificado */
+  .solution-card,
+  .industry-card {
+    transition: all 0.3s ease;
+  }
+
+  .solution-card:hover,
+  .industry-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .solution-card .text-6xl,
+  .solution-card .text-5xl,
+  .industry-card .text-5xl {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+  }
+
+  .solution-card:hover .text-6xl,
+  .solution-card:hover .text-5xl,
+  .industry-card:hover .text-5xl {
+    transform: scale(1.1);
+  }
+
+
+  /* Feature Lists */
+  .feature-list li {
+    transition: all 0.3s ease;
+  }
+
+  .feature-list li:hover {
+    transform: translateX(5px);
+    color: var(--color-blue-electric) !important;
+  }
+
+  .feature-list .checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00C48C, #00A86B);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-list li:hover .checkmark {
+    transform: scale(1.1) rotate(15deg);
+  }
+
+  /* Iconos con animación flotante */
+  .text-5xl, .text-6xl {
+    display: inline-block;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+  }
+
+  /* Botones con efectos brillantes */
+  a[class*="inline-block"],
+  a[href="/contacto"] {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  a[class*="inline-block"]::before,
+  a[href="/contacto"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+  }
+
+  a[class*="inline-block"]:hover::before,
+  a[href="/contacto"]:hover::before {
+    left: 100%;
+  }
+
+  a[class*="inline-block"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 196, 140, 0.4) !important;
+  }
+
+  /* Sección de fondo alternativo */
+  section[style*="background-color: var(--color-white-smoke)"] {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
+  }
+
+  /* Animación de entrada para grid items */
+  .grid > div {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .grid > div:nth-child(1) { animation-delay: 0.1s; }
+  .grid > div:nth-child(2) { animation-delay: 0.2s; }
+  .grid > div:nth-child(3) { animation-delay: 0.3s; }
+  .grid > div:nth-child(4) { animation-delay: 0.4s; }
+
+  /* ZellFlow card */
+  section .bg-white.p-12 {
+    overflow: visible;
+    transition: all 0.3s ease;
+  }
+
+  section .bg-white.p-12:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Frase inspiradora con efecto especial */
+  blockquote {
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  blockquote::before {
+    content: '"';
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    font-size: 120px;
+    opacity: 0.1;
+    font-family: Georgia, serif;
+    color: var(--color-violet);
+  }
+
+  /* CTA final con gradiente animado */
+  section.bg-gradient-to-r {
+    background: linear-gradient(135deg, #00BFFF 0%, #00C48C 100%);
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.bg-gradient-to-r::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    animation: float 12s ease-in-out infinite;
+  }
+
+  section.bg-gradient-to-r h2,
+  section.bg-gradient-to-r a {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Listas simples */
+  ul.space-y-3 li {
+    transition: transform 0.3s ease;
+  }
+
+  ul.space-y-3 li:hover {
+    transform: translateX(5px);
+  }
+
+  /* Hover effect para imágenes de módulos */
+  .modulo-imagen:hover {
+    transform: scale(1.03);
+  }
+
+  /* Cards de industria mejoradas */
+  .industry-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .industry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #00BFFF;
+  }
+
+  .industry-card h3 {
+    transition: color 0.3s ease;
+  }
+
+  .industry-card:hover h3 {
+    color: #00BFFF;
+  }
+
+  /* ZellFlow Cards */
+  .zellflow-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .zellflow-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(91, 58, 125, 0.08));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .zellflow-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 60px rgba(108, 99, 255, 0.2);
+    border-color: #6C63FF;
+  }
+
+  .zellflow-card:hover::before {
+    opacity: 1;
+  }
+
+  .zellflow-card:hover h3 {
+    color: #6C63FF;
+  }
+
+  /* Animación para listas de industrias */
+  .industry-card:nth-child(1) { animation-delay: 0.5s; }
+  .industry-card:nth-child(2) { animation-delay: 0.6s; }
+  .industry-card:nth-child(3) { animation-delay: 0.7s; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .module-card:hover,
+    .industry-card:hover {
+      transform: translateY(-6px) scale(1.01);
+    }
+
+    .hero-section {
+      py: 20;
+    }
+
+    /* Grid responsivo para módulos */
+    section div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
+  }
+</style>

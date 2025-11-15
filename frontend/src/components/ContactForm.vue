@@ -63,13 +63,33 @@
         </div>
       </div>
 
+      <!-- Objetivo -->
+      <div>
+        <label style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500; color: #111827;">¿Qué quieres lograr con Zellfy? *</label>
+        <select
+          v-model="formData.objetivo"
+          required
+          style="width: 100%; padding: 0.75rem; color: #111827; border: 1px solid #d1d5db; border-radius: 0.5rem; background-color: #f9fafb; font-size: 0.875rem; transition: all 0.2s ease; cursor: pointer;"
+          @blur="onBlur('objetivo', $event)"
+          @focus="(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.1)'; }"
+        >
+          <option value="">Selecciona una opción</option>
+          <option value="aumentar-ventas">Aumentar ventas</option>
+          <option value="automatizar">Automatizar seguimiento</option>
+          <option value="captar-leads">Captar más leads</option>
+          <option value="organizar-equipo">Organizar mi equipo</option>
+          <option value="integrar">Integrar herramientas</option>
+        </select>
+        <p v-if="errors.objetivo" style="margin-top: 0.5rem; font-size: 0.875rem; color: #dc2626;">{{ errors.objetivo }}</p>
+      </div>
+
       <!-- Mensaje -->
       <div>
-        <label style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500; color: #111827;">Cuéntanos sobre tu caso</label>
+        <label style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500; color: #111827;">Mensaje adicional (opcional)</label>
         <textarea 
           v-model="formData.message" 
-          placeholder="Describe brevemente qué necesitas..."
-          rows="5"
+          placeholder="Cuéntanos más detalles si lo deseas..."
+          rows="4"
           style="width: 100%; padding: 0.75rem; color: #111827; border: 1px solid #d1d5db; border-radius: 0.5rem; background-color: #f9fafb; font-size: 0.875rem; resize: none; font-family: inherit; transition: all 0.2s ease;"
           @blur="onBlur('message', $event)"
           @focus="(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.1)'; }"
@@ -131,6 +151,7 @@ const formData = reactive({
   company: '',
   email: '',
   phone: '',
+  objetivo: '',
   message: ''
 });
 
@@ -139,6 +160,7 @@ const errors = reactive({
   company: '',
   email: '',
   phone: '',
+  objetivo: '',
   message: ''
 });
 
@@ -190,6 +212,8 @@ const validateForm = () => {
   return isValid;
 };
 
+const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:8000';
+
 const handleSubmit = async () => {
   successMessage.value = '';
   errorMessage.value = '';
@@ -202,24 +226,47 @@ const handleSubmit = async () => {
   isSubmitting.value = true;
   
   try {
-    // TODO: Conectar con API Laravel cuando esté disponible
-    // const response = await fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(formData)
-    // });
-    
-    // Simulación de envío exitoso
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    successMessage.value = '¡Mensaje enviado! Te contactaremos pronto.';
-    
-    // Limpiar formulario
-    Object.keys(formData).forEach(key => {
-      formData[key] = '';
+    const response = await fetch(`${API_URL}/api/leads`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company || null,
+        objetivo: formData.objetivo || null,
+        message: formData.message || null,
+        source: 'website'
+      })
     });
+
+    const data = await response.json();
+
+    if (data.success) {
+      successMessage.value = data.message || '¡Gracias por tu interés! Te contactaremos pronto.';
+      
+      // Google Analytics event (si está configurado)
+      if (window.gtag) {
+        window.gtag('event', 'form_submit', {
+          event_category: 'lead',
+          event_label: 'contact_form'
+        });
+      }
+      
+      // Limpiar formulario
+      Object.keys(formData).forEach(key => {
+        formData[key] = '';
+      });
+      agreeToTerms.value = false;
+    } else {
+      errorMessage.value = data.message || 'Error al enviar el formulario. Intenta nuevamente.';
+    }
   } catch (error) {
-    errorMessage.value = 'Error al enviar el mensaje. Intenta nuevamente.';
+    console.error('Form submission error:', error);
+    errorMessage.value = 'Error de conexión. Por favor intenta nuevamente o contáctanos directamente.';
   } finally {
     isSubmitting.value = false;
   }

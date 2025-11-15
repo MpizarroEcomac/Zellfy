@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zellfy.vercel.app/sitemap.xml
+
+# Evitar duplicados
+User-agent: *
+Disallow: /api/
+Disallow: /*.json$

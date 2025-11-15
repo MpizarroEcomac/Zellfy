@@ -1,0 +1,213 @@
+---
+interface Props {
+  title: string;
+  price: string;
+  priceCents?: string;
+  priceNote?: string;
+  description: string;
+  subDescription?: string;
+  features?: string[];
+  ctaPrimary: string;
+  ctaSecondary?: string;
+  color: 'blue' | 'red' | 'green';
+  featured?: boolean;
+}
+
+const {
+  title,
+  price,
+  priceCents,
+  priceNote,
+  description,
+  subDescription,
+  features = [],
+  ctaPrimary,
+  ctaSecondary,
+  color,
+  featured = false
+} = Astro.props;
+
+const colors = {
+  blue: '#00BFFF',
+  red: '#FF6B6B',
+  green: '#00C48C'
+};
+
+const selectedColor = colors[color];
+---
+
+<div class="pricing-card" class:list={{ featured }}>
+  <div class="pricing-card-header" style={`background-color: ${selectedColor};`}></div>
+  <div class="pricing-card-content">
+    <h3 class="pricing-card-title">{title}</h3>
+    
+    <div class="pricing-card-price">
+      <div class="price-main">
+        <span class="price-currency" style={`color: ${selectedColor};`}>$</span>
+        <span class="price-amount" style={`color: ${selectedColor};`}>{price}</span>
+        {priceCents && <span class="price-cents" style={`color: ${selectedColor};`}>.{priceCents}</span>}
+      </div>
+      {priceNote && <p class="price-note">{priceNote}</p>}
+    </div>
+    
+    <div class="pricing-card-description">
+      <p class="description-primary">{description}</p>
+      {subDescription && <p class="description-secondary">{subDescription}</p>}
+      {features && features.length > 0 && (
+        <ul class="features-list">
+          {features.map(feature => <li>{feature}</li>)}
+        </ul>
+      )}
+    </div>
+    
+    <div class="pricing-card-actions">
+      <a href="/contacto" class="btn-primary">{ctaPrimary}</a>
+      {ctaSecondary && <a href="/contacto" class="btn-secondary">{ctaSecondary}</a>}
+    </div>
+  </div>
+</div>
+
+<style>
+  .pricing-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .pricing-card.featured {
+    border: 2px solid #FF6B6B;
+    transform: scale(1.02);
+  }
+  
+  .pricing-card-header {
+    height: 5px;
+  }
+  
+  .pricing-card-content {
+    padding: 2.5rem;
+  }
+  
+  .pricing-card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1f2937;
+    letter-spacing: -0.5px;
+  }
+  
+  .pricing-card-price {
+    margin-bottom: 2.5rem;
+  }
+  
+  .price-main {
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+  
+  .price-currency,
+  .price-amount {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  
+  .price-cents {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .price-note {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+    margin-top: 0.25rem;
+  }
+  
+  .pricing-card-description {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .description-primary {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+  
+  .description-secondary {
+    font-size: 0.95rem;
+    color: #1f2937;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-top: 0.75rem;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+  }
+  
+  .features-list li {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.7;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00C48C;
+    font-weight: 700;
+  }
+  
+  .pricing-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #5B3A7D;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #4a2f66;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: #f3f4f6;
+    color: #5B3A7D;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #e5e7eb;
+  }
+</style>
