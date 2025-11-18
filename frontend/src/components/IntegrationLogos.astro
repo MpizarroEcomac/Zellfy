@@ -1,5 +1,5 @@
 ---
-// Componente que retorna logos de marcas usando CDN de SimpleIcons
+// Componente que retorna emojis o símbolos para marcas
 interface Props {
   name: string;
   size?: number;
@@ -7,88 +7,84 @@ interface Props {
 
 const { name, size = 20 } = Astro.props;
 
-// Mapping de nombres de marcas a SimpleIcons
+// Mapping de marcas a emojis
 const logoMap: Record<string, string> = {
   // Publicidad Digital
-  'Google Ads': 'google',
-  'Meta Business': 'meta',
-  'TikTok Ads': 'tiktok',
-  'LinkedIn Ads': 'linkedin',
+  'Google Ads': '📊',
+  'Meta Business': '📱',
+  'TikTok Ads': '🎵',
+  'LinkedIn Ads': '💼',
 
   // CRMs y Ventas
-  'HubSpot': 'hubspot',
-  'Salesforce': 'salesforce',
-  'Pipedrive': 'pipedrive',
-  'Zoho CRM': 'zoho',
+  'HubSpot': '🎯',
+  'Salesforce': '☁️',
+  'Pipedrive': '📈',
+  'Zoho CRM': '🔷',
 
   // Comunicación
-  'WhatsApp': 'whatsapp',
-  'Twilio': 'twilio',
-  'SendGrid': 'sendgrid',
-  'Mailchimp': 'mailchimp',
+  'WhatsApp': '💬',
+  'Twilio': '📞',
+  'SendGrid': '📧',
+  'Mailchimp': '🐵',
 
   // Pagos y Finanzas
-  'Transbank': 'transbank',
-  'MercadoPago': 'mercadopago',
-  'Stripe': 'stripe',
-  'APIs Bancarias': 'bank',
+  'Transbank': '🏦',
+  'MercadoPago': '💳',
+  'Stripe': '💰',
+  'APIs Bancarias': '🏛️',
 
   // Firma Electrónica
-  'FirmaVirtual': 'docusign',
-  'DocuSign': 'docusign',
-  'Clave Única': 'shield',
-  'HelloSign': 'docusign',
+  'FirmaVirtual': '✍️',
+  'DocuSign': '📝',
+  'Clave Única': '🔐',
+  'HelloSign': '✔️',
 
   // Productividad
-  'Google Workspace': 'google',
-  'Microsoft 365': 'microsoft',
-  'Google Calendar': 'google',
-  'Google Sheets': 'google',
+  'Google Workspace': '📑',
+  'Microsoft 365': '🪟',
+  'Google Calendar': '📅',
+  'Google Sheets': '📊',
 
   // Análisis y BI
-  'Google Analytics': 'google',
-  'Meta Pixel': 'meta',
-  'Hotjar': 'hotjar',
-  'Power BI': 'powerbi',
+  'Google Analytics': '📈',
+  'Meta Pixel': '🎨',
+  'Hotjar': '🔍',
+  'Power BI': '📊',
 
   // Automatización
-  'Zapier': 'zapier',
-  'Make': 'make',
-  'Webhooks': 'webhook',
-  'API REST': 'api',
+  'Zapier': '⚡',
+  'Make': '🔧',
+  'Webhooks': '🪝',
+  'API REST': '🔌',
 
   // Cloud Storage
-  'Google Drive': 'googledrive',
-  'OneDrive': 'onedrive',
-  'Dropbox': 'dropbox',
-  'AWS S3': 'amazonaws',
+  'Google Drive': '☁️',
+  'OneDrive': '💾',
+  'Dropbox': '📦',
+  'AWS S3': '🪣',
 
   // Validación y Verificación
-  'Equifax': 'equifax',
-  'Experian': 'experian',
-  'Fintoc': 'fintoc',
-  'Regcheq': 'regcheq',
+  'Equifax': '✓',
+  'Experian': '✓',
+  'Fintoc': '🏧',
+  'Regcheq': '✓',
 
   // ERPs y Contabilidad
-  'SAP Business One': 'sap',
-  'Microsoft Dynamics': 'microsoft',
-  'Softland': 'softland',
-  'Epicor': 'epicor',
+  'SAP Business One': '📊',
+  'Microsoft Dynamics': '📈',
+  'Softland': '💼',
+  'Epicor': '⚙️',
 
   // Videoconferencia e IA
-  'Zoom': 'zoom',
-  'Google Meet': 'googlemeet',
-  'ChatGPT': 'openai',
-  'Claude': 'anthropic',
+  'Zoom': '📹',
+  'Google Meet': '🎥',
+  'ChatGPT': '🤖',
+  'Claude': '🧠',
 };
 
-const iconName = logoMap[name] || 'building';
-const cdnUrl = `https://cdn.simpleicons.org/${iconName}/667EEA`;
+const emoji = logoMap[name] || '✓';
 ---
 
-<img 
-  src={cdnUrl}
-  alt={name}
-  style={`width: ${size}px; height: ${size}px; display: inline-block;`}
-  loading="lazy"
-/>
+<span style={`font-size: ${size}px; display: inline-block; line-height: 1;`}>
+  {emoji}
+</span>
