@@ -1,5 +1,5 @@
 ---
-// Componente que retorna emojis o símbolos para marcas
+// Componente que retorna logos reales de marcas desde CDN
 interface Props {
   name: string;
   size?: number;
@@ -7,114 +7,118 @@ interface Props {
 
 const { name, size = 20 } = Astro.props;
 
-// Mapping de marcas a emojis
+// Mapping de marcas a URLs de logos desde CDN público
 const logoMap: Record<string, string> = {
   // Publicidad Digital
-  'Google Ads': '📊',
-  'Meta Business': '📱',
-  'TikTok Ads': '🎵',
-  'LinkedIn Ads': '💼',
+  'Google Ads': 'https://www.google.com/favicon.ico',
+  'Meta Business': 'https://www.facebook.com/favicon.ico',
+  'TikTok Ads': 'https://www.tiktok.com/favicon.ico',
+  'LinkedIn Ads': 'https://www.linkedin.com/favicon.ico',
 
   // CRMs y Ventas
-  'HubSpot': '🎯',
-  'Salesforce': '☁️',
-  'Pipedrive': '📈',
-  'Zoho CRM': '🔷',
+  'HubSpot': 'https://www.hubspot.com/favicon.ico',
+  'Salesforce': 'https://www.salesforce.com/favicon.ico',
+  'Pipedrive': 'https://www.pipedrive.com/favicon.ico',
+  'Zoho CRM': 'https://www.zoho.com/favicon.ico',
 
   // Comunicación
-  'WhatsApp': '💬',
-  'Twilio': '📞',
-  'SendGrid': '📧',
-  'Mailchimp': '🐵',
+  'WhatsApp': 'https://www.whatsapp.com/favicon.ico',
+  'Twilio': 'https://www.twilio.com/favicon.ico',
+  'SendGrid': 'https://www.sendgrid.com/favicon.ico',
+  'Mailchimp': 'https://mailchimp.com/favicon.ico',
 
   // Pagos y Finanzas
-  'Transbank': '🏦',
-  'MercadoPago': '💳',
-  'Stripe': '💰',
-  'APIs Bancarias': '🏛️',
+  'Transbank': 'https://www.transbank.cl/favicon.ico',
+  'MercadoPago': 'https://www.mercadopago.com/favicon.ico',
+  'Stripe': 'https://stripe.com/favicon.ico',
+  'APIs Bancarias': 'https://www.bcn.cl/favicon.ico',
 
   // Firma Electrónica
-  'FirmaVirtual': '✍️',
-  'DocuSign': '📝',
-  'Clave Única': '🔐',
-  'HelloSign': '✔️',
+  'FirmaVirtual': 'https://www.firmavirtual.com/favicon.ico',
+  'DocuSign': 'https://www.docusign.com/favicon.ico',
+  'Clave Única': 'https://www.claveunica.gob.cl/favicon.ico',
+  'HelloSign': 'https://www.hellosign.com/favicon.ico',
 
   // Productividad
-  'Google Workspace': '📑',
-  'Microsoft 365': '🪟',
-  'Google Calendar': '📅',
-  'Google Sheets': '📊',
+  'Google Workspace': 'https://workspace.google.com/favicon.ico',
+  'Microsoft 365': 'https://www.microsoft.com/favicon.ico',
+  'Google Calendar': 'https://calendar.google.com/favicon.ico',
+  'Google Sheets': 'https://sheets.google.com/favicon.ico',
 
   // Análisis y BI
-  'Google Analytics': '📈',
-  'Meta Pixel': '🎨',
-  'Hotjar': '🔍',
-  'Power BI': '📊',
+  'Google Analytics': 'https://analytics.google.com/favicon.ico',
+  'Meta Pixel': 'https://www.facebook.com/favicon.ico',
+  'Hotjar': 'https://www.hotjar.com/favicon.ico',
+  'Power BI': 'https://app.powerbi.com/favicon.ico',
 
   // Automatización
-  'Zapier': '⚡',
-  'Make': '🔧',
-  'Webhooks': '🪝',
-  'API REST': '🔌',
+  'Zapier': 'https://zapier.com/favicon.ico',
+  'Make': 'https://www.make.com/favicon.ico',
+  'Webhooks': 'https://webhook.cool/favicon.ico',
+  'API REST': 'https://httpbin.org/favicon.ico',
 
   // Cloud Storage
-  'Google Drive': '☁️',
-  'OneDrive': '💾',
-  'Dropbox': '📦',
-  'AWS S3': '🪣',
+  'Google Drive': 'https://drive.google.com/favicon.ico',
+  'OneDrive': 'https://onedrive.live.com/favicon.ico',
+  'Dropbox': 'https://www.dropbox.com/favicon.ico',
+  'AWS S3': 'https://aws.amazon.com/favicon.ico',
 
   // Validación y Verificación
-  'Equifax': '✓',
-  'Experian': '✓',
-  'Fintoc': '🏧',
-  'Regcheq': '✓',
+  'Equifax': 'https://www.equifax.com/favicon.ico',
+  'Experian': 'https://www.experian.com/favicon.ico',
+  'Fintoc': 'https://www.fintoc.com/favicon.ico',
+  'Regcheq': 'https://www.regcheq.cl/favicon.ico',
 
   // ERPs y Contabilidad
-  'SAP Business One': '📊',
-  'Microsoft Dynamics': '📈',
-  'Softland': '💼',
-  'Epicor': '⚙️',
+  'SAP Business One': 'https://www.sap.com/favicon.ico',
+  'Microsoft Dynamics': 'https://dynamics.microsoft.com/favicon.ico',
+  'Softland': 'https://www.softland.cl/favicon.ico',
+  'Epicor': 'https://www.epicor.com/favicon.ico',
 
   // Videoconferencia e IA
-  'Zoom': '📹',
-  'Google Meet': '🎥',
-  'ChatGPT': '🤖',
-  'Claude': '🧠',
+  'Zoom': 'https://zoom.us/favicon.ico',
+  'Google Meet': 'https://meet.google.com/favicon.ico',
+  'ChatGPT': 'https://openai.com/favicon.ico',
+  'Claude': 'https://claude.ai/favicon.ico',
 
   // Portales Inmobiliarios
-  'Portal Inmobiliario': '🏠',
-  'Yapo': '🏡',
-  'TocToc': '🏘️',
-  'Properati': '🏢',
+  'Portal Inmobiliario': 'https://www.portalinmobiliario.com/favicon.ico',
+  'Yapo': 'https://www.yapo.cl/favicon.ico',
+  'TocToc': 'https://www.toctoc.com/favicon.ico',
+  'Properati': 'https://www.properati.com/favicon.ico',
 
   // Plataformas de Propiedad
-  'Urbania': '🏗️',
-  'Nexo Inmobiliario': '🔗',
-  'Goplaiceit': '🌍',
-  'Hauzd': '🏘️',
+  'Urbania': 'https://urbania.pe/favicon.ico',
+  'Nexo Inmobiliario': 'https://www.nexoinmobiliario.cl/favicon.ico',
+  'Goplaiceit': 'https://www.goplaiceit.com/favicon.ico',
+  'Hauzd': 'https://www.hauzd.cl/favicon.ico',
 
   // Identidad y Biometría
-  '70C Biometrics': '👤',
-  'FirmaYa': '✍️',
-  'GoFirmex': '📋',
-  'Acepta': '✅',
+  '70C Biometrics': 'https://www.70cbiometrics.com/favicon.ico',
+  'FirmaYa': 'https://www.firmaya.cl/favicon.ico',
+  'GoFirmex': 'https://www.gofirmex.com/favicon.ico',
+  'Acepta': 'https://www.acepta.com/favicon.ico',
 
   // Redes Sociales
-  'Facebook': '👥',
-  'Instagram': '📸',
-  'YouTube': '📹',
-  'LinkedIn': '💼',
+  'Facebook': 'https://www.facebook.com/favicon.ico',
+  'Instagram': 'https://www.instagram.com/favicon.ico',
+  'YouTube': 'https://www.youtube.com/favicon.ico',
+  'LinkedIn': 'https://www.linkedin.com/favicon.ico',
 
   // Sistemas Contables
-  'SAP ERP': '📊',
-  'ERP Fin 700': '💾',
-  'Tableau': '📈',
-  'Office 365': '🪟',
+  'SAP ERP': 'https://www.sap.com/favicon.ico',
+  'ERP Fin 700': 'https://www.fin700.cl/favicon.ico',
+  'Tableau': 'https://www.tableau.com/favicon.ico',
+  'Office 365': 'https://www.office.com/favicon.ico',
 };
 
-const emoji = logoMap[name] || '✓';
+const logoUrl = logoMap[name] || 'https://www.google.com/favicon.ico';
 ---
 
-<span style={`font-size: ${size}px; display: inline-block; line-height: 1;`}>
-  {emoji}
-</span>
+<img 
+  src={logoUrl}
+  alt={name}
+  style={`width: ${size}px; height: ${size}px; display: inline-block; border-radius: 4px;`}
+  loading="lazy"
+  onerror="this.style.display='none'"
+/>
