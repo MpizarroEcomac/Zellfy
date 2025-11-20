@@ -1,0 +1,326 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icons.astro';
+import PricingCard from '../components/PricingCard.astro';
+---
+
+<BaseLayout 
+  title="Planes y Precios - Zellfy" 
+  description="Dos modelos de precios: Captura de Leads o Proceso Completo de Ventas. Elige el que mejor se adapte a tu negocio."
+>
+  <!-- Hero with Italic Title and Red Underline -->
+  <section class="py-16 px-6">
+    <div class="container mx-auto text-center" style="max-width: 900px;">
+      <h1 class="text-5xl md:text-6xl font-bold mb-8" style="color: var(--color-graphite); font-style: italic;">
+        Crece sin límites
+      </h1>
+      <div style="height: 3px; background-color: #FF6B6B; width: 120px; margin: 0 auto 24px;"></div>
+      <p class="text-lg" style="color: var(--color-graphite);">
+        Elige el modelo que mejor se adapte a tu negocio. Dos formas de crecer con Zellfy.
+      </p>
+    </div>
+  </section>
+
+  <!-- Model Selector Tabs -->
+  <section style="padding: 2rem 1.5rem; display: flex; justify-content: center;">
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <button style="padding: 0.75rem 1.5rem; background-color: #f3f4f6; color: #374151; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; border: none; cursor: pointer; transition: all 0.3s;" id="capture-btn">
+        Captura de Leads
+      </button>
+      <button style="padding: 0.75rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; border: none; cursor: pointer; transition: all 0.3s;" id="complete-btn">
+        Proceso Completo
+      </button>
+    </div>
+  </section>
+
+  <!-- Pricing Cards for Captura de Leads -->
+  <section id="capture-section" style="padding: 0.5rem 1.5rem 0.5rem 1.5rem;">
+    <div class="container mx-auto" style="max-width: 1200px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; auto-rows: 1fr;">
+        
+        <!-- Starter - Captura -->
+        <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; height: 100%;">
+          <div style="height: 5px; background-color: #00BFFF;"></div>
+          <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Starter</h3>
+            
+            <div style="margin-bottom: 2.5rem;">
+              <div style="margin-bottom: 0.5rem; line-height: 1;">
+                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF;">$</span>
+                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF;">316.800</span>
+              </div>
+              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">8 UF/mes</p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
+              <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem;">Captura automatizada de leads</p>
+              <p style="font-size: 0.95rem; color: #1f2937; font-weight: 600; line-height: 1.7; margin-top: 0.75rem;">Hasta 100 leads/mes</p>
+              <ul style="list-style: none; padding: 0; margin: 1.5rem 0 0 0;">
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  1 Asistente
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Setup inicial
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  1 API endpoint
+                </li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: auto;">
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; width: 100%; min-height: 60px;">
+                Comenzar Ahora
+              </a>
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #f3f4f6; color: #5B3A7D; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; width: 100%;">
+                Pruébalo Gratis
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business - Captura -->
+        <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 2px solid #FF6B6B; transform: scale(1.02);">
+          <div style="height: 5px; background-color: #FF6B6B;"></div>
+          <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Business</h3>
+            
+            <div style="margin-bottom: 2.5rem;">
+              <div style="margin-bottom: 0.5rem; line-height: 1;">
+                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B;">$</span>
+                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B;">594.000</span>
+              </div>
+              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">15 UF/mes</p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
+              <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem;">por usuario al mes (más IVA)</p>
+              <p style="font-size: 0.95rem; color: #1f2937; font-weight: 600; line-height: 1.7; margin-top: 0.75rem;">Hasta 300 leads/mes</p>
+              <ul style="list-style: none; padding: 0; margin: 1.5rem 0 0 0;">
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  2 Asistentes
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Setup + Optimización
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  2 API endpoints
+                </li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: auto;">
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; width: 100%; min-height: 60px;">
+                Compra Ahora
+              </a>
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #f3f4f6; color: #5B3A7D; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; width: 100%;">
+                Pruébalo Gratis
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise - Captura -->
+        <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; height: 100%;">
+          <div style="height: 5px; background-color: #00C48C;"></div>
+          <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Enterprise</h3>
+            
+            <div style="margin-bottom: 2.5rem;">
+              <p style="font-size: 1.25rem; color: #00C48C; font-weight: 600;">Precio personalizado</p>
+              <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.5rem;">Contacta con nuestro equipo</p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
+              <p style="font-size: 0.95rem; color: #1f2937; font-weight: 600; line-height: 1.7; margin-bottom: 1rem;">Solución completa personalizada</p>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Leads ilimitados
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Asistentes ilimitados
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  API endpoints ilimitados
+                </li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: auto;">
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; width: 100%; min-height: 60px;">
+                Contactar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards for Proceso Completo -->
+  <section id="complete-section" style="padding: 0.5rem 1.5rem 0.5rem 1.5rem; display: none;">
+    <div class="container mx-auto" style="max-width: 1200px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; auto-rows: 1fr;">
+        
+        <!-- Starter - Completo -->
+        <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; height: 100%;">
+          <div style="height: 5px; background-color: #00BFFF;"></div>
+          <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Starter</h3>
+            
+            <div style="margin-bottom: 2.5rem;">
+              <div style="margin-bottom: 0.5rem; line-height: 1;">
+                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF;">$</span>
+                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF;">990.000</span>
+              </div>
+              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">25 UF/mes</p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
+              <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem;">Proceso completo de ventas</p>
+              <p style="font-size: 0.95rem; color: #1f2937; font-weight: 600; line-height: 1.7; margin-top: 0.75rem;">Hasta 100 leads/mes</p>
+              <ul style="list-style: none; padding: 0; margin: 1.5rem 0 0 0;">
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  1 Asistente
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Setup + Flujos de venta
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  CRM + Automatización
+                </li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: auto;">
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; width: 100%; min-height: 60px;">
+                Comenzar Ahora
+              </a>
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #f3f4f6; color: #5B3A7D; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; width: 100%;">
+                Pruébalo Gratis
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business - Completo -->
+        <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; height: 100%; border: 2px solid #FF6B6B; transform: scale(1.02);">
+          <div style="height: 5px; background-color: #FF6B6B;"></div>
+          <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Business</h3>
+            
+            <div style="margin-bottom: 2.5rem;">
+              <div style="margin-bottom: 0.5rem; line-height: 1;">
+                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B;">$</span>
+                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B;">1.386.000</span>
+              </div>
+              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">35 UF/mes</p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
+              <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem;">Proceso completo + Optimización</p>
+              <p style="font-size: 0.95rem; color: #1f2937; font-weight: 600; line-height: 1.7; margin-top: 0.75rem;">Hasta 300 leads/mes</p>
+              <ul style="list-style: none; padding: 0; margin: 1.5rem 0 0 0;">
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  2 Asistentes
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Setup + Optimización semanal
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  CRM + Automatización + Email
+                </li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: auto;">
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; width: 100%; min-height: 60px;">
+                Compra Ahora
+              </a>
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #f3f4f6; color: #5B3A7D; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; width: 100%;">
+                Pruébalo Gratis
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise - Completo -->
+        <div style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; height: 100%;">
+          <div style="height: 5px; background-color: #00C48C;"></div>
+          <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Enterprise</h3>
+            
+            <div style="margin-bottom: 2.5rem;">
+              <p style="font-size: 1.25rem; color: #00C48C; font-weight: 600;">Precio personalizado</p>
+              <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.5rem;">Contacta con nuestro equipo</p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
+              <p style="font-size: 0.95rem; color: #1f2937; font-weight: 600; line-height: 1.7; margin-bottom: 1rem;">Solución completa + Dedicada</p>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Leads ilimitados
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Account manager dedicado
+                </li>
+                <li style="font-size: 0.95rem; color: #4b5563; line-height: 1.7; font-weight: 500; margin-top: 0.75rem; padding-left: 1.5rem; position: relative;">
+                  <span style="content: '✓'; position: absolute; left: 0; color: #00C48C; font-weight: 700;">✓</span>
+                  Soporte prioritario 24/7
+                </li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: auto;">
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; width: 100%; min-height: 60px;">
+                Contactar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const captureBtn = document.getElementById('capture-btn');
+    const completeBtn = document.getElementById('complete-btn');
+    const captureSection = document.getElementById('capture-section');
+    const completeSection = document.getElementById('complete-section');
+
+    captureBtn.addEventListener('click', () => {
+      captureSection.style.display = 'block';
+      completeSection.style.display = 'none';
+      captureBtn.style.backgroundColor = '#f3f4f6';
+      captureBtn.style.color = '#374151';
+      completeBtn.style.backgroundColor = '#5B3A7D';
+      completeBtn.style.color = 'white';
+    });
+
+    completeBtn.addEventListener('click', () => {
+      captureSection.style.display = 'none';
+      completeSection.style.display = 'block';
+      completeBtn.style.backgroundColor = '#f3f4f6';
+      completeBtn.style.color = '#374151';
+      captureBtn.style.backgroundColor = '#5B3A7D';
+      captureBtn.style.color = 'white';
+    });
+  </script>
+</BaseLayout>
