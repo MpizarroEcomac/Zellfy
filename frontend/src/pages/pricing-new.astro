@@ -9,7 +9,7 @@ import PricingCard from '../components/PricingCard.astro';
   description="Dos modelos de precios: Captura de Leads o Proceso Completo de Ventas. Elige el que mejor se adapte a tu negocio."
 >
   <!-- Hero with Italic Title and Red Underline -->
-  <section class="py-16 px-6">
+  <section class="py-12 px-6">
     <div class="container mx-auto text-center" style="max-width: 900px;">
       <h1 class="text-5xl md:text-6xl font-bold mb-8" style="color: var(--color-graphite); font-style: italic;">
         Crece sin límites
@@ -22,7 +22,7 @@ import PricingCard from '../components/PricingCard.astro';
   </section>
 
   <!-- Model Selector Tabs -->
-  <section style="padding: 2rem 1.5rem; display: flex; justify-content: center;">
+  <section style="padding: 0.25rem 1.5rem 1.5rem 1.5rem; display: flex; justify-content: center;">
     <div style="display: flex; align-items: center; gap: 0.5rem;">
       <button style="padding: 0.75rem 1.5rem; background-color: #f3f4f6; color: #374151; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; border: none; cursor: pointer; transition: all 0.3s;" id="capture-btn">
         Captura de Leads
@@ -44,12 +44,13 @@ import PricingCard from '../components/PricingCard.astro';
           <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
             <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Starter</h3>
             
-            <div style="margin-bottom: 2.5rem;">
-              <div style="margin-bottom: 0.5rem; line-height: 1;">
-                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF;">$</span>
-                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF;">316.800</span>
+            <div style="margin-bottom: 2.5rem; text-align: center;">
+              <p style="font-size: 0.85rem; color: #9ca3af; margin: 0 0 0.5rem 0;">desde</p>
+              <div style="margin-bottom: 0.75rem; line-height: 1;">
+                <span style="font-size: 3.5rem; font-weight: 700; color: #00BFFF;">8</span>
+                <span style="font-size: 1.5rem; font-weight: 600; color: #00BFFF;">UF</span>
               </div>
-              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">8 UF/mes</p>
+              <p style="font-size: 0.75rem; color: #d1d5db; margin: 0;">~$316.800/mes</p>
             </div>
 
             <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
@@ -88,12 +89,13 @@ import PricingCard from '../components/PricingCard.astro';
           <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
             <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Business</h3>
             
-            <div style="margin-bottom: 2.5rem;">
-              <div style="margin-bottom: 0.5rem; line-height: 1;">
-                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B;">$</span>
-                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B;">594.000</span>
+            <div style="margin-bottom: 2.5rem; text-align: center;">
+              <p style="font-size: 0.85rem; color: #9ca3af; margin: 0 0 0.5rem 0;">desde</p>
+              <div style="margin-bottom: 0.75rem; line-height: 1;">
+                <span style="font-size: 3.5rem; font-weight: 700; color: #FF6B6B;">15</span>
+                <span style="font-size: 1.5rem; font-weight: 600; color: #FF6B6B;">UF</span>
               </div>
-              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">15 UF/mes</p>
+              <p style="font-size: 0.75rem; color: #d1d5db; margin: 0;">~$594.000/mes</p>
             </div>
 
             <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
@@ -132,9 +134,12 @@ import PricingCard from '../components/PricingCard.astro';
           <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
             <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Enterprise</h3>
             
-            <div style="margin-bottom: 2.5rem;">
-              <p style="font-size: 1.25rem; color: #00C48C; font-weight: 600;">Precio personalizado</p>
-              <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.5rem;">Contacta con nuestro equipo</p>
+            <div style="margin-bottom: 2.5rem; text-align: center;">
+              <p style="font-size: 0.85rem; color: #9ca3af; margin: 0 0 0.5rem 0;">desde</p>
+              <div style="margin-bottom: 0.75rem; line-height: 1;">
+                <span style="font-size: 3.5rem; font-weight: 700; color: #00C48C;">∞</span>
+              </div>
+              <p style="font-size: 0.75rem; color: #d1d5db; margin: 0;">Personalizado</p>
             </div>
 
             <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
@@ -159,6 +164,9 @@ import PricingCard from '../components/PricingCard.astro';
               <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; width: 100%; min-height: 60px;">
                 Contactar
               </a>
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #f3f4f6; color: #5B3A7D; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; width: 100%; visibility: hidden;">
+                Placeholder
+              </a>
             </div>
           </div>
         </div>
@@ -177,12 +185,13 @@ import PricingCard from '../components/PricingCard.astro';
           <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
             <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Starter</h3>
             
-            <div style="margin-bottom: 2.5rem;">
-              <div style="margin-bottom: 0.5rem; line-height: 1;">
-                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF;">$</span>
-                <span style="font-size: 4rem; font-weight: 700; color: #00BFFF;">990.000</span>
+            <div style="margin-bottom: 2.5rem; text-align: center;">
+              <p style="font-size: 0.85rem; color: #9ca3af; margin: 0 0 0.5rem 0;">desde</p>
+              <div style="margin-bottom: 0.75rem; line-height: 1;">
+                <span style="font-size: 3.5rem; font-weight: 700; color: #00BFFF;">25</span>
+                <span style="font-size: 1.5rem; font-weight: 600; color: #00BFFF;">UF</span>
               </div>
-              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">25 UF/mes</p>
+              <p style="font-size: 0.75rem; color: #d1d5db; margin: 0;">~$990.000/mes</p>
             </div>
 
             <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
@@ -221,12 +230,13 @@ import PricingCard from '../components/PricingCard.astro';
           <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
             <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Business</h3>
             
-            <div style="margin-bottom: 2.5rem;">
-              <div style="margin-bottom: 0.5rem; line-height: 1;">
-                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B;">$</span>
-                <span style="font-size: 4rem; font-weight: 700; color: #FF6B6B;">1.386.000</span>
+            <div style="margin-bottom: 2.5rem; text-align: center;">
+              <p style="font-size: 0.85rem; color: #9ca3af; margin: 0 0 0.5rem 0;">desde</p>
+              <div style="margin-bottom: 0.75rem; line-height: 1;">
+                <span style="font-size: 3.5rem; font-weight: 700; color: #FF6B6B;">35</span>
+                <span style="font-size: 1.5rem; font-weight: 600; color: #FF6B6B;">UF</span>
               </div>
-              <p style="font-size: 0.8rem; color: #9ca3af; text-decoration: line-through; margin-top: 0.25rem;">35 UF/mes</p>
+              <p style="font-size: 0.75rem; color: #d1d5db; margin: 0;">~$1.386.000/mes</p>
             </div>
 
             <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
@@ -265,9 +275,12 @@ import PricingCard from '../components/PricingCard.astro';
           <div style="padding: 2.5rem; display: flex; flex-direction: column; height: 100%;">
             <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; color: #1f2937;">Enterprise</h3>
             
-            <div style="margin-bottom: 2.5rem;">
-              <p style="font-size: 1.25rem; color: #00C48C; font-weight: 600;">Precio personalizado</p>
-              <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.5rem;">Contacta con nuestro equipo</p>
+            <div style="margin-bottom: 2.5rem; text-align: center;">
+              <p style="font-size: 0.85rem; color: #9ca3af; margin: 0 0 0.5rem 0;">desde</p>
+              <div style="margin-bottom: 0.75rem; line-height: 1;">
+                <span style="font-size: 3.5rem; font-weight: 700; color: #00C48C;">∞</span>
+              </div>
+              <p style="font-size: 0.75rem; color: #d1d5db; margin: 0;">Personalizado</p>
             </div>
 
             <div style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #f0f0f0; flex-grow: 1;">
@@ -292,9 +305,72 @@ import PricingCard from '../components/PricingCard.astro';
               <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #5B3A7D; color: white; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; transition: all 0.3s ease; width: 100%; min-height: 60px;">
                 Contactar
               </a>
+              <a href="/contacto" style="display: flex; align-items: center; justify-content: center; padding: 1rem 1.5rem; background-color: #f3f4f6; color: #5B3A7D; font-weight: 700; font-size: 0.95rem; border-radius: 0.375rem; text-decoration: none; letter-spacing: 0.5px; width: 100%; visibility: hidden;">
+                Placeholder
+              </a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 2.5rem 1.5rem;">
+    <div class="container mx-auto" style="max-width: 800px;">
+      <h2 style="font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 2rem; color: #1f2937;">
+        Preguntas Frecuentes
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Puedo cambiar de plan en cualquier momento?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Sí, puedes actualizar o reducir tu plan cuando lo necesites sin penalizaciones. Los cambios se aplican inmediatamente en tu próximo ciclo de facturación.</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Ofrecen período de prueba?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Sí, todos los planes incluyen 14 días de prueba gratuita sin necesidad de tarjeta de crédito. Acceso completo a todas las funciones.</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Qué métodos de pago aceptan?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Aceptamos tarjetas de crédito, débito, transferencias bancarias y billeteras digitales. Para planes anuales ofrecemos descuentos especiales.</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Qué incluye el soporte técnico?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Todos los planes incluyen soporte por email. Los planes Estándar y Personalizado acceden a soporte prioritario 24/7 por teléfono y chat en vivo.</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Puedo exportar mis datos?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Sí, puedes exportar todos tus datos en cualquier momento en formato CSV, Excel o JSON. No hay restricciones en la cantidad de datos a exportar.</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Cuál es el tiempo de implementación?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Puedes comenzar en minutos. El plan Gratis es instantáneo. Para planes pagados ofrecemos onboarding personalizado que toma 1-2 semanas según tu complejidad.</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Qué integraciones están disponibles?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Integramos con más de 100 aplicaciones: Salesforce, HubSpot, Zapier, WhatsApp, Google Workspace, Microsoft 365 y muchas más. ¡Sigue creciendo nuestra lista!</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Hay límite de usuarios en los planes?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">El plan Gratis incluye hasta 1 usuario. Estándar permite hasta 10 usuarios. En Personalizado tienes usuarios ilimitados. Cada usuario adicional tiene un costo mínimo.</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Cómo es la seguridad de mis datos?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Utilizamos encriptación SSL de 256 bits, cumplimos con GDPR y realizamos auditorías de seguridad trimestrales. Tus datos están respaldados diariamente en múltiples ubicaciones.</p>
+        </details>
+        
+        <details style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid #5B3A7D;">
+          <summary style="font-weight: 700; cursor: pointer; color: #1f2937; font-size: 1rem;">¿Ofrecen capacitación?</summary>
+          <p style="margin-top: 1rem; color: #6b7280; line-height: 1.6;">Sí, todos los planes incluyen acceso a nuestra base de conocimiento. Planes pagados incluyen webinars de capacitación mensales y documentación personalizada.</p>
+        </details>
       </div>
     </div>
   </section>
