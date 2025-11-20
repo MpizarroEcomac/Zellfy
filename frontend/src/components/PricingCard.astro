@@ -178,11 +178,20 @@ const selectedColor = colors[color];
   }
   
   .pricing-card-actions {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    align-items: stretch;
     margin-top: auto;
+  }
+  
+  .pricing-card-actions .btn-primary {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .pricing-card-actions .btn-secondary {
+    grid-column: 1;
+    grid-row: 2;
   }
   
   .btn-primary,
