@@ -116,20 +116,23 @@ const fullTitle = title.includes("Zellfy") ? title : `${title} | Zellfy.ai`;
       /* Header */
       .header {
         background: white;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
         position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         width: 100%;
-        z-index: 1000;
+        z-index: 10000;
       }
       
       .nav-container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
         padding: 1rem 1.5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
       }
       
       .logo {
@@ -163,11 +166,50 @@ const fullTitle = title.includes("Zellfy") ? title : `${title} | Zellfy.ai`;
         color: var(--color-graphite);
         font-size: 0.9rem;
         font-weight: 500;
-        transition: color 0.2s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+      }
+      
+      .nav-menu a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--color-blue-electric), var(--color-green-mint));
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       
       .nav-menu a:hover {
         color: var(--color-blue-electric);
+      }
+      
+      .nav-menu a:hover::after {
+        width: 100%;
+      }
+      
+      .nav-menu a.active {
+        color: var(--color-blue-electric);
+        font-weight: 600;
+      }
+      
+      .nav-menu a.active::after {
+        width: 100%;
+        animation: slideInUnderline 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      @keyframes slideInUnderline {
+        from {
+          width: 0;
+          background-position: 100% 0;
+        }
+        to {
+          width: 100%;
+          background-position: 0 0;
+        }
       }
       
       /* Botón Hamburguesa */
@@ -255,14 +297,14 @@ const fullTitle = title.includes("Zellfy") ? title : `${title} | Zellfy.ai`;
         </button>
         
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/como-funciona">Cómo Funciona</a></li>
-          <li><a href="/soluciones">Soluciones</a></li>
-          <li><a href="/integraciones">Integraciones</a></li>
-          <li><a href="/casos">Casos de Éxito</a></li>
-          <li><a href="/pricing">Precios</a></li>
-          <li><a href="/nosotros">Nosotros</a></li>
-          <li><a href="/valores">Valores</a></li>
+          <li><a href="/" class="nav-link">Inicio</a></li>
+          <li><a href="/como-funciona" class="nav-link">Cómo Funciona</a></li>
+          <li><a href="/soluciones" class="nav-link">Soluciones</a></li>
+          <li><a href="/integraciones" class="nav-link">Integraciones</a></li>
+          <li><a href="/casos" class="nav-link">Casos de Éxito</a></li>
+          <li style="display: none;"><a href="/pricing" class="nav-link">Precios</a></li>
+          <li><a href="/nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="/valores" class="nav-link">Valores</a></li>
           <li class="mobile-cta"><a href="/contacto" class="btn btn-primary">Empieza a Fluir</a></li>
         </ul>
         <a href="/contacto" class="btn btn-primary desktop-cta">Empieza a Fluir</a>
@@ -273,10 +315,38 @@ const fullTitle = title.includes("Zellfy") ? title : `${title} | Zellfy.ai`;
       <slot />
     </main>
     
-    <!-- Script para Menú Móvil -->
+    <!-- Script para Menú Móvil y Active Link -->
     <script>
       const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
       const navMenu = document.getElementById('nav-menu');
+      
+      // Función para establecer el link activo
+      function setActiveLink() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          link.classList.remove('active');
+          
+          // Lógica de matching:
+          // - '/' solo activa si está exactamente en /
+          // - Otros paths activan si el pathname empieza con el href
+          if ((href === '/' && currentPath === '/') || 
+              (href !== '/' && currentPath.startsWith(href))) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      // Establecer link activo al cargar
+      setActiveLink();
+      
+      // Observar cambios de ruta (para navegación client-side)
+      window.addEventListener('popstate', setActiveLink);
+      
+      // Para Astro transitions (si se implementan después)
+      document.addEventListener('astro:after-swap', setActiveLink);
       
       if (mobileMenuToggle && navMenu) {
         mobileMenuToggle.addEventListener('click', () => {
@@ -327,7 +397,7 @@ const fullTitle = title.includes("Zellfy") ? title : `${title} | Zellfy.ai`;
                 <li><a href="/como-funciona">Cómo Funciona</a></li>
                 <li><a href="/soluciones">Soluciones</a></li>
                 <li><a href="/integraciones">Integraciones</a></li>
-                <li><a href="/pricing">Precios</a></li>
+                <li style="display: none;"><a href="/pricing">Precios</a></li>
                 <li><a href="/casos">Casos de Éxito</a></li>
               </ul>
             </div>
